@@ -1,0 +1,19 @@
+.eve-main-container{
+    display:fixed;
+}
+
+.eve-sub-container{
+    display: absolute;
+    z-index: -1;
+    color: rgb(238, 243, 243);
+    margin-top: 34vh;
+    margin-left: 80vh;
+    margin-right: 80vh;
+    font-size: 10rem;
+    letter-spacing: 0.8rem;
+    /* margin-bottom: auto; */
+}
+
+.eve-main-container{
+    scroll-behavior: auto;
+}
