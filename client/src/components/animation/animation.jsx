@@ -24,7 +24,11 @@ function animation() {
     id="tsparticles"
     init={particlesInit}
     loaded={particlesLoaded}
+    
     options={{
+        fullScreen: {
+            enable: false
+          },
         background: {
             color: {
                 // value: "#040b14",
@@ -92,13 +96,13 @@ function animation() {
                 value: 400,
             },
             opacity: {
-                value: 0.1,
+                value: 0.3,
             },
             shape: {
                 type:"circle",
             },
             size: {
-                value: { min: 1, max: 3 },
+                value: { min: 0.5, max: 3 },
             },
         },
         detectRetina: true,

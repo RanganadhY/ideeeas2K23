@@ -2,13 +2,14 @@
     width: 100%;
     background-color: #080808;
     height: 100vh;
+    /* overflow: hidden; */
 }
 
-#tsparticles ::after{
+/* #tsparticles ::after{
     width: 100%;
     background-color:rgba(117, 215, 32, 0.5);
     height: 100vh;
-}
+} */
 .anim-container{
     /* background-color: rgba(207, 81, 81, 0.5); */
     height: 5vh;

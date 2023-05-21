@@ -1,10 +1,12 @@
 .eve-main-container{
     display:fixed;
+    height:100vh;
+    overflow: hidden;
 }
 
 .eve-sub-container{
     display: absolute;
-    z-index: -1;
+    /* z-index: -1; */
     color: rgb(238, 243, 243);
     margin-top: 34vh;
     margin-left: 80vh;
@@ -14,6 +16,78 @@
     /* margin-bottom: auto; */
 }
 
-.eve-main-container{
-    scroll-behavior: auto;
+.eve-title{
+    background-color: #080808 ;
+    color: azure;
+    font-size: 8rem;
+    letter-spacing: 0.5rem;
+    line-height: 5rem;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+
+.events-card-main{
+    background-color: #080808 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eve-card-img{
+    margin: 50px;
+    width:300px;
+    height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 4px solid #ffff;
+    position: relative;
+}
+.eve-card-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    /* object-fit: cover; */
+}
+
+.eve-card-body{
+    width: 100%;
+    height: 100%;
+    background-color:rgb(17, 26, 26,0.5) ;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s;
+}
+
+.eve-card-img:hover .eve-card-body{
+    right: 0;
+}
+.eve-card-heading{
+    color: #ffff;
+    padding: 20px;
+    text-transform: capitalize;
+    font-size: 3rem;
+}
+
+.eve-card-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+.eve-card-btn button{
+    background-color: #ffff;
+    padding: 20px 30px;
+    border-radius: 15px;
+    cursor: pointer;
+
+   
 }
