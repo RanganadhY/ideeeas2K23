@@ -59,7 +59,7 @@ function animation() {
         },
         particles: {
             color: {
-                value: "#ffffff",
+                value: "#1656fa",
             },
             // links: {
             //     color: "#ffffff",
@@ -96,7 +96,7 @@ function animation() {
                 value: 400,
             },
             opacity: {
-                value: 0.3,
+                value: 0.7,
             },
             shape: {
                 type:"circle",
