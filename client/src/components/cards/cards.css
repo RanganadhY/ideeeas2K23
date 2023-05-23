@@ -13,6 +13,7 @@
     overflow: hidden;
     border: 0.5rem solid #ffff;
     position: relative;
+    filter: brightness(0.8);
 }
 .cards-card-img img{
     width: 100%;
