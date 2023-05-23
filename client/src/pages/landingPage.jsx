@@ -12,7 +12,7 @@ function LandingPage() {
             <div className="main-page-wrapper">
             <Header/>
                 <div className='home-hero-section'>
-                   
+                
                     <div className='home-hero-title'>
                         <div className='home-hero-title-letters'>
                         <div className='hero-home-title-i'>
