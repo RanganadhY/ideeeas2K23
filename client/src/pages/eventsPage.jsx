@@ -16,11 +16,11 @@ function eventsPage() {
       </div>
       </div>
       <div className='eve-title'>
-       OUR EVENTS 
+       {/* OUR EVENTS  */}
       </div>
-      <div className='eve-cards'>
+      {/* <div className='eve-cards'>
       <Cards details = {cardData}/>
-      </div>
+      </div> */}
       {/* <div className='events-card-main'>
      
         <div className='eve-card-img'>

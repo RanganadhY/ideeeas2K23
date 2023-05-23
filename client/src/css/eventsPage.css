@@ -1,6 +1,6 @@
 .eve-main-container{
     display:fixed;
-    height:100vh;
+    height:70vh;
     overflow: hidden;
 }
 
@@ -10,7 +10,7 @@
     align-items: center;
     /* z-index: -1; */
     color: rgb(238, 243, 243);
-    margin-top: 34vh;
+    margin-top: 24vh;
     margin-left: 80vh;
     margin-right: 80vh;
     font-size: 10rem;
@@ -29,17 +29,31 @@
     padding: 20px;
 }
 
-.eve-cards{
+/* .eve-cards{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* grid-row-gap:20px #4456; */
     
-}
+    
+} */
 
-.eve-cards :nth-last-child(1) {
-        display: flex;
-        flex-direction: column;
-}
+/* .eve-cards :nth-last-child(2) {
+    grid-template-columns: 1fr;
+    grid-column: 2;
+    grid-column: auto / span 2; 
+
+  } */
+
+  /* .eve-cards :nth-last-child(1) {
+    grid-template-columns: 1fr;
+    grid-column: 3;
+    grid-row: auto / span 2; 
+
+  } */
+
+
+/* this is extra
+
+
 
 /* .events-card-main{
     background-color: #080808 ;
