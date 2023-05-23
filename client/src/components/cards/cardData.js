@@ -1,8 +1,8 @@
-import webifyImg from '../../assets/images/events/webifycard3.png'
-import blitzImg from '../../assets/images/events/blitz2.png'
-import cnarioImg from '../../assets/images/events/c-NARIO()_2.png'
-import technoconImg from '../../assets/images/events/technocon2.png'
-import rectifierImg from '../../assets/images/events/rectifier2.png'
+import webifyImg from '../../assets/images/events/webify2.png'
+import blitzImg from '../../assets/images/events/blitz1.png'
+import cnarioImg from '../../assets/images/events/cnario1.png'
+import technoconImg from '../../assets/images/events/technocon1.png'
+import rectifierImg from '../../assets/images/events/RECTIFIER1.png'
 
  const cardData = [
     {
