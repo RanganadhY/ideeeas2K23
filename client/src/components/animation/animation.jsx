@@ -93,7 +93,7 @@ function animation() {
                     enable: true,
                     area: 800,
                 },
-                value: 400,
+                value: 600,
             },
             opacity: {
                 value: 0.7,

@@ -1,3 +1,98 @@
 .main-page-wrapper{
     background-color: #0E071B;
+    
+}
+
+.home-hero-section{
+    display: flex;
+    /* flex-direction: row-reverse; */
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 20px;
+    /* margin: 0 20px; */
+    /* flex-direction: column; */
+    /* grid-template-columns: repeat(1fr,2); */
+}
+
+
+.home-hero-title-letters{
+    display: flex;
+}
+.home-hero-title{
+    color: aliceblue;
+    font-size: 9rem;
+    letter-spacing: 2rem;
+    
+}
+.hero-home-title-i{
+    color: #0d3dff;
+    text-shadow:
+      /* 0 0 7px #1a1eff, */
+      /* 0 0 10px #2c4ef8, */
+      0 0 21px #002fff,
+      0 0 42px rgb(37, 33, 245),
+      0 0 82px rgb(20, 28, 253),
+      0 0 92px rgb(35, 42, 249),
+      0 0 102px rgb(49, 35, 252),
+      0 0 151px rgb(21, 28, 250);
+}
+
+.hero-home-title-e{
+    color: #0d3dff;
+    text-shadow:
+    /* 0 0 7px #1a1eff, */
+    /* 0 0 10px #2c4ef8, */
+    /* 0 0 21px #002fff, */
+    /* 0 0 42px rgb(37, 33, 245), */
+    0 0 82px rgb(20, 28, 253),
+    0 0 92px rgb(35, 42, 249),
+    0 0 102px rgb(49, 35, 252),
+    0 0 151px rgb(21, 28, 250);
+}
+.home-hero-subtitle{
+    color: cornflowerblue;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-hero-space{
+    color: #0E071B;
+
+}
+.home-hero-Otherletters{
+    color: #ffffff;
+    font-size: 2rem;
+}
+.home-hero-letters{
+    color: #4036ff;
+    text-shadow:
+      0 0 7px #1a1eff,
+      0 0 10px #2c4ef8,
+      0 0 21px #1d44f4,
+      0 0 42px rgb(37, 33, 245),
+      0 0 82px rgb(84, 37, 254),
+      0 0 92px rgb(35, 42, 249),
+      0 0 102px rgb(49, 35, 252),
+      0 0 151px rgb(21, 28, 250);
+}
+.home-events-title{
+    background-color: #0E071B;
+    color: azure;
+    font-size: 8rem;
+    letter-spacing: 0.5rem;
+    line-height: 5rem;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.home-event-cards{
+    background-color: #0E071B;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));  */
+
+    /* grid-row-gap:20px #4456; */
 }
