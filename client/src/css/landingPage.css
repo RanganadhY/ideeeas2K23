@@ -1,6 +1,6 @@
 .main-page-wrapper{
-    background-color: #0E071B;
-    
+    /* background-color: #0E071B; */
+    background-color: #0D051B;
 }
 
 .home-hero-section{
@@ -42,9 +42,10 @@
     display: flex;
     color: aliceblue;
     font-size: 9rem;
-    letter-spacing: 2rem;
+    letter-spacing: 1.5rem;
     /* width: 70%; */
     justify-content: space-between;
+    
 }
 .hero-home-title-i{
     color: #0d3dff;
@@ -110,7 +111,6 @@
     line-height: 5rem;
     display: flex;
     justify-content: center;
-    padding: 3rem;
 }
 .home-event-cards{
     background-color: #0E071B;
