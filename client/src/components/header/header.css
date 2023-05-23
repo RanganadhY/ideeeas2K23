@@ -7,18 +7,19 @@ nav{
 }
 
 .header-icons-container{
-    width: 50%;
+    width: 40%;
     display: flex;
     justify-content: space-evenly;
+    padding-top: 1rem;
 }
 
 .header-hamburger{
-    width: 50%;
+    width: 60%;
 
 }
 .header-icon{
-    width: 13%;
-    /* height: 100%; */
+    width: 10%;
+    height: 70%;
 }
 
 .header-icon img{
@@ -28,7 +29,7 @@ nav{
 
 .header-hamburger{
     color: rgb(216, 222, 226);
-    font-size: 5rem;
+    font-size: 3.5rem;
     display: flex;
     justify-content:end;
     align-items: center;
@@ -112,4 +113,89 @@ nav{
     transition: all 0.3s ease-in-out;
     /* overflow: hidden; */
 
+}
+
+@media  only screen and (max-width: 600px){
+    nav{
+        width: 100%;
+        display: flex;
+        height: 7vh;
+        padding: 2rem 0;
+        position: relative;
+    }
+    .header-icon{
+        width: 20%;
+        height: 50%;
+        /* background-color: aqua; */
+    }
+    
+    .header-icon img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .header-icons-container{
+        width: 50%;
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 1.5rem;
+    }
+    .header-hamburger{
+        color: rgb(216, 222, 226);
+        font-size: 2.5rem;
+        display: flex;
+        justify-content:end;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-device-width: 601px) and (max-device-width: 992px) and (orientation:portrait) {
+    nav{
+        width: 100%;
+        display: flex;
+        height: 10vh;
+        padding: 2rem 0;
+        position: relative;
+    }
+    .header-icon{
+        width: 15%;
+        height: 60%;
+    }
+    
+    .header-icon img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .header-icons-container{
+        width: 40%;
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 2rem;
+    }
+}
+@media only screen and  (min-device-width: 993px) and  (max-width: 1024px) {
+    nav{
+        width: 100%;
+        display: flex;
+        height: 10vh;
+        padding: 2rem 0;
+        position: relative;
+    }
+    .header-icon{
+        width: 15%;
+        height: 60%;
+    }
+    
+    .header-icon img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .header-icons-container{
+        width: 40%;
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 2rem;
+    }
 }

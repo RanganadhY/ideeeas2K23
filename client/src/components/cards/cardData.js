@@ -1,4 +1,8 @@
-import webifyImg from '../../assets/images/webify.webp'
+import webifyImg from '../../assets/images/events/webifycard3.png'
+import blitzImg from '../../assets/images/events/blitz2.png'
+import cnarioImg from '../../assets/images/events/c-NARIO()_2.png'
+import technoconImg from '../../assets/images/events/technocon2.png'
+import rectifierImg from '../../assets/images/events/rectifier2.png'
 
  const cardData = [
     {
@@ -6,19 +10,19 @@ import webifyImg from '../../assets/images/webify.webp'
         desc : ' web designing contest'
     },
     {
-        img : webifyImg,
+        img : blitzImg,
         desc : ' web designing contest'
     },
     {
-        img : webifyImg,
+        img : cnarioImg,
         desc : ' web designing contest'
     },
     {
-        img : webifyImg,
+        img : technoconImg,
         desc : ' web designing contest'
     },
     {
-        img : webifyImg,
+        img : rectifierImg,
         desc : ' web designing contest'
     },
     {

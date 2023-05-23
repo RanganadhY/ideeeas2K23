@@ -44,12 +44,13 @@ function LandingPage() {
                         <img src={Hero} alt="" />
                     </div>
                 </div>
+                <br></br>
                 <div className='home-events-title'>
                     OUR EVENTS
                 </div>
-                {/* <div className='home-event-cards'>
+                <div className='home-event-cards'>
                     <Cards details={cardData} />
-                </div> */}
+                </div>
             </div>
         </>
     )
