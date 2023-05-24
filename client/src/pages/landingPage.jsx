@@ -18,7 +18,6 @@ function LandingPage() {
                                 <div className='hero-home-title-i'>
                                     I
                                 </div>
-
                                 <div className='hero-home-title-d'>
                                     D
                                 </div>
@@ -33,7 +32,6 @@ function LandingPage() {
                                 2K23
                             </div>
                         </div>
-
                         <div className='home-hero-subtitle'>
                             <div className='home-hero-Otherletters'> ORGANIZED BY </div>
                             <div className='home-hero-space'> .</div>
