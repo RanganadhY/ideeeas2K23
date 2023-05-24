@@ -59,7 +59,7 @@ function animation() {
         },
         particles: {
             color: {
-                value: "#1656fa",
+                value: "#034aff",
             },
             // links: {
             //     color: "#ffffff",

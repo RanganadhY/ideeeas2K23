@@ -1,118 +1,122 @@
+.events-page-wrapper{
+    background-color: #0D051B !important;
+    width: 100%;
+    /* height: 100%; */
+    position: absolute;
+    /* padding: 0 3rem; */
+    /* display: flex; */
+}
+
+
 .eve-main-container{
-    display:fixed;
-    height:70vh;
-    overflow: hidden;
+    position: relative;
+    /* display:fixed; */
+    width: 100%;
+    height: 80vh;
+    /* height:70vh; */
+    /* overflow: hidden; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .eve-sub-container{
-    display: absolute;
+    position: absolute;
+    display: flex;
+    grid-template-rows: repeat(3,1fr);
     justify-content: center;
     align-items: center;
+    /* height: 100%; */
+    padding-top: 0% !important;
     /* z-index: -1; */
     color: rgb(238, 243, 243);
-    margin-top: 24vh;
+    /* margin-top: 24vh;
     margin-left: 80vh;
-    margin-right: 80vh;
+    margin-right: 80vh; */
     font-size: 10rem;
     letter-spacing: 0.8rem;
     /* margin-bottom: auto; */
 }
 
 .eve-title{
-    background-color: #080808 ;
-    color: azure;
-    font-size: 8rem;
-    letter-spacing: 0.5rem;
-    line-height: 5rem;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-
-/* .eve-cards{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    
-    
-} */
-
-/* .eve-cards :nth-last-child(2) {
-    grid-template-columns: 1fr;
-    grid-column: 2;
-    grid-column: auto / span 2; 
-
-  } */
-
-  /* .eve-cards :nth-last-child(1) {
-    grid-template-columns: 1fr;
-    grid-column: 3;
-    grid-row: auto / span 2; 
-
-  } */
-
-
-/* this is extra
-
-
-
-/* .events-card-main{
-    background-color: #080808 ;
+    position:relative;
+    color: aliceblue;
+    height: 20vh;
+    font-size: 4rem;
+    letter-spacing: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.eve-card-img{
-    margin: 50px;
-    width:300px;
-    height: 300px;
-    border-radius: 20px;
-    overflow: hidden;
-    border: 4px solid #ffff;
-    position: relative;
-}
-.eve-card-img img{
+.eve-content-container{
     width: 100%;
-    height: 100%;
-    border-radius: 5px;
+    height:80vh;
+    display: flex;
+    background-color: #0D051B !important;
+    /* padding: 3rem 0; */
 }
 
-.eve-card-body{
-    width: 100%;
+.eve-content-text{
+    width: 50%;
     height: 100%;
-    background-color:rgb(17, 26, 26,0.5) ;
-    top: 0;
-    right: -100%;
-    position: absolute;
-    backdrop-filter: blur(5px);
-    border-radius: 10px;
+    /* height: 80vh; */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transition: 1s;
+    align-items: center;
+    color: rgb(247, 249, 250);
+
 }
 
-.eve-card-img:hover .eve-card-body{
-    right: 0;
-}
-.eve-card-heading{
-    color: #ffff;
-    padding: 20px;
-    text-transform: capitalize;
-    font-size: 3rem;
-}
-
-.eve-card-btn{
+.eve-content-text-heading{
+    width: 100%;
+    height:25%;
+    font-size: 5.5rem;
+    font-weight: 600;
+    letter-spacing: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 10px;
 }
-.eve-card-btn button{
-    background-color: #ffff;
-    padding: 20px 30px;
-    border-radius: 15px;
-    cursor: pointer;
 
-   
-} */
+.eve-content-text-desc{
+    width: 80%;
+    height: 50%;
+    font-size: 2.5rem;
+    letter-spacing: 0.6rem;
+    line-height: 4rem;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* padding: 0rem 3rem; */
+    /* padding-left: 3rem; */
+}
+
+.eve-register-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 20%; */
+}
+
+.eve-register-btn button{
+    padding: 1.5rem;
+}
+
+.eve-content-poster{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.eve-content-poster-image{
+    width: 70%;
+    height: 100%;
+}
+
+.eve-content-poster-image img{
+    width: 100%;
+    height: 100%;
+}

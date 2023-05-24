@@ -32,7 +32,7 @@ function LandingPage() {
                                 2K23
                             </div>
                         </div> */}
-                        <div className='home-hero-title-sp'>    
+                        <div className='home-hero-title-sp'>
                             {/* <span className='hero-home-title-i'>I</span>
                             <span className='home-hero-title-Otherletters'>D</span>
                             <span className='hero-home-title-i'>EEE</span>
