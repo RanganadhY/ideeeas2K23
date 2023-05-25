@@ -6,6 +6,7 @@ import rectifierImg from '../../assets/images/events/RECTIFIER1.png'
 import webifyImage from '../../assets/images/events/webify3.png' 
  const cardData = [
     {
+        id: 1,
         img : webifyImage,
         desc : ' web designing contest'
     },

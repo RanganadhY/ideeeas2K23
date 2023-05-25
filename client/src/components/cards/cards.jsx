@@ -1,7 +1,15 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import '../cards/cards.css'
 import { cardData } from './cardData'
-function cards(props) {
+import EventsPage from '../../pages/eventsPage'
+function Cards(props) {
+
+    const navigate = useNavigate();
+
+    const navigateToEvents = () => {
+        navigate("/:{props.id}");
+    }
     return (
         <>
         {props.details.map(( value, index)=>(
@@ -14,7 +22,7 @@ function cards(props) {
                         {value.desc}
                     </div>
                     <div className='cards-card-btn'>
-                        <button>REGISTER NOW</button>
+                        <button onClick={navigateToEvents}>REGISTER NOW</button>
                     </div>
                 </div>
             </div>
@@ -26,7 +34,7 @@ function cards(props) {
    
 }
 
-export default cards
+export default Cards
 // export const cardData = [
 //     {
 //         img : webifyImg,
