@@ -59,7 +59,7 @@ function EventsPage(props) {
           </div>
         </div>
         <div className='eve-sub-content'>
-          
+
         </div>
       </div>
     </>
