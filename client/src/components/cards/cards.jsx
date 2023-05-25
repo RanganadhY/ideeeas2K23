@@ -1,7 +1,6 @@
 import React from 'react'
 import '../cards/cards.css'
 import { cardData } from './cardData'
-import webifyImg from "../../assets/images/webify.webp"
 function cards(props) {
     return (
         <>
