@@ -3,10 +3,10 @@ import blitzImg from '../../assets/images/events/blitz1.png'
 import cnarioImg from '../../assets/images/events/cnario1.png'
 import technoconImg from '../../assets/images/events/technocon1.png'
 import rectifierImg from '../../assets/images/events/RECTIFIER1.png'
-
+import webifyImage from '../../assets/images/events/webify3.png' 
  const cardData = [
     {
-        img : webifyImg,
+        img : webifyImage,
         desc : ' web designing contest'
     },
     {

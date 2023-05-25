@@ -3,7 +3,9 @@ import { useParams } from 'react-router-dom';
 import Animation from '../components/animation/animation'
 import Tilt from 'react-parallax-tilt';
 import '../css/eventsPage.css';
-import Header from '../components/header/Header'
+// import events from '../../public/eventPosters/'
+import Header from '../components/header/header'
+// import web from '../assets/images/posters/webify.webp'
 // import webifyPoster from '../assets/images/posters/webify copy 2.webp'
 import details from './events.json'
 function EventsPage(props) {
@@ -13,12 +15,12 @@ function EventsPage(props) {
 
   return (
     <>
-    
-    <div className='events-page-wrapper'>
 
-      
-         <Header/>
-      {/* <div className='eve-main-container'>
+      <div className='events-page-wrapper'>
+
+
+        <Header />
+        {/* <div className='eve-main-container'>
         <Animation />
      
         <div className='eve-sub-container'>
@@ -29,32 +31,35 @@ function EventsPage(props) {
 
 
       </div> */}
-      {/* <div className='eve-title'>
+        {/* <div className='eve-title'>
         OUR EVENTS
       </div> */}
-      <div className='eve-content-container'>
-        <div className='eve-content-text'>
-          <div className='eve-content-text-heading'>
-            {eventDetails.name}
-            
+        <div className='eve-content-container'>
+          <div className='eve-content-text'>
+            <div className='eve-content-text-heading'>
+              {eventDetails.name}
+
             </div>
             <span className='eve-content-text-desc'>
               {eventDetails.description}
             </span>
             <div className='eve-register-btn'>
-          <button>REGISTER</button>
-          <button>DOWNLOAD BROCHURE</button>
+              <button>REGISTER</button>
+              <button>DOWNLOAD BROCHURE</button>
             </div>
-        </div>
-        <div className='eve-content-poster'>
-          <div className='eve-content-poster-image'>
-          <img src={"/assets/images/posters/" + eventDetails.poster} />
+          </div>
+          <div className='eve-content-poster'>
+            <div className='eve-content-poster-image'>
+              <img src={"/eventPosters/" + eventDetails.poster} />
 
+              {/* <img src={web}  /> */}
+              {/* <img src={'../assets/images/posters/' + eventDetails.poster} /> */}
+
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </>
+    </>
   )
 }
 
