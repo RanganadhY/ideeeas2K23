@@ -3,13 +3,17 @@ import { useParams } from 'react-router-dom';
 import Animation from '../components/animation/animation'
 import Tilt from 'react-parallax-tilt';
 import '../css/eventsPage.css';
+
 import Header from '../components/header/Header'
 // import webifyPoster from '../assets/images/posters/webify copy 2.webp'
+import img from "../assets/images/posters/webify.webp"
 import details from './events.json'
 function EventsPage(props) {
   const { eventNum } = useParams();
   const eventDetails = details.details[parseInt(eventNum) - 1];
   console.log(eventNum)
+  console.log(eventDetails)
+  
 
   return (
     <>
@@ -17,7 +21,7 @@ function EventsPage(props) {
     <div className='events-page-wrapper'>
 
       
-         <Header/>
+      <Header/>
       {/* <div className='eve-main-container'>
         <Animation />
      
@@ -48,7 +52,7 @@ function EventsPage(props) {
         </div>
         <div className='eve-content-poster'>
           <div className='eve-content-poster-image'>
-          <img src={"/assets/images/posters/" + eventDetails.poster} />
+          <img alt="poster" src={"/assets/images/posters/"+eventDetails.poster} />
 
           </div>
         </div>
