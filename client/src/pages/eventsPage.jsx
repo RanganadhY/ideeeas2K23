@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import Animation from '../components/animation/animation'
 import Tilt from 'react-parallax-tilt';
 import '../css/eventsPage.css';
-import Header from '../components/header/header'
+import Header from '../components/header/Header'
 // import webifyPoster from '../assets/images/posters/webify copy 2.webp'
 import details from './events.json'
 function EventsPage(props) {

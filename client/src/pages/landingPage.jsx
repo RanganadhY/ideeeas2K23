@@ -1,6 +1,6 @@
 import React from 'react'
 import "../css/landingPage.css"
-import Header from '../components/header/header.jsx';
+import Header from '../components/header/Header';
 import Hero from "../assets/images/ezgif.com-video-to-gif.gif"
 import Tilt from 'react-parallax-tilt';
 import Cards from '../components/cards/cards';
@@ -18,7 +18,6 @@ function LandingPage() {
                                 <div className='hero-home-title-i'>
                                     I
                                 </div>
-
                                 <div className='hero-home-title-d'>
                                     D
                                 </div>
