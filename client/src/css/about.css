@@ -1,0 +1,245 @@
+body {
+    background-color: #00162b;
+    overflow-x: hidden;
+  }
+  
+  .main {
+    text-align: center;
+    color: yellow;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main h1 {
+    font-size: 40px;
+  }
+  
+  .mainbox,
+  .secondbox {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-right: 100px;
+    margin-left: 50px;
+    text-align: justify;
+    height: 300px;
+    ;
+  }
+  
+  .imagebox,
+  .textbox,
+  .imagebox2,
+  .textbox2 {
+    width: 50%;
+  }
+  .mainbox{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .imagebox{
+    margin-left: 150px;
+    margin-right: 30px;
+    background-image: url(../assets/images/aboutuss/SIT-Tumkur.webp);
+  }
+  .mainbox2{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .imagebox2{
+    margin-left: 5px;
+    margin-right: 150px;
+    
+  }
+  .textbox2{
+    margin-left: -30px;
+  }
+  .textbox2 span{
+    color: #068DA9;
+  }
+ 
+ 
+  .imagebox2
+  {
+    background-image: url(../assets/images/aboutuss/download.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+  
+  .textbox,
+  .textbox2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .textbox h1 {
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: yellow;
+  }
+  
+  .textbox2 h1 {
+    font-size: 30px;
+    margin-top: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  .textbox p {
+    text-align: justify;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    margin-top: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  .textbox2 p {
+    text-align: justify;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    margin-top: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  .imagebox img {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 20px;
+    border: #93f3bd solid 3px;
+  }
+  
+  .imagebox2 img {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 20px;
+    border: #93f3bd solid 3px;
+  }
+  .textbox2 p{
+    font-size: 15px;
+  }
+  .textbox p{
+    font-size: 20px;
+  }
+  .textbox2 h1{
+    font-size: 40px;
+  }
+  @media only screen and (max-width:900px) {
+    .mainbox,
+    .secondbox {
+      flex-direction: column-reverse;
+      margin-right: 0;
+      margin-top: 50px;
+      margin-left: 0;
+      display: flex;
+      
+      height: auto;
+    }
+    
+  
+    .imagebox{
+        width: 350px;
+        height: 200px;
+        
+        margin-left: 5px;
+     
+        background-size: cover;
+    }
+    .imagebox2{
+        width: 100%;
+        height: 200px;
+        
+        
+    }
+    .textbox{
+        width: 100%;
+        
+    }
+    .sit{
+        margin-top: 50px;
+    }
+    .textbox2 {
+      width: 100%;
+      margin-left: 1px;
+    }
+  
+    .textbox h1 {
+      font-size: 30px;
+      align-items: center;
+      
+      margin-top: 30px;
+    }
+  
+    .textbox2 h1 {
+      font-size: 30px;
+      
+
+    }
+  
+    .textbox p {
+      font-size: 14px;
+    }
+  
+    .textbox2 p {
+      font-size: 11px;
+    }
+  }
+  @media (min-width: 899px) and (max-width: 1300px) {
+    .mainbox,
+    .secondbox {
+      flex-direction: column-reverse;
+      margin-right: 0;
+      margin-left: 0;
+      height: auto;
+      display: flex;
+      align-items: center;
+      
+    }
+    
+  
+    .imagebox{
+        width: 350px;
+        height: 200px;
+        
+        background-size: cover;
+       margin-left: 0px;
+       
+    }
+    .imagebox2{
+        width: 350px;
+        height: 200px;
+       display: flex;
+       margin-left: 125px;
+    }
+    .textbox{
+        width: 50%;
+    }
+    .sit{
+        margin-top: 50px;
+    }
+    .textbox2 {
+      width: 50%;
+      margin-left: 1px;
+    }
+  
+    .textbox h1 {
+      font-size: 30px;
+    }
+  
+    .textbox2 h1 {
+      font-size: 30px;
+    }
+  
+    .textbox p {
+      font-size: 14px;
+    }
+  
+    .textbox2 p {
+      font-size: 11px;
+    }
+  }
+  @media (min-width: 360px) and (max-width: 900px) {
+    .imagebox2{
+        width: 350px;
+        height: 200px;
+      
+    }
+  }
