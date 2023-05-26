@@ -13,14 +13,17 @@
             "name":"Technocon",
             "image":"ideeeas2K23/client/src/assets/images/posters/webify.webp",
             "poster":"webify.webp",
-            "description": "The event challenges teams to write insightful articles and deliver captivating presentations on advanced technology topics. Participants analyze real-world problems, propose innovative solutions, and explore the potential of emerging technologies."
+            "description": "The event challenges teams to write insightful articles and deliver captivating presentations on advanced technology topics. Participants analyze real-world problems, propose innovative solutions, and explore the potential of emerging technologies.",
+            "link":"www.google.com"
         },
         {
             "id":3,
             "name":"Aavishkar",
             "image":"ideeeas2K23/client/src/assets/images/posters/webify.webp",
             "poster":"webify.webp",
-            "description": "As a part of IdEEEas, tech enthusiasts are given a chance to show off their hard work and dedication. Be it application-oriented projects or just basic projects in either hardware or software, students are enc"
+            "description": "As a part of IdEEEas, tech enthusiasts are given a chance to show off their hard work and dedication. Be it application-oriented projects or just basic projects in either hardware or software, students are enc",
+            "link":"www.google.com"
+
         },
         {
             "id":4,
@@ -57,7 +60,9 @@
             "name":" Plan-o-pitch",
             "image":"ideeeas2K23/client/src/assets/images/posters/webify.webp",
             "poster":"webify.webp",
-            "description": "Pitchathon is the newest addition to IdEEEas-2k23 which focuses on giving a platform to all the brilliant ideas which can be converted into a startup in the future. This supports both technical and non-technical business proposals. It is open to students from all the engineering colleges and students pursuing MBA. The best idea will be selected based on how the team presents the idea from the perspective of business which includes finances, future stacks, growth, market demand, marketing, and many more."
+            "description": "Pitchathon is the newest addition to IdEEEas-2k23 which focuses on giving a platform to all the brilliant ideas which can be converted into a startup in the future. This supports both technical and non-technical business proposals. It is open to students from all the engineering colleges and students pursuing MBA. The best idea will be selected based on how the team presents the idea from the perspective of business which includes finances, future stacks, growth, market demand, marketing, and many more.",
+            "link":"www.google.com"
+
         },
         {
             "id":9,
@@ -71,7 +76,9 @@
             "name":"Trademark",
             "image":"ideeeas2K23/client/src/assets/images/posters/webify.webp",
             "poster":"webify.webp",
-            "description": "Design is about more than just aesthetics. It’s about connecting with the audience and communicating a message that resonates with them. One of the major skills of an engineering student is creativity. A logo is a symbol or emblem that is unique to a brand, an individual, a company, or a business. Logos serve to represent a given organization through a visual image that can be easily understood, builds trust, and gets recognized. Through this event, we unleash each participant's inner designer by designing a logo based on the given theme showcasing their creativity."
+            "description": "Design is about more than just aesthetics. It’s about connecting with the audience and communicating a message that resonates with them. One of the major skills of an engineering student is creativity. A logo is a symbol or emblem that is unique to a brand, an individual, a company, or a business. Logos serve to represent a given organization through a visual image that can be easily understood, builds trust, and gets recognized. Through this event, we unleash each participant's inner designer by designing a logo based on the given theme showcasing their creativity.",
+            "link":"www.google.com"
+
         },
         {
             "id":11,

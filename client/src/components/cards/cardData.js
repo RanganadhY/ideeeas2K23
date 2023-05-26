@@ -12,54 +12,54 @@ import trivieeeaImg from '../../assets/images/events/trivieeea.png'
 
  const cardData = [
     {
-        id: '1',
-        img : webifyImg,
-        desc : ' web designing contest'
+        img : aavishkarImg,
+        desc : 'Project Exhibition'
     },
     {
         img : blitzImg,
-        desc : ' web designing contest'
+        desc : 'Literary Event'
     },
     {
         img : cnarioImg,
-        desc : ' web designing contest'
+        desc : 'C Programming Contest'
+    },
+    {
+        img : webifyImg,
+        desc : 'Personality Test'
+    },
+    {
+        img : planoPitchImg,
+        desc : 'Ideation Event'
+    },
+    {
+        img : photographiaImg,
+        desc : 'Mobile Photography Contest'
+    },
+    {
+        img : rectifierImg,
+        desc : 'Circuit Debugging Contest'
+    },
+    {
+        img : webifyImg,
+        desc : 'LFR, Roborace and Cross Road Event'
     },
     {
         img : technoconImg,
         desc : ' web designing contest'
     },
     {
-        img : rectifierImg,
-        desc : ' web designing contest'
-    },
-    {
-        img : aavishkarImg,
-        desc : ' web designing contest'
-    },
-    {
-        img : photographiaImg,
-        desc : ' web designing contest'
-    },
-    {
-        img : planoPitchImg,
-        desc : ' web designing contest'
-    },
-    {
         img : trademarkImg,
-        desc : ' web designing contest'
+        desc : 'Logo Designing Contest'
     },
     {
         img : trivieeeaImg,
-        desc : ' web designing contest'
+        desc : 'Technical quiz'
     },
     {
         img : webifyImg,
         desc : ' web designing contest'
     },
-    {
-        img : webifyImg,
-        desc : ' web designing contest'
-    },
+    
 ];
 
 export default cardData

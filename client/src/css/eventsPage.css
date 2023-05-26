@@ -125,9 +125,11 @@
 }
 
 .eve-register-btn button{
-    padding: 1rem;
+    padding: 0.5rem;
     cursor: pointer;
     font-size: 2rem;
+    width: 30%;
+    height: 35%;
 }
 
 .eve-content-poster{
@@ -340,7 +342,9 @@
     /* flex-direction: column; */
     justify-content: space-evenly;
     align-items: center;
-    height: 10vh;
+    /* height: 10vh; */
+    height: 35%;
+    width: 100%;
     /* width: 100%; */
 
 }
@@ -348,6 +352,7 @@
 .eve-register-btn button{
     padding: 0.5rem !important;
     cursor: pointer;
+    height: 9vh;
 
 }
 }
