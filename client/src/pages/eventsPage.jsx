@@ -47,6 +47,7 @@ function EventsPage(props) {
             <div className='eve-register-btn'>
               <button>REGISTER</button>
               <button>DOWNLOAD BROCHURE</button>
+              {eventDetails.link && <button >DOWNLOAD ABSTRACT</button>}
             </div>
           </div>
           </div>
