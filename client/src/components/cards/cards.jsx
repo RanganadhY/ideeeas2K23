@@ -2,10 +2,6 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import '../cards/cards.css'
 import { cardData } from './cardData'
-<<<<<<< HEAD
-import webifyImg from "../../assets/images/webify.webp"
-function cards(props) {
-=======
 import EventsPage from '../../pages/eventsPage'
 function Cards(props) {
 
@@ -14,7 +10,6 @@ function Cards(props) {
     const navigateToEvents = () => {
         navigate("/:props.id");
     }
->>>>>>> f77666d2bf987b9520013610dbaabe86a45c7876
     return (
         <>
         {props.details.map(( value, index)=>(

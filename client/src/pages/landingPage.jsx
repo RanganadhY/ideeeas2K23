@@ -1,10 +1,6 @@
 import React from 'react'
 import "../css/landingPage.css"
-<<<<<<< HEAD
-import Header from '../components/header/Header';
-=======
 import Header from '../components/header/header';
->>>>>>> f77666d2bf987b9520013610dbaabe86a45c7876
 import Hero from "../assets/images/ezgif.com-video-to-gif.gif"
 import Tilt from 'react-parallax-tilt';
 import Cards from '../components/cards/cards';
