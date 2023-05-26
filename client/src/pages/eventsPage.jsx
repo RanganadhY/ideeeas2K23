@@ -38,6 +38,7 @@ function EventsPage(props) {
         OUR EVENTS
       </div> */}
         <div className='eve-content-container'>
+          <div className='eve-content-sub-container'>
           <div className='eve-content-text'>
             <div className='eve-content-text-heading'>
               {eventDetails.name}
@@ -51,6 +52,7 @@ function EventsPage(props) {
               <button>DOWNLOAD BROCHURE</button>
             </div>
           </div>
+          </div>
           <div className='eve-content-poster'>
             <div className='eve-content-poster-image'>
               <img src={"/eventPosters/" + eventDetails.poster} />
@@ -62,7 +64,7 @@ function EventsPage(props) {
           </div>
         </div>
         <div className='eve-sub-content'>
-          
+
         </div>
       </div>
     </>

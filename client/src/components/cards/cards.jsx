@@ -6,9 +6,9 @@ import EventsPage from '../../pages/eventsPage'
 function Cards(props) {
 
     const navigate = useNavigate();
-
+    console.log(props.id)
     const navigateToEvents = () => {
-        navigate("/:{props.id}");
+        navigate("/:props.id");
     }
     return (
         <>
