@@ -1,6 +1,10 @@
 import React from 'react'
 import "../css/landingPage.css"
+<<<<<<< HEAD
 import Header from '../components/header/Header';
+=======
+import Header from '../components/header/header';
+>>>>>>> f77666d2bf987b9520013610dbaabe86a45c7876
 import Hero from "../assets/images/ezgif.com-video-to-gif.gif"
 import Tilt from 'react-parallax-tilt';
 import Cards from '../components/cards/cards';
@@ -13,12 +17,11 @@ function LandingPage() {
                 <Header />
                 <div className='home-hero-section'>
                     <div className='home-hero-heading-container'>
-                        <div className='home-hero-title'>
+                        {/* <div className='home-hero-title'>
                             <div className='home-hero-title-letters'>
                                 <div className='hero-home-title-i'>
                                     I
                                 </div>
-
                                 <div className='hero-home-title-d'>
                                     D
                                 </div>
@@ -32,13 +35,23 @@ function LandingPage() {
                             <div className='hero-home-title-year'>
                                 2K23
                             </div>
-                        </div>
+                        </div> */}
+                        <div className='home-hero-title-sp'>
+                            {/* <span className='hero-home-title-i'>I</span>
+                            <span className='home-hero-title-Otherletters'>D</span>
+                            <span className='hero-home-title-i'>EEE</span>
+                            <span className='home-hero-title-Otherletters'>AS</span>
 
-                        <div className='home-hero-subtitle'>
+                            <span className='home-hero-title-Otherletters'>2K23</span> */}
+
+                            <span className='home-hero-title-letters'><span className='hero-home-title-i'>I</span>D<span className='hero-home-title-i'>EEE</span>AS  <span>2K23</span></span>
+                            <span className='home-hero-subtitle'><span className='home-hero-Otherletters'>ORGANIZED  BY</span><span>IEEE SIT SB</span></span>
+                        </div>
+                        {/* <div className='home-hero-subtitle'>
                             <div className='home-hero-Otherletters'> ORGANIZED BY </div>
                             <div className='home-hero-space'> .</div>
                             <div className='home-hero-letters'>IEEE SIT SB</div>
-                        </div>
+                        </div> */}
                     </div>
                     <div className='home-hero-image'>
                         <img src={Hero} alt="" />

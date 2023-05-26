@@ -1,45 +1,71 @@
 import React from 'react'
+import { useParams } from 'react-router-dom';
 import Animation from '../components/animation/animation'
 import Tilt from 'react-parallax-tilt';
 import '../css/eventsPage.css';
-import webifyImg from '../assets/images/webify.webp'
-import Cards from '../components/cards/cards'
-import cardData from '../components/cards/cardData'
-// import {Cards,cardData} from '../components/cards/cards'
-function eventsPage() {
+// import events from '../../public/eventPosters/'
+import Header from '../components/header/header'
+// import web from '../assets/images/posters/webify.webp'
+// import webifyPoster from '../assets/images/posters/webify copy 2.webp'
+import details from './events.json'
+function EventsPage(props) {
+  const { eventNum } = useParams();
+  const eventDetails = details.details[parseInt(eventNum) - 1];
+  console.log(eventNum)
+
   return (
     <>
-    <div className='eve-main-container'>
-      <Animation />
-      <div className='eve-sub-container'>
-       Events
-      </div>
-      </div>
-      <div className='eve-title'>
-       {/* OUR EVENTS  */}
-      </div>
-      {/* <div className='eve-cards'>
-      <Cards details = {cardData}/>
-      </div> */}
-      {/* <div className='events-card-main'>
+
+      <div className='events-page-wrapper'>
+
+
+        <Header />
+        {/* <div className='eve-main-container'>
+        <Animation />
      
-        <div className='eve-card-img'>
-          <img src={webifyImg} alt='Webify-image'></img>
-          <div className='eve-card-body'>
-            <div className='eve-card-heading'>
-              web designing contest
-            </div>
-            <div className='eve-card-btn'>
-              <button>REGISTER NOW</button>
-            </div>
+        <div className='eve-sub-container'>
+          <div className='eve-main-heading'>
+            EVENTS
           </div>
         </div>
 
-      </div>
-    */}
 
+      </div> */}
+        {/* <div className='eve-title'>
+        OUR EVENTS
+      </div> */}
+        <div className='eve-content-container'>
+          <div className='eve-content-sub-container'>
+          <div className='eve-content-text'>
+            <div className='eve-content-text-heading'>
+              {eventDetails.name}
+
+            </div>
+            <span className='eve-content-text-desc'>
+              {eventDetails.description}
+            </span>
+            <div className='eve-register-btn'>
+              <button>REGISTER</button>
+              <button>DOWNLOAD BROCHURE</button>
+            </div>
+          </div>
+          </div>
+          <div className='eve-content-poster'>
+            <div className='eve-content-poster-image'>
+              <img src={"/eventPosters/" + eventDetails.poster} />
+
+              {/* <img src={web}  /> */}
+              {/* <img src={'../assets/images/posters/' + eventDetails.poster} /> */}
+
+            </div>
+          </div>
+        </div>
+        <div className='eve-sub-content'>
+
+        </div>
+      </div>
     </>
   )
 }
 
-export default eventsPage
+export default EventsPage

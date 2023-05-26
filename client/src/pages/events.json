@@ -1,0 +1,91 @@
+{
+    "details": [
+        {
+            "id":1,
+            "name":"WEBIFY",
+            "pos":"webify2.png",
+            "image":"ideeeas2K23/client/src/assets/images/posters/webify.webp",
+            "poster":"webify.webp",
+            "description": "Make your mark in the digital realm by participating in the exhilarating Web Designing Contest, Webify. Showcase your unique vision and captivate users with stunning layouts, and seamless interactions, using only HTML, CSS, and JavaScript. Gain recognition, and expand your network as you compete in two thrilling rounds. Judges eagerly await your groundbreaking ideas and fresh perspectives as you redefine web design."
+        },
+        {
+            "id":2,
+            "name":"Technocon",
+            "image":"ideeeas2K23/client/src/assets/images/posters/webify.webp",
+            "poster":"webify.webp",
+            "description": "The event challenges teams to write insightful articles and deliver captivating presentations on advanced technology topics. Participants analyze real-world problems, propose innovative solutions, and explore the potential of emerging technologies."
+        },
+        {
+            "id":3,
+            "name":"Aavishkar",
+            "image":"ideeeas2K23/client/src/assets/images/posters/webify.webp",
+            "poster":"webify.webp",
+            "description": "As a part of IdEEEas, tech enthusiasts are given a chance to show off their hard work and dedication. Be it application-oriented projects or just basic projects in either hardware or software, students are enc"
+        },
+        {
+            "id":4,
+            "name":"Robotics",
+            "image":"ideeeas2K23/client/src/assets/images/posters/webify.webp",
+            "poster":"webify.webp",
+            "description": "Robotics has been a star attraction of IdEEEas for a long time, with people from all over India coming in with their creations for an event where nothing is impossible. The event is itself divided into three events viz. Autonomous Bot Competition (i.e. Line follower) and Manual Bot Competition (Roborace and Crossroads). The exhilarating atmosphere is enough to send a shiver down one's spine!"
+            
+        },
+        {
+            "id":5,
+            "name":"Rectifier",
+            "image":"ideeeas2K23/client/src/assets/images/posters/webify.webp",
+            "poster":"webify.webp",
+            "description": "One of the major skills of an engineering student is to find and resolve defects or problems within a system that hinders its functioning. Rectifier, the hardware debugging contest which tests the rectifying skills of the participants. With 1-2nd years and 3-4th years as a division event is open to all electronics geeks."
+            
+        },
+        {
+            "id":6,
+            "name":"Blitz",
+            "image":"ideeeas2K23/client/src/assets/images/posters/webify.webp",
+            "poster":"webify.webp",
+            "description": "Blitz is a literary event in which the purpose of the event is to explore a person's literary proficiency. It is all about having fun with words as well check the spontaneity in analyzing and responding. It's a fun-filled event with minimum prior knowledge."
+        },
+        {
+            "id":7,
+            "name":"Cnario",
+            "image":"ideeeas2K23/client/src/assets/images/posters/webify.webp",
+            "poster":"webify.webp",
+            "description": "A thrilling programming contest with a big prize at stake will be up for grab this year. The language used is 'C' as it is the most commonly used and taught language. The students will be tested on their analytical and logical skills. The event is divided into two rounds namely, the MCQ round and a final coding round. This is a team event and a team should consist of two members only"
+        },
+        {
+            "id":8,
+            "name":" Plan-o-pitch",
+            "image":"ideeeas2K23/client/src/assets/images/posters/webify.webp",
+            "poster":"webify.webp",
+            "description": "Pitchathon is the newest addition to IdEEEas-2k23 which focuses on giving a platform to all the brilliant ideas which can be converted into a startup in the future. This supports both technical and non-technical business proposals. It is open to students from all the engineering colleges and students pursuing MBA. The best idea will be selected based on how the team presents the idea from the perspective of business which includes finances, future stacks, growth, market demand, marketing, and many more."
+        },
+        {
+            "id":9,
+            "name":"IdEEEas IDOL",
+            "image":"ideeeas2K23/client/src/assets/images/posters/webify.webp",
+            "poster":"webify.webp",
+            "description": "All of us have an inspiration in life, a role model! Idol is one such event that briefly appreciates one's talent of being a leader or maybe an icon. As students, one with the ability to solve general aptitude questions and one who can sit with a group of diverse-minded people and lead a conversation is appreciated as idealistic. Last but not least, to be a responsible citizen, the knowledge of changes that society requires and the diversified thoughts upon a social change is a definite strength to possess to be identified as our winner. To test an individual and present an IDOL amongst the competitors is the event as a whole."
+        },
+        {
+            "id":10,
+            "name":"Trademark",
+            "image":"ideeeas2K23/client/src/assets/images/posters/webify.webp",
+            "poster":"webify.webp",
+            "description": "Design is about more than just aesthetics. It’s about connecting with the audience and communicating a message that resonates with them. One of the major skills of an engineering student is creativity. A logo is a symbol or emblem that is unique to a brand, an individual, a company, or a business. Logos serve to represent a given organization through a visual image that can be easily understood, builds trust, and gets recognized. Through this event, we unleash each participant's inner designer by designing a logo based on the given theme showcasing their creativity."
+        },
+        {
+            "id":11,
+            "name":"Photographia",
+            "image":"ideeeas2K23/client/src/assets/images/posters/webify.webp",
+            "poster":"webify.webp",
+            "description": "Unleash your creativity in Photographia, the captivating photography contest of the year. Freeze time, transport viewers, and tell stories through your lens. Judgment criteria are designed to assess the overall technical skill, creativity, composition, and adherence to the theme. Leave an impression, and gain recognition."
+        },
+        {
+            "id":12,
+            "name":"The trIEEEvia",
+            "image":"ideeeas2K23/client/src/assets/images/posters/webify.webp",
+            "poster":"webify.webp",
+            "description": "Unveil the quizard in you! To all the tech enthusiasts with great knowledge and fast fingers, here's a technical quiz for you. Crack the trickiest questions and win exciting goodies. Bring the right partner along to boost your energy and light up your talent to stand as a winner. Find the fastest of fingers to answer the questions at the moment out on the qualified panel. Sign yourself up for an electrifying round of trivia!"
+        }
+    ]
+}
