@@ -10,8 +10,8 @@ import Header from '../components/header/header';
 import details from './events.json'
 function EventsPage(props) {
   const { eventNum } = useParams();
-  const eventDetails = details.details[parseInt(eventNum) - 1];
-  console.log(eventNum)
+  const eventDetails = details[eventNum];
+  console.log(eventDetails)
 
   return (
     <>

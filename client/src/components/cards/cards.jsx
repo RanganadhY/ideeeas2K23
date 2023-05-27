@@ -6,10 +6,14 @@ import EventsPage from '../../pages/eventsPage'
 function Cards(props) {
 
     const navigate = useNavigate();
-    console.log(props.id)
-    const navigateToEvents = () => {
-        navigate("/:props.id");
+
+    const handleExplore = async(eventName) => {
+            navigate(`/events/${eventName}`)
     }
+    // console.log(props.id)
+    // const navigateToEvents = () => {
+    //     navigate("/:props.id");
+    // }
     return (
         <>
         {props.details.map(( value, index)=>(
@@ -22,7 +26,7 @@ function Cards(props) {
                         {value.desc}
                     </div>
                     <div className='cards-card-btn'>
-                        <button onClick={navigateToEvents}>REGISTER NOW</button>
+                        <button onClick={() => handleExplore(value.name)}> EXPLORE</button>
                     </div>
                 </div>
             </div>

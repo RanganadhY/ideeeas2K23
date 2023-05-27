@@ -8,58 +8,82 @@ import photographiaImg from '../../assets/images/events/photographia.png'
 import planoPitchImg from '../../assets/images/events/planopitch.png'
 import trademarkImg from '../../assets/images/events/trademark.png'
 import trivieeeaImg from '../../assets/images/events/trivieeea.png'
-// import rectifierImg from '../../assets/images/events/rectifier_.png'
+import ideeeasIdolImg from '../../assets/images/events/ideeeasIdol.png'
+import roboticsImg from '../../assets/images/events/robotics.png'
 
- const cardData = [
+const cardData = [
     {
-        img : aavishkarImg,
-        desc : 'Project Exhibition'
+        name: "aavishkar",
+        img: aavishkarImg,
+        desc: 'Project Exhibition'
     },
     {
-        img : blitzImg,
-        desc : 'Literary Event'
+        name: "blitz",
+
+        img: blitzImg,
+        desc: 'Literary Event'
     },
     {
-        img : cnarioImg,
-        desc : 'C Programming Contest'
+        name: "cnario",
+
+        img: cnarioImg,
+        desc: 'C Programming Contest'
     },
     {
-        img : webifyImg,
-        desc : 'Personality Test'
+        name: "ideeeasidol",
+
+        img: ideeeasIdolImg,
+        desc: 'Personality Test'
     },
     {
-        img : planoPitchImg,
-        desc : 'Ideation Event'
+        name: "planopitch",
+
+        img: planoPitchImg,
+        desc: 'Ideation Event'
     },
     {
-        img : photographiaImg,
-        desc : 'Mobile Photography Contest'
+        name: "photographia",
+
+        img: photographiaImg,
+        desc: 'Mobile Photography Contest'
     },
     {
-        img : rectifierImg,
-        desc : 'Circuit Debugging Contest'
+        name: "rectifier",
+
+        img: rectifierImg,
+        desc: 'Circuit Debugging Contest'
     },
     {
-        img : webifyImg,
-        desc : 'LFR, Roborace and Cross Road Event'
+        name: "robotics",
+
+        img: roboticsImg,
+        desc: 'LFR, Roborace and Cross Road Event'
     },
     {
-        img : technoconImg,
-        desc : ' web designing contest'
+        name: "technocon",
+
+        img: technoconImg,
+        desc: ' web designing contest'
     },
     {
-        img : trademarkImg,
-        desc : 'Logo Designing Contest'
+        name: "trademark",
+
+        img: trademarkImg,
+        desc: 'Logo Designing Contest'
     },
     {
-        img : trivieeeaImg,
-        desc : 'Technical quiz'
+        name: "thetriveeevia",
+
+        img: trivieeeaImg,
+        desc: 'Technical quiz'
     },
     {
-        img : webifyImg,
-        desc : ' web designing contest'
+        name: "webify",
+
+        img: webifyImg,
+        desc: ' web designing contest'
     },
-    
+
 ];
 
 export default cardData
