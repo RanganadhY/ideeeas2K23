@@ -1,44 +1,98 @@
-
-
-  .mains {
-    display: flex;
-    flex-direction: column;
-    height: 100vh; 
-    background-image: url(../../assets/images/aboutuss/2474882-removebg-preview.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
+.firstpage {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #0D051B;
+}
+.twosections {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+}
+.aboutus h1{
+  color: rgb(8, 4, 238);
+  font-size: 50px;
+  margin-bottom: 10px;
+  color:#006aff; 
   
-  .top {
-    flex: 1; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #00162b; 
-    height: 20%;
-    margin-top: 0;
-  }
-  .top h1{
-    color: aliceblue;
-    font-size: 50px;
-  }
   
-  .bottom {
-    height: 80%;
-    margin-bottom: 300px;
-    display: flex;
- }
+}
+.aboutus{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 10%;
+  margin-bottom: 10px;
+}
+.twosections h1{
+  font-size: 50px;
+  color: aliceblue;
+  margin-left: 15px;}
+.twosections p {
+  color: #fff;
+  font-size: 16px;
+  margin-top: 55px;
+  margin-left: 15px;
+  margin-right: 15px;
+  text-align: justify;
+}
 
- @media only screen and (max-width:900px) {
-    .mains {
-        display: flex;
-        flex-direction: column;
-        height: 100vh; 
-        background-image: url(../../assets/images/aboutuss/2474882-removebg-preview.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        
- }}
+.twosections span{
+  color: red;
+}
+.twosections{
+  display: flex;
+  flex-direction: row;
+  height: 75%;
+}
+.textcontent{
+  width: 50%;
  
+}
+.cards{
+  width: 67%;
+}
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.gallery__item {
+  width: 70%;
+  height: 80%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s, z-index 0.3s;
+}
+
+
+.gallery__item--1 {
+  background-image: url("../../assets/images/aboutuss/SIT-Tumkur.webp");
+  height: 65%;
+  background-size:cover;  
+}
+
+.gallery__item--2 {
+  background-image: url("../../assets/images/aboutuss//main.jpg");
+  
+  height: 65%;
+
+  
+}
+
+.gallery__item--3 {
+  background-image: url("../../assets/images/aboutuss/2474882-removebg-preview.png");
+  height: 65%;
+ 
+ 
+}
+
+.gallery__item:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
