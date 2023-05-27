@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { RxHamburgerMenu,RxCross1 } from 'react-icons/rx';
 
 import './header.css'
 import sitLogo from '../../assets/images/icons/sit.png'
@@ -34,12 +35,13 @@ function Header() {
         </div>
         <div className="header-hamburger" onClick={HandleClick} >
 
-          <i className={clicked ? "fas fa-times" : "fas fa-bars"}></i>
+          {/* <i className={clicked ? "fas fa-times" : "fas fa-bars"}></i> */}
+          {clicked?<RxCross1/> : <RxHamburgerMenu/> }
         </div>
 
 
       </nav>
-      <div className='header-links'>
+      <div className='header-link'>
         <ul className={clicked ? 'header-list' : 'header-list-close'}>
           <li> <Link className='header-links' exact to="/" activeClassName="active">Home</Link> </li>
           <li> <Link className='header-links' exact to="/ScrollingPage" activeClassName="active">About </Link> </li>

@@ -8,7 +8,8 @@ import photographiaImg from '../../assets/images/events/photographia.png'
 import planoPitchImg from '../../assets/images/events/planopitch.png'
 import trademarkImg from '../../assets/images/events/trademark.png'
 import trivieeeaImg from '../../assets/images/events/trivieeea.png'
-// import rectifierImg from '../../assets/images/events/rectifier_.png'
+import ideeeasIdolImg from '../../assets/images/events/ideeeasIdol.png'
+import roboticsImg from '../../assets/images/events/robotics.png'
 
 const cardData = [
     {
@@ -31,7 +32,7 @@ const cardData = [
     {
         name: "ideeeasidol",
 
-        img: webifyImg,
+        img: ideeeasIdolImg,
         desc: 'Personality Test'
     },
     {
@@ -55,7 +56,7 @@ const cardData = [
     {
         name: "robotics",
 
-        img: webifyImg,
+        img: roboticsImg,
         desc: 'LFR, Roborace and Cross Road Event'
     },
     {
