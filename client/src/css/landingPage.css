@@ -222,16 +222,17 @@ animation: name duration timing-function delay iteration-count direction fill-mo
         width: 100%;
         justify-content: space-between;
         align-items: center;
-        height: 90vh;
+        height: 93vh;
         /* height: 100%; */
     }
     .home-hero-image{
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 50%;
-        height: 45vh;
-        height: 50%;
+        padding: 2rem 0;
+        width: 80%;
+        /* height: 45vh; */
+        height: 60%;
     }
     .home-hero-image img{
         /* width: 35vh;
@@ -243,8 +244,9 @@ animation: name duration timing-function delay iteration-count direction fill-mo
         /* margin-top: 5rem; */
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
         width: 100%;
-        height: 50%;
+        height: 40%;
         /* height: 35vh; */
     }
    

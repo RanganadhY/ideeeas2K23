@@ -10,7 +10,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<LandingPage/>}/>
-        <Route path='/:eventNum' element={<EventsPage/>}/>
+        <Route path='/events/:eventNum' element={<EventsPage/>}/>
         <Route path='/ScrollingPage' element={<ScrollingPage/>}/>
         
       </Routes>
