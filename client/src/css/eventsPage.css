@@ -9,7 +9,7 @@
 
 .eve-btn-container{
     width: 100%;
-    height: 80vh;
+    /* height: 80vh; */
 }
 .eve-sub-container{
     position: absolute;
@@ -29,27 +29,13 @@
     /* margin-bottom: auto; */
 }
 
-.eve-title{
-    position:relative;
-    color: aliceblue;
-    height: 20vh;
-    font-size: 4rem;
-    letter-spacing: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .eve-content-container{
     width: 100%;
-    /* height:90vh; */
-    /* height: 100%;    */
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display:flex;
+    justify-content: space-evenly;
     background-color: #0D051B !important;
-    padding: 3rem ;
+    padding-top: 5rem ;
 }
 
 .eve-content-sub-container{
@@ -59,14 +45,11 @@
     justify-content: center;
     align-items: center;
     box-shadow: 1px 1px 10px 4px rgba(238, 226, 248, 0.5);
-
+    
 }
 
 .eve-content-text{
-    /* width: 47%; */
-    height: 100%;
     width: 100%;
-    /* height: 90vh; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -75,62 +58,83 @@
     background-color: rgba(0, 0, 0, 0.5);
     box-sizing: border-box;
     border: 0.1rem solid #ffff;
-
     border-radius: 0.8rem;
+    padding: 3rem 3rem;
 }
-
 .eve-content-text-heading{
-    /* color: #b9b749; */
-    /* color: rgb(255,215,0); */
-    /* padding-top: 3rem; */
     width: 100%;
-    height: 15%;
-    font-size: 5.5rem;
-    font-weight: 600;
-    letter-spacing: 1rem;
+
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.eve-content-text-heading h2{
+    font-size: 5.5rem;
+    font-weight: 600;
+    letter-spacing: 1rem;
     text-transform: uppercase;
     color: #c6e2ff;
     animation: neon .08s ease-in-out infinite alternate;
 }
 
 .eve-content-text-desc{
-    width: 90%;
-    height: 40%;
-    font-size: 1.8rem;
-    letter-spacing: 0.3rem;
-    line-height: 2.5rem;
-    color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* padding: 3rem 0; */
-    /* padding: 0rem 3rem; */
-    /* padding-left: 3rem; */
+    text-align: left;
+    padding: 2rem 0;
+}
+.eve-content-text-desc p{
+    width: 100%;
+    font-size: 2.2rem;
+    letter-spacing: 0.15rem;
+    line-height: 1.6;
+    color: #ffffff;
 }
 
 .eve-extra-details{
     display: flex;
-    width: 90%;
-    height: 30vh;
-}
-
-
-.eve-details-icons{
-    width: 20%;
-    height: 100%;
-    display: flex;
     flex-direction: column;
+    width:100%;
+
+}
+.eve-extra-details .eve-details-container{
+    display: flex;
+    padding: 1.3rem;
+
+}
+.event-details-icon{
+    width: 13%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.event-details-icon img{
+    width: 100%;
 }
 
-.eve-details-icons img{
-    /* width: 5vh; */
-    width: 50%;
-    height: 5vh;
-    margin: 1rem;
+
+.event-details-text-container{
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
 }
+.eve-details-desc-text {
+    display: flex;
+    align-items: center;
+}
+.eve-details-desc-text .event-label p{
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 0.15rem;
+}
+.event-page-rule-info{
+    font-size: 2.2rem;
+    padding-left: 1rem;
+}
+
+
+
 
 .eve-details-description{
     display: flex;
@@ -140,19 +144,12 @@
     height: 100%;
     /* align-items: center; */
 }
-.eve-details-desc-text{
-    height: 7vh;
-    margin: 0.5vh;
-    font-size: 1.5rem;
-    letter-spacing: 0.2rem;
-    display: flex;
-    align-items: center;
-}
+
 .eve-register-btn{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 35%;
+
     width: 100%;
     padding: 3rem 0 ;
 }
@@ -162,7 +159,7 @@
     cursor: pointer;
     font-size: 2rem;
     width: 30%;
-    height: 35%;
+
 }
 
 /* Button resets and style */
@@ -204,7 +201,7 @@
 
     }
     66%{
-        background: #243d75;
+        background: #014dff;
 
       /* background: #0dcc00; */
     }
@@ -234,7 +231,7 @@
   }
 .eve-content-poster{
     width: 50%;
-    height: 100%;
+    height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -255,10 +252,7 @@
     height: 100%;
 }
 
-.eve-sub-content{
-    width: 100%;
-    height: 30vh;
-}
+
 
 @keyframes neon {
     from {
@@ -280,201 +274,3 @@
       0 0 60px rgba(30,132,242,1);
     }
   }
-@media only screen and (max-width: 480px) and (min-width: 320px){
-    .eve-content-container{
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-    }
-
-    .eve-content-poster{
-        display: flex;
-        justify-content: center;
-        align-items: center;  
-        height: 90vh;
-        width: 80%;
-        /* margin: 5rem; */
-        }
-
-        .eve-content-poster-image{
-            height: 70%;
-            width: 90%;
-        }
-    .eve-content-poster-image img{
-        height: 100%;
-        width: 100%;
-    }
-    .eve-content-sub-container{
-        width: 80%;
-        /* width: 100%; */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .eve-content-text{
-        width: 100%;
-        /* height: 40vh; */
-        height: 100%;
-        /* height: 80vh; */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: rgb(247, 249, 250);
-        background-color: rgba(87, 84, 93, 0.4);
-        box-sizing: border-box;
-        border: 0.1rem solid #ffff;
-        /* margin: 3rem; */
-        padding: 0rem !important;
-
-        border-radius: 0.8rem;
-    }
-    .eve-content-text-heading{
-        width: 100%;
-        height: 20%;
-        /* height:7vh; */
-        font-size: 3rem;
-        font-weight: 600;
-        letter-spacing: 0.8rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0.5rem;
-    }
-
-    
-.eve-content-text-desc{
-    width: 80%;
-    height: 60%;
-    font-size: 1rem;
-    letter-spacing: 0.2rem;
-    line-height: 2rem;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    /* padding: 0rem 3rem; */
-    /* padding-left: 3rem; */
-}
-
-.eve-register-btn{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    /* height: 7vh; */
-    height: 20%;
-    font-size: 1rem;
-    padding: 0.5rem 0;
-    /* height: 8vh; */
-    /* width: 100%; */
-
-}
-
-.eve-register-btn button{
-    padding: 0.5rem !important;
-    cursor: pointer;
-    font-size: 1.3rem;
-    margin: 0.5rem;
-}
-}
-
-@media only screen  and (max-device-width: 768px)and (min-device-width: 481px) {
-    .eve-content-container{
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-    }
-
-    .eve-content-poster{
-        display: flex;
-        justify-content: center;
-        align-items: center;  
-        /* height: 90vh; */
-        height: 100%;
-        width: 80%;
-
-        margin: 5rem;
-        }
-
-        .eve-content-poster-image{
-            height: 100%;
-            width: 100%;
-        }
-    .eve-content-poster-image img{
-        height: 100%;
-        width: 100%;
-    }
-
-    .eve-content-sub-container{
-        /* width: 80%; */
-        width: 100% ;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .eve-content-text{
-        width: 80%;
-        height: 100%;
-        /* height: 80vh; */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: rgb(247, 249, 250);
-        background-color: rgba(87, 84, 93, 0.4);
-        box-sizing: border-box;
-        border: 0.1rem solid #ffff;
-        margin: 3rem;
-
-        border-radius: 0.8rem;
-    }
-    .eve-content-text-heading{
-        width: 100%;
-        height:10vh;
-        font-size: 4rem;
-        font-weight: 600;
-        letter-spacing: 0.8rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    
-.eve-content-text-desc{
-    width: 80%;
-    height: 60%;
-    font-size: 1.8rem;
-    letter-spacing: 0.4rem;
-    line-height: 2.5rem;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    /* padding: 0rem 3rem; */
-    /* padding-left: 3rem; */
-}
-
-.eve-register-btn{
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: space-evenly;
-    align-items: center;
-    /* height: 10vh; */
-    height: 35%;
-    width: 100%;
-    /* width: 100%; */
-
-}
-
-.eve-register-btn button{
-    padding: 0.5rem !important;
-    cursor: pointer;
-    height: 9vh;
-
-}
-}
