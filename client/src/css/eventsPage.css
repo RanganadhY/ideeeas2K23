@@ -63,11 +63,11 @@
 .eve-content-text{
     /* width: 47%; */
     height: 100%;
-    width: 90%;
+    width: 100%;
     /* height: 90vh; */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     color: rgb(247, 249, 250);
     background-color: rgba(0, 0, 0, 0.5);
