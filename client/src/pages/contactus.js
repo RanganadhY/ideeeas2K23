@@ -41,7 +41,7 @@ export default function Contactus() {
                     </div>
                     <div className='contact-card'>
                         <h3 className='name'>Sneha N</h3>
-                        <h3 className='deets'>Vicechair, WIE IEEE SIT SB</h3>
+                        <h3 className='deets'>Vicechair,WIE IEEE SIT SB </h3>
                         <h3 className='deets'><img alt="phone" src={phone} className="deets-img"></img><span> +91 93535 59069</span></h3>
                         <h3 className='deets'><img alt="email" src={email} className="deets-img"></img><span> snehaneelappagol@gmail.com</span></h3>
                     </div>

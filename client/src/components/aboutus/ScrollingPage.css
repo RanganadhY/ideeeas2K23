@@ -1,22 +1,43 @@
-body{background-color: #0D051B;
-overflow-x: hidden;}
-.scrolling-page {
-  
-    height: 100vh;
-    
-  }
-  
-  .full-screen-section {
-    height: 100vh;
-    width: 100vw;
-   
+body {
+  background-color: #0D051B;
+  overflow-x: hidden;
+}
 
+.scrolling-page {
+  height: 100vh;
+}
+
+.full-screen-section {
+  height: 100vh;
+  width: 100vw;
+}
+
+.reveal-section {
+  height: 80vh;
+  width: 100vw;
+  background-color: #00162b;
+}
+@media (max-width: 768px) {
+  .full-screen-section,
+  .reveal-section {
+    height: auto;
   }
   
   .reveal-section {
-    height: 80vh;
-    width: 100vw;
-    background-color: #00162b;
+    height: auto;
+    min-height: 80vh;
   }
+}
 
+/* Media query for screens with maximum width 480px */
+@media (max-width: 480px) {
+  .full-screen-section,
+  .reveal-section {
+    height: auto;
+  }
   
+  .reveal-section {
+    height: auto;
+    min-height: 60vh;
+  }
+}
