@@ -6,7 +6,7 @@ import email from '../../assets/images/contact/email.webp'
 import blog from '../../assets/images/contact/blog.webp'
 
 
-export default function footer() {
+export default function Footer() {
     return(
         <>
             <center className='heading-primary--sub skyblue'id="contact">FOLLOW US ON</center>
