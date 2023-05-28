@@ -2,11 +2,14 @@
     height: 5vh;
     background-color: black;
     color: ivory;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #contact{
     margin-top: 3vh;
     color: ivory;
-
+    font-size: 2rem;
 }
 
 .contact-icons{
