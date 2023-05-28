@@ -1,3 +1,52 @@
+import React from 'react'
+import './timeline.css'
+// import {WorkIcon} from '../../assets/images/icons/pin.png'
+
+// import {ReactComponent as WorkIcon } from '../../assets/images/icons/pin.png'
+import timeLineElements from './timeLineData'
+import {VerticalTimeline,VerticalTimelineElement} from 'react-vertical-timeline-component'
+import "react-vertical-timeline-component/style.min.css"
+function Timeline() {
+    let timeIconStyle = {background: "rgba(193, 148, 231)"}
+    console.log(timeLineElements)
+    timeLineElements.map((data)=>{
+      console.log(data)
+    })
+  return (
+    <div>
+        <VerticalTimeline>
+            {
+                timeLineElements.map((element) => {
+                    return(
+                        
+                        <VerticalTimelineElement
+                        className="vertical-timeline-element--work"
+                            key={element.id}
+                            iconStyle = {timeIconStyle}
+                            contentStyle={{ background: 'rgba(3, 3, 3, 0.3)', color: '#ffffff',border:"#ffffff" }}
+                            // icon={<WorkIcon />}
+                            >
+                                <div className='timeline-main-cont'>
+                             <h3 className='vertical-timeline-element-title'>{element.date}</h3>
+                            <h3 className='vertical-timeline-element-subtitle'>{element.title}</h3>
+                           <div className='timeline-text'> 
+                           {element.desc}
+
+                           </div>
+                           </div>
+                        </VerticalTimelineElement>
+                        
+                    )
+                })
+            }
+        </VerticalTimeline>
+    </div>
+  )
+}
+
+export default Timeline
+
+
 // import React from 'react';
 // import "./timeline.css"
 // export default function Timeline() {
@@ -42,38 +91,3 @@
 //   )
 // }
 
-import React from 'react'
-// import {ReactComponent as WorkIcon } from '../../assets/images/icons/pin.png'
-import timeLineElements from './timeLineData'
-import {
-  VerticalTimeline,
-  VerticalTimelineElement} from 'react-vertical-timeline-component'
-import "react-vertical-timeline-component/style.min.css"
-function Timeline() {
-    let timeIconStyle = {background: "#06D6A0"}
-  return (
-    <div>
-        <VerticalTimeline>
-            {
-                timeLineElements.map((element) => {
-                    return(
-                        
-                        <VerticalTimelineElement
-                            key={element.id}
-                            iconStyle = {timeIconStyle}
-                            // icon={<WorkIcon/>}
-                        >
-                             <h3 className='vertical-timeline-element-title'>{element.date}</h3>
-                            <h3 className='vertical-timeline-element-title'>{element.title}</h3>
-                           <p id='description'>{element.desc}</p>
-
-                        </VerticalTimelineElement>
-                    )
-                })
-            }
-        </VerticalTimeline>
-    </div>
-  )
-}
-
-export default Timeline
