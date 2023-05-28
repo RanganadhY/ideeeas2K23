@@ -5,6 +5,8 @@ import Hero from "../assets/images/ezgif.com-video-to-gif.gif"
 import Tilt from 'react-parallax-tilt';
 import Cards from '../components/cards/cards';
 import cardData from '../components/cards/cardData';
+import Footer from '../components/footer/footer'
+// import { GlitchAnimation } from "react-glitch-animation";
 
 function LandingPage() {
     return (
@@ -40,8 +42,16 @@ function LandingPage() {
 
                             <span className='home-hero-title-Otherletters'>2K23</span> */}
 
-                            <span className='home-hero-title-letters'><span className='hero-home-title-i'>I</span>D<span className='hero-home-title-i'>EEE</span>AS  <span>2K23</span></span>
-                            <span className='home-hero-subtitle'><span className='home-hero-Otherletters'>ORGANIZED  BY</span><span>IEEE SIT SB</span></span>
+                            {/* <span className='home-hero-title-letters'><span className='hero-home-title-i'>I</span>D<span className='hero-home-title-i'>EEE</span>AS  <span>2K23</span></span> */}
+                            <span className='home-hero-title-letters'>
+                                <span className='hero-home-title-i'>I</span>
+                               <span className='hero-home-title-d'>D</span>
+                                <span className='hero-home-title-i'>EEE</span>
+                                <span className='hero-home-title-d'>AS</span>
+                                <span className='hero-home-title-num'> 2K23</span>
+                            </span>
+                            <span className='home-hero-subtitle'>
+                                <span className='home-hero-Otherletters'>ORGANIZED  BY</span><span>IEEE SIT SB</span></span>
                         </div>
                         {/* <div className='home-hero-subtitle'>
                             <div className='home-hero-Otherletters'> ORGANIZED BY </div>
@@ -60,6 +70,8 @@ function LandingPage() {
                 <div className='home-event-cards'>
                     <Cards details={cardData} />
                 </div>
+
+                <Footer />
             </div>
         </>
     )

@@ -4,17 +4,15 @@ import Animation from '../components/animation/animation'
 import Tilt from 'react-parallax-tilt';
 import '../css/eventsPage.css';
 // import events from '../../public/eventPosters/'
-import Header from '../components/header/Header'
+import Header from '../components/header/Header';
 // import web from '../assets/images/posters/webify.webp'
 // import webifyPoster from '../assets/images/posters/webify copy 2.webp'
 import img from "../assets/images/posters/webify.webp"
 import details from './events.json'
 function EventsPage(props) {
   const { eventNum } = useParams();
-  const eventDetails = details.details[parseInt(eventNum) - 1];
-  console.log(eventNum)
+  const eventDetails = details[eventNum];
   console.log(eventDetails)
-  
 
   return (
     <>
@@ -50,6 +48,7 @@ function EventsPage(props) {
             <div className='eve-register-btn'>
               <button>REGISTER</button>
               <button>DOWNLOAD BROCHURE</button>
+              {eventDetails.link && <button >DOWNLOAD ABSTRACT</button>}
             </div>
           </div>
           </div>

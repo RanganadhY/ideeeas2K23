@@ -1,0 +1,103 @@
+
+.secondpage {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #0D051B;
+  margin-top: -150px;
+}
+.twosections2 {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+}
+.aboutus2 h1{
+  color: rgb(8, 4, 238);
+  font-size: 50px;
+  margin-bottom: 10px;
+  color:#006aff; 
+  
+  
+}
+.aboutus2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 10%;
+  margin-bottom: 10px;
+}
+.twosections2 h1{
+  font-size: 50px;
+  color: rgb(10, 134, 241);
+  margin-left: 15px;
+  margin-top: 100px;
+}
+.twosections2 p {
+  color: #fff;
+  font-size: 16px;
+  margin-top: 55px;
+  margin-left: 15px;
+  margin-right: 15px;
+  text-align: justify;}
+
+.twosections2 span{
+  color: red;
+}
+.twosections2{
+  display: flex;
+  flex-direction: row;
+  height: 75%;
+}
+.textcontent2{
+  width: 50%;
+ 
+}
+.cards2{
+  width: 67%;
+
+}
+.gallery2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  
+}
+
+.gallery__item2 {
+  width: 70%;
+  height: 80%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s, z-index 0.3s;
+}
+
+
+.gallery__item2--1 {
+  background-image: url("../assets/images/aboutuss/SIT-Tumkur.webp");
+  height: 65%;
+  background-size:cover;  
+}
+
+.gallery__item2--2 {
+  background-image: url("../assets/images/aboutuss/final.png");
+  
+  height: 65%;
+
+  
+}
+
+.gallery__item2--3 {
+  background-image: url("../assets/images/aboutuss/main.jpg");
+  height: 65%;
+ 
+ 
+}
+
+.gallery__item2:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
