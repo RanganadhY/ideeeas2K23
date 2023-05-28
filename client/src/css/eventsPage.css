@@ -20,6 +20,10 @@
     align-items: center;
 }
 
+.eve-btn-container{
+    width: 100%;
+    height: 80vh;
+}
 .eve-sub-container{
     position: absolute;
     display: flex;
@@ -89,7 +93,7 @@
 .eve-content-text-heading{
     /* color: #b9b749; */
     /* color: rgb(255,215,0); */
-    padding-top: 3rem;
+    /* padding-top: 3rem; */
     width: 100%;
     height:15%;
     font-size: 5.5rem;
@@ -99,11 +103,13 @@
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
+    color: #c6e2ff;
+    animation: neon .08s ease-in-out infinite alternate;
 }
 
 .eve-content-text-desc{
     width: 90%;
-    height: 50%;
+    height: 40%;
     font-size: 1.8rem;
     letter-spacing: 0.3rem;
     line-height: 2.5rem;
@@ -111,18 +117,55 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 3rem 0;
+    /* padding: 3rem 0; */
     /* padding: 0rem 3rem; */
     /* padding-left: 3rem; */
 }
 
+.eve-extra-details{
+    display: flex;
+    width: 90%;
+    height: 30vh;
+}
+
+
+.eve-details-icons{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.eve-details-icons img{
+    /* width: 5vh; */
+    width: 50%;
+    height: 5vh;
+    margin: 1rem;
+}
+
+.eve-details-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    /* align-items: center; */
+}
+.eve-details-desc-text{
+    height: 7vh;
+    margin: 0.5vh;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    display: flex;
+    align-items: center;
+}
 .eve-register-btn{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     height: 35%;
     width: 100%;
-    padding: 3rem 0;
+    padding: 3rem 0 ;
 }
 
 .eve-register-btn button{
@@ -161,6 +204,26 @@
     height: 30vh;
 }
 
+@keyframes neon {
+    from {
+      text-shadow:
+      0 0 6px rgba(202,228,225,0.92),
+      0 0 30px rgba(202,228,225,0.34),
+      0 0 12px rgba(30,132,242,0.52),
+      0 0 21px rgba(30,132,242,0.92),
+      0 0 34px rgba(30,132,242,0.78),
+      0 0 54px rgba(30,132,242,0.92);
+    }
+    to {
+      text-shadow:
+      0 0 6px rgba(202,228,225,0.98),
+      0 0 30px rgba(202,228,225,0.42),
+      0 0 12px rgba(30,132,242,0.58),
+      0 0 22px rgba(30,132,242,0.84),
+      0 0 38px rgba(30,132,242,0.88),
+      0 0 60px rgba(30,132,242,1);
+    }
+  }
 @media only screen and (max-width: 480px) and (min-width: 320px){
     .eve-content-container{
         display: flex;

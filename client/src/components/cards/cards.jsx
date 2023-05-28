@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import '../cards/cards.css'
 import { cardData } from './cardData'
 import EventsPage from '../../pages/eventsPage'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 function Cards(props) {
 
     const navigate = useNavigate();
@@ -17,7 +19,7 @@ function Cards(props) {
     return (
         <>
         {props.details.map(( value, index)=>(
-        <div className='card-main'key={index}>
+        <div data-aos="fade-up"className='card-main'key={index}>
            
             <div className='cards-card-img' >
                 <img src={value.img} alt='value.desc'></img>
@@ -26,9 +28,10 @@ function Cards(props) {
                         {value.desc}
                     </div>
                     <div className='cards-card-btn'>
-                        <button onClick={() => handleExplore(value.name)}> EXPLORE</button>
+                        <div className='cards-card-btn-body'> 
+                      <button  onClick={() => handleExplore(value.name)}> EXPLORE</button>
                     </div>
-                </div>
+                </div></div>
             </div>
            
         </div>
