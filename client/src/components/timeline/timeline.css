@@ -1,0 +1,161 @@
+/* 
+.Time-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 17px 0;
+    font-family: 'Raleway', sans-serif;
+    
+
+}
+
+.Timeline {
+    width: 80%;
+    height: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 5rem;
+
+}
+
+.Timeline ul {
+    list-style: none;
+}
+
+.Timeline ul li {
+    padding: 20px;
+    background-color: black;
+    color: ivory;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-family: 'Raleway' sans-serif;
+
+}
+
+.Timeline ul li:last-child {
+    margin-bottom: 0;
+}
+
+.Timeline-content h1 {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    
+}
+
+.Timeline-content p {
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 300;
+    color: rgb(191, 190, 190);
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    .Timeline:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 100%;
+        background-color: gray;
+    }
+
+    .Timeline ul li {
+        width: 50%;
+        position: relative;
+        margin-bottom: 50px;
+    }
+
+    .Timeline ul li:nth-child(odd) {
+        float: left;
+        clear: right;
+        transform: translateX(-30px);
+        border-radius: 20px 0px 20px 20px;
+    }
+
+    .Timeline ul li:nth-child(even) {
+        float: right;
+        clear: left;
+        transform: translateX(30px);
+        border-radius: 0px 20px 20px 20px;
+    }
+
+    .Timeline ul li::before {
+        content: "";
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background-color: gray;
+        top: 0px;
+    }
+
+    .Timeline ul li:nth-child(odd)::before {
+        transform: translate(50%, -50%);
+        right: -32px;
+    }
+
+    .Timeline ul li:nth-child(even)::before {
+        transform: translate(-50%, -50%);
+        left: -30px;
+    }
+    
+   
+
+    .Timeline ul li:hover::before {
+        background-color: white;
+    }
+}
+.cnario-date{
+   
+    color: #d0acf4;
+
+
+}
+.ideathon-date{
+    
+   color: rgb(129, 209, 163);
+   
+}.trademark-date{
+    color: #d0acf4;
+    
+
+}.webify-date{
+   color: rgb(247, 248, 176);
+    
+
+
+} */
+
+.timeline-main-cont{
+    /* background-color: rgb(57, 7, 82); */
+    width: 100%;
+    margin: 0rem;
+    padding: 0rem;
+    /* box-sizing: border-box; */
+    /* border: .2rem solid #ffff; */
+}
+.vertical-timeline-element-title{
+    font-size: 3rem;
+    color: rgb(244, 240, 248);
+    height: 7vh;
+}
+
+.vertical-timeline-element-subtitle{
+    color: rgb(189, 110, 235);
+    height: 5vh;
+
+}
+
+.timeline-text{
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+}

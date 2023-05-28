@@ -10,7 +10,7 @@ nav{
     width: 40%;
     display: flex;
     justify-content: space-evenly;
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
 }
 
 .header-hamburger{
@@ -18,8 +18,8 @@ nav{
 
 }
 .header-icon{
-    width: 15%;
-    height: 80%;
+    width: 20%;
+    height: 100%;
 }
 
 .header-icon img{
@@ -29,15 +29,15 @@ nav{
 
 .header-hamburger{
     color: rgb(216, 222, 226);
-    font-size: 3.5rem;
+    font-size: 4rem;
     display: flex;
     justify-content:end;
     align-items: center;
 }
 
 .header-hamburger {
-    margin-right: 2rem;
-
+    padding-right: 2rem;
+    cursor: pointer;
 }
 /* .header-icons-container{
     display: flex;
@@ -209,8 +209,8 @@ nav{
         position: relative;
     }
     .header-icon{
-        width: 20%;
-        height: 60%;
+        width: 30%;
+        height: 70%;
         /* background-color: aqua; */
     }
     

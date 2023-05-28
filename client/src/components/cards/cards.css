@@ -52,6 +52,7 @@
     padding: 2.5rem;
     text-transform: capitalize;
     font-size: 2.5rem;
+    letter-spacing: 0.3rem;
     display: block;
     justify-content: center;
     align-items: center;
@@ -62,17 +63,48 @@
     justify-content: center;
     align-items: center;
     padding-top: 1.25rem;
+    /* background: rgba(255, 255, 255, 0.05); */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+         appearance: none;
 
+   
 }
+
+
+
+
 .cards-card-btn button{
-    background-color: #ffff;
+     /* background-color: #a42bd8; */
+     background-color: #0E071B;
     padding: 20px 30px;
     border-radius: 15px;
     cursor: pointer;
     text-decoration: none;
+    /* box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	border-top: 1px solid rgba(255, 255, 255, 0.1); */
+    /* background: linear-gradient(to bottom, #5d326c, #350048); */
+	color: rgb(239, 235, 237);
+    /* color: #0c0c0c;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    */
+   
+  
 }
 
-a{
-    text-decoration: none;
-    color: black;
-}
+.cards-card-btn-body button:hover, .cards-card-btn-body button:focus {
+    color: #fff;
+    outline: 0;
+    background-color: #4506e3;
+  }
+.cards-card-btn-body button {
+    -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  }
+  /* .cards-card-btn-body:hover {
+    box-shadow: 0 0 40px 40px #4506e3 inset;
+  } */
