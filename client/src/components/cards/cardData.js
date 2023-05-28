@@ -63,7 +63,7 @@ const cardData = [
         name: "technocon",
 
         img: technoconImg,
-        desc: ' web designing contest'
+        desc: 'Tech Exploration Challenge'
     },
     {
         name: "trademark",

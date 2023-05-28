@@ -6,10 +6,14 @@
     align-items: center;
     justify-content: center;
 }
-#contact{
-    margin-top: 3vh;
+.heading-primary--sub-skyblue{
+    /* margin: 3vh; */
     color: ivory;
+    padding: 2rem;
     font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-icons{

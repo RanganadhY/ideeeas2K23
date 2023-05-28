@@ -53,7 +53,7 @@
 }
 
 .eve-content-sub-container{
-    width: 50%;
+    width: 40%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -196,15 +196,15 @@
   /* Declate color shifting animation */
   @keyframes colorShift {
     0%, 100% {
-        background: #014dff;
+        background: #3f6fe1;
     }
     33% {
       /* background: #fb3e3e; */
-      background: #014dff;
+      background: #2b4c98;
 
     }
     66%{
-        background: #014dff;
+        background: #243d75;
 
       /* background: #0dcc00; */
     }

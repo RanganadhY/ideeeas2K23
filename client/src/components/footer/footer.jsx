@@ -9,7 +9,7 @@ import blog from '../../assets/images/contact/blog.webp'
 export default function Footer() {
     return(
         <>
-            <center className='heading-primary--sub skyblue'id="contact">FOLLOW US ON</center>
+            <center className='heading-primary--sub-skyblue'id="contact">FOLLOW US ON</center>
             <div className="contact-icons">
                 <a rel="noreferrer" href="https://www.instagram.com/ieeesitsb/" target="_blank"><img alt="insta" src={instagram} className="con-icons"></img></a>
                 <a rel="noreferrer" href="https://www.youtube.com/channel/UCPatXnxDMcEDlFEQKX3q3rg" style={{"marginTop":"2vh"}} target="_blank"><img alt="youtube" src={youtube} className="con-icons"></img></a>

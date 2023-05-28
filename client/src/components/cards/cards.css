@@ -180,7 +180,7 @@ p#or {
    bottom: -1px;
 }
 
-.cards-card-btn-body .cards-card-btn-body ::after {
+.cards-card-btn-body  ::after {
    content: "";
    position: absolute;
    border-left: 1px solid gray;
