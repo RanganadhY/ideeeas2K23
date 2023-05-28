@@ -13,8 +13,8 @@ import 'aos/dist/aos.css'
 import Timeline from '../components/timeline/timeline';
 function LandingPage() {
 
-    useEffect( () => {
-        Aos.init({duration: 3000});
+    useEffect(() => {
+        Aos.init({ duration: 3000 });
     }, []);
     return (
         <>
@@ -52,7 +52,7 @@ function LandingPage() {
                             {/* <span className='home-hero-title-letters'><span className='hero-home-title-i'>I</span>D<span className='hero-home-title-i'>EEE</span>AS  <span>2K23</span></span> */}
                             <span className='home-hero-title-letters'>
                                 <span className='hero-home-title-i'>I</span>
-                               <span className='hero-home-title-d'>D</span>
+                                <span className='hero-home-title-d'>D</span>
                                 <span className='hero-home-title-i'>EEE</span>
                                 <span className='hero-home-title-d'>AS</span>
                                 <span className='hero-home-title-num'> 2K23</span>
@@ -74,20 +74,25 @@ function LandingPage() {
                 <div className='home-events-title'>
                     OUR EVENTS
                 </div>
-                <Fade bottom distance="20%" duration = {1000} >
+                <Fade bottom distance="20%" duration={1000} >
 
-                <div data-aos="fade-up" className='home-event-cards'>
-                    <Cards details={cardData} />
-                </div>
+                    <div data-aos="fade-up" className='home-event-cards'>
+                        <Cards details={cardData} />
+                    </div>
                 </Fade>
+                <div data-aos="fade-up" className='home-timeline'>
+                    <span> IDEEEAS 2K23 SCHEDULE</span>
+                    <Timeline />
 
-                <Timeline/>
+                </div>
 
                 {/* <div data-aos="fade-up" className='home-event-cards'>
                     <Cards details={cardData} />
                 </div> */}
+                <div className='home-footer'>
+                    <Footer />
 
-                <Footer />
+                </div>
             </div>
         </>
     )
