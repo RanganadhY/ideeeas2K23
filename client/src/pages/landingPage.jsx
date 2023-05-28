@@ -45,10 +45,10 @@ function LandingPage() {
                             {/* <span className='home-hero-title-letters'><span className='hero-home-title-i'>I</span>D<span className='hero-home-title-i'>EEE</span>AS  <span>2K23</span></span> */}
                             <span className='home-hero-title-letters'>
                                 <span className='hero-home-title-i'>I</span>
-                                D
+                               <span className='hero-home-title-d'>D</span>
                                 <span className='hero-home-title-i'>EEE</span>
-                                AS
-                                <span>2K23</span>
+                                <span className='hero-home-title-d'>AS</span>
+                                <span className='hero-home-title-num'> 2K23</span>
                             </span>
                             <span className='home-hero-subtitle'>
                                 <span className='home-hero-Otherletters'>ORGANIZED  BY</span><span>IEEE SIT SB</span></span>

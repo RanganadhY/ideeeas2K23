@@ -37,7 +37,7 @@ nav{
 
 .header-hamburger {
     margin-right: 2rem;
-
+    cursor: pointer;
 }
 /* .header-icons-container{
     display: flex;
