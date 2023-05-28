@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "../css/landingPage.css"
 import Header from '../components/header/header';
 import Hero from "../assets/images/ezgif.com-video-to-gif.gif"
@@ -7,8 +7,15 @@ import Cards from '../components/cards/cards';
 import cardData from '../components/cards/cardData';
 import Footer from '../components/footer/footer'
 // import { GlitchAnimation } from "react-glitch-animation";
-
+import Fade from 'react-reveal/Fade';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+import Timeline from '../components/timeline/timeline';
 function LandingPage() {
+
+    useEffect( () => {
+        Aos.init({duration: 3000});
+    }, []);
     return (
         <>
             <div className="main-page-wrapper">
@@ -67,9 +74,18 @@ function LandingPage() {
                 <div className='home-events-title'>
                     OUR EVENTS
                 </div>
-                <div className='home-event-cards'>
+                <Fade bottom distance="20%" duration = {1000} >
+
+                <div data-aos="fade-up" className='home-event-cards'>
                     <Cards details={cardData} />
                 </div>
+                </Fade>
+
+                <Timeline/>
+
+                {/* <div data-aos="fade-up" className='home-event-cards'>
+                    <Cards details={cardData} />
+                </div> */}
 
                 <Footer />
             </div>
