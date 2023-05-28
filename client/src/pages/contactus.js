@@ -4,7 +4,7 @@ import us from "../components/contactus/us.svg"
 import email from "../components/contactus/email.webp";
 import phone from "../components/contactus/phone.png"
 
-import Header from '../components/header/Header';
+import Header from '../components/header/header';
 import Footer from '../components/footer/footer';
 export default function Contactus() {
     return(

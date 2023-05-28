@@ -7,7 +7,7 @@ import timeLineElements from './timeLineData'
 import {VerticalTimeline,VerticalTimelineElement} from 'react-vertical-timeline-component'
 import "react-vertical-timeline-component/style.min.css"
 function Timeline() {
-    let timeIconStyle = {background: "rgba(193, 148, 231)"}
+    let timeIconStyle = {background: "rgba(193, 148, 231)", innerWidth:"0.1rem",innerHeight:"1rem"}
     console.log(timeLineElements)
     timeLineElements.map((data)=>{
       console.log(data)
