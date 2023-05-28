@@ -1,3 +1,6 @@
+
+
+
 .c-head
 {
     font-size: 3.5rem;
@@ -10,6 +13,7 @@
 }
 .flex1{
  height: 60vh;
+ margin-top: 100px;
 }
 #us{
     height: 500px;
@@ -41,7 +45,7 @@
     align-items: center;
 }
 .contact-card{
-    width: 25rem;
+    width: 28rem;
     height: 23rem;
    
 }
@@ -53,13 +57,15 @@
 }
 .deets{
     color: #b7b4b4;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 1.5rem;
+    display: flex;
+    align-items: center;
 }
 .deets-img{
     width: 1.5rem;
     height: 1.5rem;
-    margin-right: .5vh;
+    margin-right: 0.5vh;
 }
 .dev-name{
     font-size: 2rem;
@@ -71,6 +77,9 @@
     font-weight: 300;
     font-size: 1.5rem;
 }
+.deets span {
+    margin-left: 0.5vh;
+  }
 .dev-card{
     margin: 5vh;
 }
@@ -80,13 +89,34 @@
     width: 5vh;
 
     }
+    .deets:nth-child(3) {
+        margin-top: 0.5rem;
+      }
     
 #contactUs{
         
         background-size: cover;
         background-repeat: no-repeat;
     }
-
+    .name,
+    .deets,
+    .dev-name,
+    .dev-deets {
+      font-size: 2.5rem;
+    }
+    
+    .deets-img {
+      width: 2rem;
+      height: 2rem;
+      margin-right: 1vh;
+    }
+    
+    .dev-card {
+      margin: 7vh;
+    }
+.flex3{
+    margin-right: 90px;
+}    
 @media  screen and (max-width:56.25em) {
     #us{
         width: 0;
@@ -108,6 +138,6 @@
         height: 800px;
     }
     .flex4{
-        margin-right: 40px;
+        margin-right: 120px;
     }
 }
