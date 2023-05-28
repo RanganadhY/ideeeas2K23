@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import "../css/landingPage.css"
-import Header from '../components/header/header';
+import Header from '../components/header/Header';
 import Hero from "../assets/images/ezgif.com-video-to-gif.gif"
 import Tilt from 'react-parallax-tilt';
 import Cards from '../components/cards/cards';
