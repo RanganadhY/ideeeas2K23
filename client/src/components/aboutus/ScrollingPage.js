@@ -2,7 +2,7 @@ import React from 'react';
 import '../aboutus/ScrollingPage.css';
 import About from '../../pages/about'
 import First from '../../components/aboutus/First'
-import Header from '../header/header';
+import Header from '../header/Header.jsx';
 import Footer from '../footer/footer.jsx'
 
 class ScrollingPage extends React.Component {
