@@ -4,7 +4,7 @@ import us from "../components/contactus/us.svg"
 import email from "../components/contactus/email.webp";
 import phone from "../components/contactus/phone.png"
 
-import Header from '../components/header/Header';
+import Header from '../components/header/Header.jsx';
 import Footer from '../components/footer/footer';
 export default function Contactus() {
     return(
@@ -41,7 +41,7 @@ export default function Contactus() {
                     </div>
                     <div className='contact-card'>
                         <h3 className='name'>Sneha N</h3>
-                        <h3 className='deets'>Vicechair, WIE IEEE SIT SB</h3>
+                        <h3 className='deets'>Vicechair,WIE IEEE SIT SB </h3>
                         <h3 className='deets'><img alt="phone" src={phone} className="deets-img"></img><span> +91 93535 59069</span></h3>
                         <h3 className='deets'><img alt="email" src={email} className="deets-img"></img><span> snehaneelappagol@gmail.com</span></h3>
                     </div>
@@ -57,12 +57,6 @@ export default function Contactus() {
                         <h3 className='dev-name'>Anvs Anudeep</h3>
                         <h3 className='dev-deets'>LEAD, WEB DEV IEEE SIT SB</h3>
                         <h3 className='dev-deets'><img alt="phone" src={phone} className="deets-img"></img><span> +91 63637 64172 </span></h3>
-                        <h3 className='dev-deets'><img alt="email" src={email} className="deets-img"></img><span> anvsanudeep@gmail.com</span></h3>
-        </div>
-        <div className='dev-card'>
-                        <h3 className='dev-name'>Ranganath</h3>
-                        <h3 className='dev-deets'>PRO, IEEE SIT SB</h3>
-                        <h3 className='dev-deets'><img alt="phone" src={phone} className="deets-img"></img><span> +91 70934 09340</span></h3>
                         <h3 className='dev-deets'><img alt="email" src={email} className="deets-img"></img><span> anvsanudeep@gmail.com</span></h3>
         </div>
         <div className='dev-card'>

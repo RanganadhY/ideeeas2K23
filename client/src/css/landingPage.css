@@ -129,15 +129,55 @@
 }
 .home-events-title{
     /* background-color: #0E071B; */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+   
+}
+.home-events-title p{
     background-color: #0D051B;
     color: azure;
     font-size: 6rem;
     letter-spacing: 0.8rem;
     line-height: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 15vh;
+    position: relative;
+}
+.home-events-title p::after{
+  content:"";
+  width: 150px;
+  height: 3px;
+  background-color: #C194E7;
+  position: absolute;
+  bottom:-10px;
+  left:0;
+  border-radius: 0.5rem;
+  animation: sliding 6s infinite;
+    animation-timing-function: ease-in;
+}
+@keyframes sliding {
+  0%{transform: translateX(0%);}
+  5%{transform: translateX(5%);}
+  10%{transform: translateX(10%);}
+  15%{transform: translateX(15%);}
+  20%{transform: translateX(20%);}
+  25%{transform: translateX(25%);}
+  30%{transform: translateX(30%);}
+  35%{transform: translateX(35%);}
+  40%{transform: translateX(40%);}
+  45%{transform: translateX(45%);}
+  50%{transform: translateX(50%);}
+  55%{transform: translateX(55%);}
+  60%{transform: translateX(60%);}
+  65%{transform: translateX(65%);}
+  70%{transform: translateX(70%);}
+  75%{transform: translateX(75%);}
+  80%{transform: translateX(80%);}
+  85%{transform: translateX(85%);}
+  90%{transform: translateX(90%);}
+  95%{transform: translateX(95%);}
+  100%{transform: translateX(100%);}
 }
 .home-event-cards{
     background-color: #0E051B;
@@ -517,6 +557,57 @@ color: aliceblue;
         justify-content: center;
         align-items: center;
          height: 5vh;
+    }
+    .home-events-title{
+      /* background-color: #0E071B; */
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 15vh;
+  }
+  .home-events-title p{
+      background-color: #0D051B;
+      color: azure;
+      font-size: 6rem;
+      letter-spacing: 0.8rem;
+      line-height: 5rem;
+      position: relative;
+  }
+    .home-events-title p::after{
+      content:"";
+      width: 150px;
+      height: 3px;
+      background-color: #C194E7;
+      position: absolute;
+      bottom:-10px;
+      left:0;
+      border-radius: 0.5rem;
+      animation: sliding 6s infinite;
+        animation-timing-function: ease-in;
+    }
+    @keyframes sliding {
+      0%{transform: translateX(0%);}
+      5%{transform: translateX(5%);}
+      10%{transform: translateX(10%);}
+      15%{transform: translateX(15%);}
+      20%{transform: translateX(20%);}
+      25%{transform: translateX(25%);}
+      30%{transform: translateX(30%);}
+      35%{transform: translateX(35%);}
+      40%{transform: translateX(40%);}
+      45%{transform: translateX(45%);}
+      50%{transform: translateX(50%);}
+      55%{transform: translateX(55%);}
+      60%{transform: translateX(60%);}
+      65%{transform: translateX(65%);}
+      70%{transform: translateX(70%);}
+      75%{transform: translateX(75%);}
+      80%{transform: translateX(80%);}
+      85%{transform: translateX(85%);}
+      90%{transform: translateX(90%);}
+      95%{transform: translateX(95%);}
+      100%{transform: translateX(100%);}
     }
 }
 

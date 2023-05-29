@@ -1,18 +1,22 @@
-import React, { useEffect }from 'react'
+import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import Animation from '../components/animation/animation'
 import Tilt from 'react-parallax-tilt';
 import '../css/eventsPage.css';
+import Footer from '../components/footer/footer'
 // import events from '../../public/eventPosters/'
-import Header from '../../src/components/header/Header';
+
+import { IoArrowRedoCircle } from 'react-icons/io5';
+import Header from '../components/header/Header';
 // import web from '../assets/images/posters/webify.webp'
 // import webifyPoster from '../assets/images/posters/webify copy 2.webp'
 import img from "../assets/images/posters/webify.webp"
 import details from './events.json'
-import moneyIcon from '../assets/images/icons/money.png'
-import teamIcon from '../assets/images/icons/teamsize.png'
-import locationIcon from '../assets/images/icons/location (1).png'
-import eligiblityIcon from '../assets/images/icons/eligiblity.png'
+import moneyIcon from '../assets/images/icons/cash.png'
+import teamIcon from '../assets/images/icons/teamwork (1).png'
+import locationIcon from '../assets/images/icons/location (2).png'
+import eligiblityIcon from '../assets/images/icons/criteria.png'
+import Point from '../assets/images/icons/point.png'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 function EventsPage(props) {
@@ -22,9 +26,14 @@ function EventsPage(props) {
 
   useEffect(() => {
     Aos.init({ duration: 2500 });
-}, []);
+  }, []);
+
+  const handleDownloadBrochure = async (link) => {
+
+    window.open(link, "_blank")
+  }
   return (
-    
+
     <>
 
       <div className='events-page-wrapper'>
@@ -46,32 +55,53 @@ function EventsPage(props) {
         OUR EVENTS
       </div> */}
         <div className='eve-content-container'>
-          <div  data-aos="fade-right" className='eve-content-sub-container'>
-          <div className='eve-content-text'>
-            <div className='eve-content-text-heading'>
-              {eventDetails.name}
-
-            </div>
-            <span className='eve-content-text-desc'>
-              {eventDetails.description}
-            </span>
-            <div className='eve-extra-details'>
-              <div className='eve-details-icons'>
-                <img src={ teamIcon}/>
-                <img src={ eligiblityIcon}/>
-                <img src={ locationIcon}/>
-                <img src={ moneyIcon}/>
+          <div data-aos="fade-right" className='eve-content-sub-container'>
+            <div className='eve-content-text'>
+              <div className='eve-content-text-heading'>
+                <h2>{eventDetails.name}</h2>
 
               </div>
-              <div className='eve-details-description'>
-                <span className='eve-details-desc-text'>Team size : {eventDetails.teamsize}</span>
-                <span className='eve-details-desc-text'>Eligiblity: {eventDetails.Eligibility}</span>
-                <span className='eve-details-desc-text'>Location  :{eventDetails.location}</span>
-                <span className='eve-details-desc-text'>Entry fee :{eventDetails.entryfee}</span>
-
+              <div className='eve-content-text-desc'>
+                <p>{eventDetails.description}</p>
+              </div>
+              <div className='eve-extra-details'>
+                <div className="eve-details-container">
+                  <div className="event-details-icon">
+                    <img src={teamIcon} />
+                  </div>
+                  <div className="event-details-text-container">
+                    <p className='eve-details-desc-text'><span className='event-label'><p>Team size :</p></span> <p className='event-page-rule-info'>{eventDetails.teamsize}</p></p>
+                  </div>
+                </div>
+                <div className="eve-details-container">
+                  <div className="event-details-icon">
+                    <img src={eligiblityIcon} />
+                  </div>
+                  <div className="event-details-text-container">
+                    <p className='eve-details-desc-text'><span className='event-label'><p>Eligiblity:</p></span><p className='event-page-rule-info'>{eventDetails.Eligibility}</p></p>
+                  </div>
+                </div>
+                <div className="eve-details-container">
+                  <div className="event-details-icon">
+                    <img src={locationIcon} />
+                  </div>
+                  <div className="event-details-text-container">
+                    <p className='eve-details-desc-text'><span className='event-label'><p>Location  :</p></span><p className='event-page-rule-info'>{eventDetails.location}</p></p>
+                  </div>
+                </div>
+                <div className="eve-details-container">
+                  <div className="event-details-icon">
+                    <img src={moneyIcon} />
+                  </div>
+                  <div className="event-details-text-container">
+                    <p className='eve-details-desc-text'>
+                      <span className='event-label'><p>Entry fee :</p></span>
+                      <p className='event-page-rule-info'>{eventDetails.entryfee}</p>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
           </div>
           <div data-aos="fade-left" className='eve-content-poster'>
             <div className='eve-content-poster-image'>
@@ -83,17 +113,41 @@ function EventsPage(props) {
             </div>
           </div>
         </div>
-        <div className='eve-btn-container'>
-        <div className='eve-register-btn'>
-              <button>REGISTER</button>
-              <button>DOWNLOAD BROCHURE</button>
-              {eventDetails.link && <button >DOWNLOAD ABSTRACT</button>}
-            </div>
+        
+        <div className='eve-btn-container' >
+          <div className='eve-register-btn'>
+            <button className='event-button' >REGISTER</button>
+            <button className='event-button' onClick={() => handleDownloadBrochure(eventDetails.brochure)}>DOWNLOAD BROCHURE</button>
+            {eventDetails.link && <button className='event-button'>UPLOAD FILE</button>}
           </div>
-        <div className='eve-sub-content'>
-
         </div>
+        <section className='eve-template-content'>
+
+          <div className='eve-template-container'>
+          {eventDetails.template &&
+            <div className='eve-temp-name'><h2>For Materials refer the link below</h2>
+              <div className="eve-temp-name-subContainer">
+                <div className='eve-temp-icon'>
+                  <IoArrowRedoCircle />
+                </div>
+                <a href={eventDetails.template} target={"_blank"}>Synopsis Template</a></div></div>}
+          </div>
+        <div classNme='eve-template-container'>
+        {eventDetails.id === 9 && <div className='eve-temp-name'>
+            <div className="eve-temp-name-subContainer">
+              <div className='eve-temp-icon'>
+                <IoArrowRedoCircle />
+              </div>
+              <a href={eventDetails.problemDescLink} target={"_blank"}>Problem Description</a></div></div>}
+        </div>
+
+          
+        </section>
       </div>
+      <div className='home-footer'>
+                    <Footer />
+
+                </div>
     </>
   )
 }
