@@ -1,7 +1,7 @@
 // First.js
 import React from 'react';
 import '../aboutus/First.css';
-import img1 from "../../assets/images/aboutuss/img1.webp"
+import img1 from "../../assets/images/aboutuss/img1.jpeg"
 import img2 from "../../assets/images/aboutuss/img2.jpg"
 import img3 from "../../assets/images/aboutuss/img3.JPG"
 
