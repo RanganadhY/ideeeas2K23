@@ -5,11 +5,13 @@
         "image": "ideeeas2K23/client/src/assets/images/posters/webify.webp",
         "poster": "Aavishkar_ideeeas2k23.png",
         "description": "As a part of IdEEEas, tech enthusiasts are given a chance to show off their hard work and dedication. Be it application-oriented projects or just basic projects in either hardware or software, students are encouraged to come up with their ‘invention’ and win the big bucks for the same.",
-        "link": "www.google.com",
+        "link": "https://drive.google.com/drive/folders/1Jb9LYxvk7Np0TtMEHztAght_fE3dnbbw?usp=drive_link",
         "teamsize":" Max.4",
         "Eligibility" : "Open to all branches of BE and diploma students.",
         "location":" IEM 101/102",
-        "entryfee":"200"
+        "entryfee":"200",
+        "brochure":"https://drive.google.com/file/d/1Q4VdyxEmQQEX3yYguICYU1TDxU61F3IG/view?usp=share_link",
+        "template":"https://docs.google.com/document/d/1DXbZwKoKe2xZL2fWXizqH-ntP4_GRjlwFr0cGTBDSZs/edit"
 
     },
     "blitz": {
@@ -21,7 +23,8 @@
         "teamsize":" 1",
         "Eligibility" : "Students of all semesters and all branches are eligible.",
         "location":" GJCB classrooms(3-4) ",
-        "entryfee":"50"
+        "entryfee":"50",
+        "brochure":"https://drive.google.com/file/d/1nRiehHV_MEeZuTTxJDwwD_oUQEl9foey/view?usp=share_link"
     },
     "cnario": {
         "id": 3,
@@ -32,7 +35,8 @@
         "teamsize":" 2",
         "Eligibility" : "Students of all semesters and all branches are eligible.",
         "location":" CS/IS Lab",
-        "entryfee":" 100"
+        "entryfee":" 100",
+        "brochure":"https://drive.google.com/file/d/18gSPnUkNqszNyHFaoz-vSra0uvTTnTBr/view?usp=share_link"
     },
     "ideeeasidol": {
         "id": 4,
@@ -43,7 +47,8 @@
         "teamsize":"1",
         "Eligibility" : "Open to all branches of all years.",
         "location":"Media center",
-        "entryfee":"50"
+        "entryfee":"50",
+        "brochure":"https://drive.google.com/file/d/1IuBZkxWK2OP1IRbrozmkzBHYarTO8xqt/view?usp=share_link"
     },
     "planopitch": {
         "id": 5,
@@ -51,11 +56,14 @@
         "image": "ideeeas2K23/client/src/assets/images/posters/webify.webp",
         "poster": "Pitch-O-Thon_ideeeas2k23.png",
         "description": "Pitchathon is the newest addition to IdEEEas-2k23 which focuses on giving a platform to all the brilliant ideas which can be converted into a startup in the future. This supports both technical and non-technical business proposals. It is open to students from all the engineering colleges and students pursuing MBA. The best idea will be selected based on how the team presents the idea from the perspective of business which includes finances, future stacks, growth, market demand, marketing, and many more.",
-        "link": "www.google.com",
+        "link": "https://drive.google.com/drive/folders/1Jp7WtgVc-i09xSwD-MhnnKFZ-gVKrEu-?usp=drive_link",
         "teamsize":" 2 to 4",
         "Eligibility" : "Students of 1st and 2nd year can form a group and participate, 3rd and 4th year can form a group and participate.Open to all branches and MBA students",
         "location":"Biotech Seminar Hall",
-        "entryfee":"200"
+        "entryfee":"200",
+        "brochure":"https://drive.google.com/file/d/18i_3AX6WNVyt9VFR_z300W4c-aOI_M4T/view?usp=share_link",
+        "template":"https://docs.google.com/document/d/1ZDTrAT4MpE7e1P_gOlX3LNJ5XxqbGMi5/edit?usp=drive_link&ouid=113786761310784899727&rtpof=true&sd=true"
+
     },
     "photographia": {
         "id": 6,
@@ -66,7 +74,8 @@
         "teamsize":" 1",
         "Eligibility" : "Open to all branches of all years.",
         "location":"GJCB Seminar Hall",
-        "entryfee":"50"
+        "entryfee":"50",
+        "brochure":"https://drive.google.com/file/d/1B3YJT2sC6aFMnr8hoNS6f1jv-Zw9bmrT/view?usp=share_link"
     },
     "rectifier": {
         "id": 7,
@@ -77,7 +86,8 @@
         "teamsize":" Max. 2",
         "Eligibility" : "Open to all branches of all years.",
         "location":" ECL 301+ EC Lab",
-        "entryfee":"100"
+        "entryfee":"100",
+        "brochure":"https://drive.google.com/file/d/18i_3AX6WNVyt9VFR_z300W4c-aOI_M4T/view?usp=share_link"
     },
     "robotics": {
         "id": 8,
@@ -88,7 +98,8 @@
         "teamsize":" 2 to 4",
         "Eligibility" : "Open to all branches of all years.",
         "location":"  Indoor and outdoor stadium",
-        "entryfee":"100"
+        "entryfee":"100",
+        "brochure":"https://drive.google.com/file/d/1J0uHOlJtH6Pdy6lE6bIQtPLe6CsgdO5y/view?usp=share_link"
     },
     "technocon": {
         "id": 9,
@@ -96,11 +107,15 @@
         "image": "ideeeas2K23/client/src/assets/images/posters/webify.webp",
         "poster": "Technocon_ideeeas2k23.png",
         "description": "The event challenges teams to write insightful articles and deliver captivating presentations on advanced technology topics. Participants analyze real-world problems, propose innovative solutions, and explore the potential of emerging technologies.",
-        "link": "www.google.com",
+        "link": "https://drive.google.com/drive/folders/1QECh0iKBnMZ0pVVZw7tjXYmvm6WYhsfd?usp=drive_link",
         "teamsize":" 1 to 3",
         "Eligibility" : "Open to all branches of all years.",
         "location":"ECL 201",
-        "entryfee":"100"
+        "entryfee":"100",
+        "brochure":"https://drive.google.com/file/d/1bEfVrmYi5fE38K1L1zRAQLkeBNRHeAcq/view?usp=share_link",
+        "template":"https://docs.google.com/document/d/1ErVWusPrD08DLyMKB0X2vRoZ3kDTiFRT/edit?usp=drive_link&ouid=113786761310784899727&rtpof=true&sd=true",
+        "problemDescLink":"https://drive.google.com/file/d/1PMABbfxPzHNiGEwljJesQLwcS7EVECDd/view?usp=drive_link"
+
     },
     "trademark": {
         "id": 10,
@@ -108,11 +123,11 @@
         "image": "ideeeas2K23/client/src/assets/images/posters/webify.webp",
         "poster": "Trademark_ideeeas2k23.png",
         "description": "Design is about more than just aesthetics. It’s about connecting with the audience and communicating a message that resonates with them. One of the major skills of an engineering student is creativity. A logo is a symbol or emblem that is unique to a brand, an individual, a company, or a business. Logos serve to represent a given organization through a visual image that can be easily understood, builds trust, and gets recognized. Through this event, we unleash each participant's inner designer by designing a logo based on the given theme showcasing their creativity.",
-        "link": "www.google.com",
         "teamsize":" 1",
         "Eligibility" : "Open to all branches of all years.",
         "location":"Online event",
-        "entryfee":"50"
+        "entryfee":"50",
+        "brochure":"https://drive.google.com/file/d/16aRWHycTyjtjlvc8vEKhIatxj_3e-H8f/view?usp=share_link"
     },
     "thetriveeevia": {
         "id": 11,
@@ -123,7 +138,8 @@
         "teamsize":"2",
         "Eligibility" : " Students of all semesters and all branches can participate.",
         "location":"EEE Seminar Hall/ECL/TEL 101",
-        "entryfee":" 100"
+        "entryfee":" 100",
+        "brochure":"https://drive.google.com/file/d/13ownQpgqkVrqEGwyqSA2ENwuFjJi-Fg2/view?usp=share_link"
     },
     "webify": {
         "id": 12,
@@ -134,6 +150,7 @@
         "teamsize":"2",
         "Eligibility" : "Open to all branches of all years",
         "location":" ECL 401",
-        "entryfee":"100"
+        "entryfee":"100",
+        "brochure":"https://drive.google.com/file/d/10eX3CyXVhHoHLlzrv2mvGWrHWZK3Psxw/view?usp=share_link"
     }
 }

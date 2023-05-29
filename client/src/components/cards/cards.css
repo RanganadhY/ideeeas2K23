@@ -71,228 +71,83 @@
 }
 
 .cards-card-btn button{
-     /* background-color: #a42bd8; */
-     background-color: #0E071B;
+     background-color: #fafafa;
     padding: 20px 30px;
     border-radius: 15px;
     cursor: pointer;
     text-decoration: none;
   
-	color: rgb(239, 235, 237); 
 }
 
-/* .cards-card-btn-body button:hover, .cards-card-btn-body button:focus {
-    color: #fff;
-    outline: 0;
-    background-color: #4506e3;
-  }
+/* Button resets and style */
 .cards-card-btn-body button {
-    -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
-    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
-  } */
-
- /* .cards-card-btn-body button{
-   
-    font-size: 18px;
-    text-decoration: none;
-    color: #ffffff;
-    border: 2px solid #333;
-    letter-spacing: 2px;
-    text-align: center;
-    transition: all .35s;
-  }
-  .cards-card-btn-body button{
-    position: relative;
-    z-index: 2;
+    margin: 15px auto;
+    font-family: "Montserrat";
+    font-size: 20px;
+    color: #010000;
+    cursor: pointer;
+    border-radius: 100px;
+    padding: 15px 20px;
+    border: 0px solid #000;   
+    }
+  
+  /* Initiate Auto-Pulse animations */
+  button.pulse-button {
+    animation: borderPulse infinite 2000ms  ease-out, colorShift 10000ms infinite ease-in;
   }
   
- .cards-card-btn-body button:after{
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    border-radius: 0.5rem;
-
-    background: #ffffff;
-
-    transition: all .35s;
+  /* Initiate color change for pulse-on-hover */
+  button.pulse-button-hover {
+    animation: colorShift infinite 20000ms  ease-in;
   }
   
-   button:hover{
-    color: #000000;
+  /* Continue animation and add shine on hover */
+ .cards-card-btn-body button:hover,
+ .cards-card-btn-body button:focus {
+    animation: borderPulse infinite 2000ms  ease-out, colorShift 10000ms infinite ease-in, hoverShine 200ms;
   }
   
-  button:hover:after{
-    width: 100%;
+  /* Declate color shifting animation */
+  @keyframes colorShift {
+    0%, 100% {
+        background: #3f6fe1;
+    }
+    33% {
+      /* background: #fb3e3e; */
+      background: #2b4c98;
+
+    }
+    66%{
+        background: #014dff;
+
+      /* background: #0dcc00; */
+    }
+  }
+  
+  /* Declare border pulse animation */
+  @keyframes borderPulse {
+    0% {
+      box-shadow: inset 0px 0px 0px 5px rgba(255, 255, 255,.4), 0px 0px 0px 0px rgba(255,255,255,1);
+    }
+    100% {
+      box-shadow: inset 0px 0px 0px 3px rgba(117, 117, 255,.2), 0px 0px 0px 10px rgba(255,255,255,0);
+    }
+  }
+  
+  /* Declare shine on hover animation */
+  @keyframes hoverShine {
+    0%{
+      background-image: linear-gradient(135deg, rgba(255,255,255,.4) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0) 100%);
+    }
+    50%{
+      background-image: linear-gradient(135deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.4) 50%, rgba(255,255,255,0) 100%);
+    }
+    100%{
+      background-image: linear-gradient(135deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,.4) 100%);
+    }
   }
 
-  .btn,
-p {
-   display: inline-block;
-   vertical-align: middle;
-}
-
-.btn {
-   position: relative;
-   width: 240px;
-   height: 60px;
-   margin: 10px;
-}
-
-.btn p {
-   width: 100%;
-   height: 100%;
-}
-
-.btn a {
-   display: block;
-   width: 100%;
-   height: 60px;
-}
-
-.btn span {
-   display: block;
-   width: 100%;
-   height: 60px;
-   padding-top: 23px;
-}
-
-p#or {
-   margin: 0 14px;
-} */
 
 
 
 
-/*  ------ HOVER EFFECT ----- */
-
-/* the top and bottom innter lines */
-.cards-card-btn .cards-card-btn-body ::before {
-   content: "";
-   position: absolute;
-   border-top: 1px solid gray;
-   border-bottom: 1px solid gray;
-   top: -1px;
-   left: -7px;
-   right: -7px;
-   bottom: -1px;
-}
-
-.cards-card-btn-body  ::after {
-   content: "";
-   position: absolute;
-   border-left: 1px solid gray;
-   border-right: 1px solid gray;
-   top: -9px;
-   bottom: -9px;
-   left:-1px;
-   right: -1px;
-}
-
-.cards-card-btn:hover ::before,
-.cards-card-btn:hover ::after {
-   border: none;
-}
-
-
-/* the hover state for the inner button */
-.cards-card-btn button  {
-   background: inherit;
-   color: inherit;
-   transition-property: background, color;
-   transition-duration: 0.1s;
-   transition-timing-function: ease-out;
-}
-
-.cards-card-btn-body:hover button {
-   background: white;
-   color: black;
-}
-
-/* the inset border on hover */
-.cards-card-btn-body button::before {
-   content: "";
-   position: absolute;
-   border: 5px solid black;
-   left: 1px;
-   top: 1px;
-   right: 1px;
-   bottom: 1px;
-   transition-property: opacity, background, color;
-   transition-duration: 0.2s;
-   transition-timing-function: ease-out;
-   opacity: 0;
-}
-
-.cards-card-btn-body:hover button::before {
-   opacity: 1;
-}
-
-/* the shrinking outer edges */
-.cards-card-btn-body::before {
-   content: "";
-   height: 1px;
-   position: absolute;
-   background: gray;
-   bottom: 68px;
-   left: 0;
-   right: 0;
-   transition-property: left, right;
-   transition-duration: 0.3s;
-   transition-timing-function: ease-out;
-}
-
-.cards-card-btn-body::after {
-   content: "";
-   height: 1px;
-   position: absolute;
-   background: gray;
-   top: 68px;
-   left: 0;
-   right: 0;
-   transition-property: left, right;
-   transition-duration: 0.3s;
-   transition-timing-function: ease-out;
-}
-
-.cards-card-btn-body:hover::before,
-.bcards-card-btn-bodytn:hover::after {
-   left: 50%;
-   right: 50%;
-}
-
-.bcards-card-btn-body::before {
-   content: "";
-   width: 1px;
-   position: absolute;
-   background: gray;
-   top: 0;
-   bottom: 0;
-   left: -7px;
-   right: 0;
-   transition-property: top, bottom;
-   transition-duration: 0.3s;
-   transition-timing-function: ease-out;
-}
-
-.cards-card-btn-body ::after {
-   content: "";
-   width: 1px;
-   position: absolute;
-   background: gray;
-   top: 0;
-   bottom: 0;
-   right: -7px;
-   transition-property: top, bottom;
-   transition-duration: 0.3s;
-   transition-timing-function: ease-out;
-   
-}
-
-.btcards-card-btn-bodyn:hover ::before,
-.cards-card-btn-body:hover ::after {
-   top: 50%;
-   bottom: 50%;
-}

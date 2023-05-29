@@ -129,15 +129,39 @@
 }
 .home-events-title{
     /* background-color: #0E071B; */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+   
+}
+.home-events-title p{
     background-color: #0D051B;
     color: azure;
     font-size: 6rem;
     letter-spacing: 0.8rem;
     line-height: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 15vh;
+    position: relative;
+}
+.home-events-title p::after{
+  content:"";
+  width: 150px;
+  height: 5px;
+  background-color: white;
+  position: absolute;
+  bottom:-10px;
+  left:0;
+  border-radius: 0.5rem;
+  animation: sliding 5s infinite;
+    animation-timing-function: ease-in;
+}
+@keyframes sliding {
+  0%{transform: translateX(0%);}
+  25%{transform: translateX(25%);}
+  50%{transform: translateX(50%);}
+  75%{transform: translateX(75%);}
+  100%{transform: translateX(100%);}
 }
 .home-event-cards{
     background-color: #0E051B;

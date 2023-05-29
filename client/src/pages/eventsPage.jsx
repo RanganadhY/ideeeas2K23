@@ -1,17 +1,19 @@
-import React, { useEffect }from 'react'
+import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import Animation from '../components/animation/animation'
 import Tilt from 'react-parallax-tilt';
 import '../css/eventsPage.css';
 // import events from '../../public/eventPosters/'
 import Header from '../../src/components/header/header';
+import { IoArrowRedoCircle } from 'react-icons/io5';
 // import web from '../assets/images/posters/webify.webp'
 // import webifyPoster from '../assets/images/posters/webify copy 2.webp'
 import details from './events.json'
-import moneyIcon from '../assets/images/icons/money.png'
-import teamIcon from '../assets/images/icons/teamsize.png'
-import locationIcon from '../assets/images/icons/location (1).png'
-import eligiblityIcon from '../assets/images/icons/eligiblity.png'
+import moneyIcon from '../assets/images/icons/cash.png'
+import teamIcon from '../assets/images/icons/teamwork (1).png'
+import locationIcon from '../assets/images/icons/location (2).png'
+import eligiblityIcon from '../assets/images/icons/criteria.png'
+import Point from '../assets/images/icons/point.png'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 function EventsPage(props) {
@@ -21,9 +23,14 @@ function EventsPage(props) {
 
   useEffect(() => {
     Aos.init({ duration: 2500 });
-}, []);
+  }, []);
+
+  const handleDownloadBrochure = async (link) => {
+
+    window.open(link, "_blank")
+  }
   return (
-    
+
     <>
 
       <div className='events-page-wrapper'>
@@ -45,7 +52,7 @@ function EventsPage(props) {
         OUR EVENTS
       </div> */}
         <div className='eve-content-container'>
-          <div  data-aos="fade-right" className='eve-content-sub-container'>
+          <div data-aos="fade-right" className='eve-content-sub-container'>
             <div className='eve-content-text'>
               <div className='eve-content-text-heading'>
                 <h2>{eventDetails.name}</h2>
@@ -57,7 +64,7 @@ function EventsPage(props) {
               <div className='eve-extra-details'>
                 <div className="eve-details-container">
                   <div className="event-details-icon">
-                    <img src={ teamIcon}/>
+                    <img src={teamIcon} />
                   </div>
                   <div className="event-details-text-container">
                     <p className='eve-details-desc-text'><span className='event-label'><p>Team size :</p></span> <p className='event-page-rule-info'>{eventDetails.teamsize}</p></p>
@@ -65,26 +72,29 @@ function EventsPage(props) {
                 </div>
                 <div className="eve-details-container">
                   <div className="event-details-icon">
-                  <img src={ eligiblityIcon}/>
+                    <img src={eligiblityIcon} />
                   </div>
                   <div className="event-details-text-container">
-                    <p className='eve-details-desc-text'>Eligiblity: {eventDetails.Eligibility}</p>
+                    <p className='eve-details-desc-text'><span className='event-label'><p>Eligiblity:</p></span><p className='event-page-rule-info'>{eventDetails.Eligibility}</p></p>
                   </div>
                 </div>
                 <div className="eve-details-container">
                   <div className="event-details-icon">
-                    <img src={ locationIcon}/>
+                    <img src={locationIcon} />
                   </div>
                   <div className="event-details-text-container">
-                    <p className='eve-details-desc-text'>Location  :{eventDetails.location}</p>
+                    <p className='eve-details-desc-text'><span className='event-label'><p>Location  :</p></span><p className='event-page-rule-info'>{eventDetails.location}</p></p>
                   </div>
                 </div>
                 <div className="eve-details-container">
                   <div className="event-details-icon">
-                    <img src={ moneyIcon}/>
+                    <img src={moneyIcon} />
                   </div>
                   <div className="event-details-text-container">
-                  <p className='eve-details-desc-text'>Entry fee :{eventDetails.entryfee}</p>
+                    <p className='eve-details-desc-text'>
+                      <span className='event-label'><p>Entry fee :</p></span>
+                      <p className='event-page-rule-info'>{eventDetails.entryfee}</p>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -100,16 +110,36 @@ function EventsPage(props) {
             </div>
           </div>
         </div>
-        <div className='eve-btn-container' data-aos="fade-top">
-        <div className='eve-register-btn'>
-              <button>REGISTER</button>
-              <button>DOWNLOAD BROCHURE</button>
-              {eventDetails.link && <button >DOWNLOAD ABSTRACT</button>}
+        
+        <div className='eve-btn-container' >
+          <div className='eve-register-btn'>
+            <button className='event-button' >REGISTER</button>
+            <button className='event-button' onClick={() => handleDownloadBrochure(eventDetails.brochure)}>DOWNLOAD BROCHURE</button>
+            {eventDetails.link && <button className='event-button'>UPLOAD FILE</button>}
           </div>
         </div>
-        <div className='eve-sub-content'>
+        <section className='eve-template-content'>
 
+          <div className='eve-template-container'>
+          {eventDetails.template &&
+            <div className='eve-temp-name'><h2>For Materials refer the link below</h2>
+              <div className="eve-temp-name-subContainer">
+                <div className='eve-temp-icon'>
+                  <IoArrowRedoCircle />
+                </div>
+                <a href={eventDetails.template} target={"_blank"}>Synopsis Template</a></div></div>}
+          </div>
+        <div classNme='eve-template-container'>
+        {eventDetails.id === 9 && <div className='eve-temp-name'>
+            <div className="eve-temp-name-subContainer">
+              <div className='eve-temp-icon'>
+                <IoArrowRedoCircle />
+              </div>
+              <a href={eventDetails.problemDescLink} target={"_blank"}>Problem Description</a></div></div>}
         </div>
+
+          
+        </section>
       </div>
     </>
   )

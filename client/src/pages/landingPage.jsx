@@ -72,7 +72,7 @@ function LandingPage() {
                 </div>
                 <br></br>
                 <div className='home-events-title'>
-                    OUR EVENTS
+                    <p>OUR EVENTS</p>
                 </div>
                 <Fade bottom distance="20%" duration={1000} >
 

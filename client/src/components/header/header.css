@@ -110,7 +110,7 @@ nav{
     align-items: flex-start;
     transition:  all 3.5s ease-in-out;
     /* animation: forwards ; */
-    
+    z-index: 1;
     padding-left: 0px;
     /* top:100px; */
     /* width:250px; */

@@ -10,7 +10,7 @@ function Cards(props) {
     const navigate = useNavigate();
 
     const handleExplore = async(eventName) => {
-            navigate(`/events/${eventName}`)
+            navigate(`/${eventName}`)
     }
     // console.log(props.id)
     // const navigateToEvents = () => {
