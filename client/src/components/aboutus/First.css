@@ -10,10 +10,10 @@
   margin-top: 30px;
 }
 .aboutus h1{
-  color: rgb(8, 4, 238);
+  color:#dabcf8;
   font-size: 50px;
   margin-bottom: 10px;
-  color:#006aff; 
+  
   
   
 }
@@ -27,7 +27,7 @@
 }
 .twosections h1{
   font-size: 50px;
-  color: aliceblue;
+  color:  #c395f1;
   margin-left: 15px;}
 .twosections p {
   color: #fff;
@@ -77,15 +77,15 @@
 }
 
 .gallery__item--2 {
-  background-image: url("../../assets/images/aboutuss//main.jpg");
-  
+  background-image: url("../../assets/images/aboutuss/main.jpg");
+  background-size: cover;
   height: 65%;
 
   
 }
 
 .gallery__item--3 {
-  background-image: url("../../assets/images/aboutuss/2474882-removebg-preview.png");
+  background-image: url("../../assets/images/aboutuss/IMG_6556.JPG");
   height: 65%;
  
  

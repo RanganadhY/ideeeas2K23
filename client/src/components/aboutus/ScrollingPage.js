@@ -3,6 +3,7 @@ import '../aboutus/ScrollingPage.css';
 import About from '../../pages/about'
 import First from '../../components/aboutus/First'
 import Header from '../header/Header';
+import Footer from '../footer/footer.jsx'
 
 class ScrollingPage extends React.Component {
   render() {
@@ -15,7 +16,9 @@ class ScrollingPage extends React.Component {
         <div className="reveal-section">
            <About />
         </div>
+        <Footer />
       </div>
+      
     );
   }
 }
