@@ -237,6 +237,9 @@ nav{
         align-items: center;
         width: 20%;
     }
+    .header-list{
+        width: 35%;
+    }
 }
 
 @media only screen  and (max-device-width: 768px)and (min-device-width: 481px)  {

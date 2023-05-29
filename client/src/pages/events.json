@@ -50,9 +50,9 @@
         "entryfee":"50",
         "brochure":"https://drive.google.com/file/d/1IuBZkxWK2OP1IRbrozmkzBHYarTO8xqt/view?usp=share_link"
     },
-    "planopitch": {
+    "pitchothon": {
         "id": 5,
-        "name": " Plan-o-pitch",
+        "name": " pitchothon",
         "image": "ideeeas2K23/client/src/assets/images/posters/webify.webp",
         "poster": "Pitch-O-Thon_ideeeas2k23.png",
         "description": "Pitchathon is the newest addition to IdEEEas-2k23 which focuses on giving a platform to all the brilliant ideas which can be converted into a startup in the future. This supports both technical and non-technical business proposals. It is open to students from all the engineering colleges and students pursuing MBA. The best idea will be selected based on how the team presents the idea from the perspective of business which includes finances, future stacks, growth, market demand, marketing, and many more.",

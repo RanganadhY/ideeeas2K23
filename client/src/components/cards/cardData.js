@@ -10,7 +10,7 @@ import trademarkImg from '../../assets/images/events/trademark.png'
 import trivieeeaImg from '../../assets/images/events/trivieeea.png'
 import ideeeasIdolImg from '../../assets/images/events/ideeeasIdol.png'
 import roboticsImg from '../../assets/images/events/robotics.png'
-
+import pitchathonImg from '../../assets/images/events/pitchothonnew.png'
 const cardData = [
     {
         name: "aavishkar",
@@ -36,10 +36,10 @@ const cardData = [
         desc: 'Personality Test'
     },
     {
-        name: "planopitch",
+        name: "pitchothon",
 
-        img: planoPitchImg,
-        desc: 'Ideation Event'
+        img: pitchathonImg,
+        desc: 'Ideas pitching Event'
     },
     {
         name: "photographia",

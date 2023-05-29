@@ -21,7 +21,7 @@ let timeLineElements = [
         id:4,
         date:"23-06-2023",
         title:"IdEEEas 2k23 is here!",
-        desc:"The most awaited IDEEEAS 2k22 is here. Hope you have a wonderful learning, Best wishes from Team IEEE SIT SB."
+        desc:"The most awaited IDEEEAS 2k23 is here. Hope you have a wonderful learning, Best wishes from Team IEEE SIT SB."
     }
 
 

@@ -127,9 +127,9 @@
     align-items: center;
 
 }
-.eve-details-desc-text .event-label{
+/* .eve-details-desc-text .event-label{
 
-}
+} */
 
 .eve-details-desc-text .event-label p{
     font-size: 2.2rem;
@@ -407,6 +407,7 @@
         padding-left: 1rem;
     }
 .eve-register-btn{
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -420,6 +421,7 @@
 }
 
 .eve-register-btn button{
+    width: 50%;
     padding: 0.5rem 1rem !important;
     cursor: pointer;
     font-size: 1.3rem;
@@ -455,6 +457,10 @@
     font-size: 2rem;
 }
 
+.eve-temp-name-subContainer{
+    width: 50%;   
+
+}
 }
 
 @media only screen  and (max-device-width: 768px)and (min-device-width: 481px) {
@@ -544,16 +550,13 @@
     }
     
 
-.eve-register-btn{
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: space-evenly;
-    align-items: center;
-    /* height: 10vh; */
-    width: 100%;
-    /* width: 100%; */
-
-}
+    .eve-register-btn button{
+        width: 50%;
+        padding: 0.5rem 1rem !important;
+        cursor: pointer;
+        font-size: 1.3rem;
+        margin: 1rem;
+    }
 
 .eve-register-btn button{
     padding: 0.5rem !important;
@@ -594,5 +597,8 @@
 .eve-temp-name h2{
     font-size: 2rem;
 }
+.eve-temp-name-subContainer{
+    width: 50%;   
 
+}
 }

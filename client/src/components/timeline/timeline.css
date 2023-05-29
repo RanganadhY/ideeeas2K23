@@ -159,3 +159,11 @@
     font-size: 1.8rem;
     letter-spacing: 0.2rem;
 }
+
+@media only screen and (max-width: 480px) and (min-width: 320px){
+    .vertical-timeline-element-subtitle{
+        color: rgb(189, 110, 235);
+        height: 8rem;
+    
+    }
+}
