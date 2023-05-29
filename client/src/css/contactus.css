@@ -141,3 +141,11 @@
         margin-right: 120px;
     }
 }
+@media (min-width: 900px){
+    .dev-deets {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+    }
+}

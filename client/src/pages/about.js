@@ -1,8 +1,8 @@
 import React from 'react';
 import '../css/about.css';
-import img1 from "../assets/images/aboutuss/img1.webp"
-import img2 from "../assets/images/aboutuss/img2.jpg"
-import img3 from "../assets/images/aboutuss/img3.JPG"
+import img4 from "../assets/images/aboutuss/img4.jpeg"
+import img5 from "../assets/images/aboutuss/img5.jpeg"
+import img6 from "../assets/images/aboutuss/img6.jpeg"
 
 const About = () => {
   
@@ -16,9 +16,9 @@ const About = () => {
         </div>
         <div className='cards2'>
           
-               <img alt="us" src={img1} id="img1"></img>
-               <img alt="us" src={img2} id="img2"></img>
-               <img alt="us" src={img3} id="img3"></img>
+               <img alt="us" src={img4} id="img4"></img>
+               <img alt="us" src={img5} id="img5"></img>
+               <img alt="us" src={img6} id="img6"></img>
           
         </div>
       </div>
