@@ -9,7 +9,7 @@ let timeLineElements = [
         id:2,
         date:"21-06-2023",
         title:"Last Day for Abstract Submissions",
-        desc:"The abstract submission for the events Presentario, Aavishkar, Trademark and Ideathon will be closed after the above date. ON-SPOT REGISTRATION for other events is available."
+        desc:"The abstract submission for the events  Aavishkar, Pitchothon and Technocon will be closed after the above date. ON-SPOT REGISTRATION for other events is available."
     },
     {
         id:3,
