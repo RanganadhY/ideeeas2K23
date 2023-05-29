@@ -4,8 +4,9 @@ import Animation from '../components/animation/animation'
 import Tilt from 'react-parallax-tilt';
 import '../css/eventsPage.css';
 // import events from '../../public/eventPosters/'
-import Header from '../../src/components/header/header';
+
 import { IoArrowRedoCircle } from 'react-icons/io5';
+import Header from '../components/header/Header';
 // import web from '../assets/images/posters/webify.webp'
 // import webifyPoster from '../assets/images/posters/webify copy 2.webp'
 import details from './events.json'
