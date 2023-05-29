@@ -72,7 +72,7 @@ function LandingPage() {
                 </div>
                 <br></br>
                 <div className='home-events-title'>
-                    OUR EVENTS
+                    <p>OUR EVENTS</p>
                 </div>
                 <Fade bottom distance="20%" duration={1000} >
 
@@ -81,7 +81,7 @@ function LandingPage() {
                     </div>
                 </Fade>
                 <div data-aos="fade-up" className='home-timeline'>
-                    <span> IDEEEAS 2K23 SCHEDULE</span>
+                    <span className='ideeas-timeline-header'> IDEEEAS 2K23 SCHEDULE</span>
                     <Timeline />
 
                 </div>

@@ -6,6 +6,8 @@ import './header.css'
 import sitLogo from '../../assets/images/icons/sit.png'
 import wieLogo from '../../assets/images/icons/wie.png'
 import ieeeLogo from '../../assets/images/icons/IEEE.webp'
+import ieeEmbc from "../../assets/images/icons/IEEE-EMBS-BC-logo-white.png"
+import ieePhotonics from "../../assets/images/icons/Photonics.png"
 // import { faHome } from "@fortawesome/free-solid-svg-icons";
 // import { FontAwesomeIcon } from "react-fontawesome";
 import { Fabars } from 'react-icons/fa'
@@ -25,7 +27,8 @@ function Header() {
           <div className='header-icon'> <img src={sitLogo} /></div>
           <div className='header-icon'> <img src={ieeeLogo} /></div>
           <div className='header-icon'> <img src={wieLogo} /></div>
-
+          <div className='header-icon'> <img src={ieeEmbc} /></div>
+          <div className='header-icon'> <img src={ieePhotonics} /></div>
 
 
           {/* <FontAwesomeIcon icon="fa-solid fa-bars" /> */}
