@@ -17,17 +17,30 @@
 }
 
 .contact-icons{
+
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content:space-evenly;
 }
+
+/* .contact-icons .con-icons i{
+    color: ivory;
+    height: 4.5vh;
+width: 4.5vh;
+} */
 .con-icons{
 /* border: 1px red solid; */
 margin: 1vh;
-height: 4.5vh;
+height: 4.55vh;
 width: 4.5vh;
 transition: all .3s ease;
+/* mix-blend-mode:color-dodge; */
+}
+
+img{
+    width: 4.5vh;
+    height: 4.5vh;
 }
 .con-icons:hover{
     transform: scale(1.2);
