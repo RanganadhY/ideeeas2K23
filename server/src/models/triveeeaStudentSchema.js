@@ -8,20 +8,21 @@ const TStudentData = new mongoose.Schema({
     },
     usn:{
         type:String,
-        required:true
+        default:null        
     },
     name:{
         type:String,
-        required:true
+        default:null        
     },
     answerSelected:{
 
         answer:{ 
             type:Array,
-            required:true},
+            default:null        
+        },
         timeTaken:{
             type:Double,
-            required:true
+            default:null        
         }
         
     }

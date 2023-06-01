@@ -16,6 +16,8 @@ const data = require('./routes/dataRoute')
 app.use(cors());
 app.use('/api/data-routes', data);
 
+const uniqueId = require('./routes/triveeeaRoute')
+app.use('/api/triveeeaRoute', uniqueId);
 app.listen(port, () => {
     console.log(`listening to port ${port}`)
 })

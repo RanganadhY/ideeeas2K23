@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
 
 const TadminData = new mongoose.Schema({
-    questionsA:{
-        type: Array,
+    questions:{
+        type: int,
         required: true
     },
-    answersA:{
+    answers:{
         type:Array,
         required:true
     }
