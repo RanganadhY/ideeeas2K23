@@ -11,10 +11,10 @@ app.use(express.json());
 app.use(cors());
 
 const triveeeaRoutes = require("./routes/triveeearoutes")
-
+const photographiaRoutes = require('./routes/photographiaroutes')
 
 app.use("/api/triveeea-routes/",triveeeaRoutes)
-
+app.use("/api/photographia-routes/",photographiaRoutes)
 
 const port = process.env.PORT
 

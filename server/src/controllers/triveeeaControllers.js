@@ -1,21 +1,34 @@
 const triveeeaStudentSchema = require('../models/triveeeaStudentModel')
 const triveeeaAdminSchema = require('../models/triveeeaAdminModel')
+const photographiaStudentSchema = require('../models/photographiaStudentModel')
+const photographiaAdminSchema = require('../models/photographiaAdminModel')
 const generateUniqueIds = async (req, res) => {
 
     try {
-        const { NoOfUniqueIds } = req.body;
+        const NoOfUniqueIds  = req.body.NoOfUniqueIds;
+        const EventName = req.body.EventName;
         NoOfUIds = {NoOfUniqueIds:NoOfUniqueIds}
         console.log(NoOfUIds)
-        const result = await triveeeaAdminSchema.create(NoOfUIds)
+
+        if(EventName === "triveeea")
+            result = await triveeeaAdminSchema.create(NoOfUIds) 
+
+        // {EventName === "triveeea" ? 
+        //  result = await triveeeaAdminSchema.create(NoOfUIds) :
+        //  result = await photographiaAdminSchema.create(NoOfUIds)
+        // }
         const uniqueIds = [];
         for (i = 0; i < NoOfUniqueIds; i++) {
             uniqueIds[i] = { "uniqueId": (Math.floor(Math.random() * (999999 - 100000 + 1)) + 100000) }
         }
         //uniqueId is the field name in schema
         console.log(uniqueIds)
-        const response = await triveeeaStudentSchema.insertMany(uniqueIds)
+        {EventName === "triveeea" ? 
+             response = await triveeeaStudentSchema.insertMany(uniqueIds) :
+             response = await photographiaStudentSchema.insertMany(uniqueIds)
+        }
         console.log(response)
-        return res.status(200).json({"noOfUniqueIdsGenerated":result, "uniqueIdsGenerated": response })
+        return res.status(200).json({ "uniqueIdsGenerated": response })
 
     }
 
