@@ -11,7 +11,8 @@
         "location":" IEM 101/102",
         "entryfee":"200",
         "brochure":"https://drive.google.com/file/d/1Q4VdyxEmQQEX3yYguICYU1TDxU61F3IG/view?usp=share_link",
-        "template":"https://docs.google.com/document/d/1DXbZwKoKe2xZL2fWXizqH-ntP4_GRjlwFr0cGTBDSZs/edit"
+        "template":"https://docs.google.com/document/d/1DXbZwKoKe2xZL2fWXizqH-ntP4_GRjlwFr0cGTBDSZs/edit",
+        "ydlink":"https://www.yepdesk.com/embed/aavishkar2k23"
 
     },
     "blitz": {
@@ -24,7 +25,8 @@
         "Eligibility" : "Students of all semesters and all branches are eligible.",
         "location":" GJCB classrooms(3-4) ",
         "entryfee":"50",
-        "brochure":"https://drive.google.com/file/d/1nRiehHV_MEeZuTTxJDwwD_oUQEl9foey/view?usp=share_link"
+        "brochure":"https://drive.google.com/file/d/1nRiehHV_MEeZuTTxJDwwD_oUQEl9foey/view?usp=share_link",
+        "ydlink":"https://www.yepdesk.com/embed/blitz2k23"
     },
     "cnario": {
         "id": 3,
@@ -36,7 +38,8 @@
         "Eligibility" : "Students of all semesters and all branches are eligible.",
         "location":" CS/IS Lab",
         "entryfee":" 100",
-        "brochure":"https://drive.google.com/file/d/18gSPnUkNqszNyHFaoz-vSra0uvTTnTBr/view?usp=share_link"
+        "brochure":"https://drive.google.com/file/d/18gSPnUkNqszNyHFaoz-vSra0uvTTnTBr/view?usp=share_link",
+        "ydlink":"https://www.yepdesk.com/embed/cnario2k23"
     },
     "ideeeasidol": {
         "id": 4,
@@ -48,7 +51,8 @@
         "Eligibility" : "Open to all branches of all years.",
         "location":"Media center",
         "entryfee":"50",
-        "brochure":"https://drive.google.com/file/d/1IuBZkxWK2OP1IRbrozmkzBHYarTO8xqt/view?usp=share_link"
+        "brochure":"https://drive.google.com/file/d/1IuBZkxWK2OP1IRbrozmkzBHYarTO8xqt/view?usp=share_link",
+        "ydlink":"https://www.yepdesk.com/embed/ideeeasidol2k23"
     },
     "pitchothon": {
         "id": 5,
@@ -62,7 +66,8 @@
         "location":"Biotech Seminar Hall",
         "entryfee":"200",
         "brochure":"https://drive.google.com/file/d/18i_3AX6WNVyt9VFR_z300W4c-aOI_M4T/view?usp=share_link",
-        "template":"https://docs.google.com/document/d/1ZDTrAT4MpE7e1P_gOlX3LNJ5XxqbGMi5/edit?usp=drive_link&ouid=113786761310784899727&rtpof=true&sd=true"
+        "template":"https://docs.google.com/document/d/1ZDTrAT4MpE7e1P_gOlX3LNJ5XxqbGMi5/edit?usp=drive_link&ouid=113786761310784899727&rtpof=true&sd=true",
+        "ydlink":"https://www.yepdesk.com/embed/pitch-o-thon2k23"
 
     },
     "photographia": {
@@ -75,7 +80,9 @@
         "Eligibility" : "Open to all branches of all years.",
         "location":"GJCB Seminar Hall",
         "entryfee":"50",
-        "brochure":"https://drive.google.com/file/d/1B3YJT2sC6aFMnr8hoNS6f1jv-Zw9bmrT/view?usp=share_link"
+        "brochure":"https://drive.google.com/file/d/1B3YJT2sC6aFMnr8hoNS6f1jv-Zw9bmrT/view?usp=share_link",
+        "ydlink":"https://www.yepdesk.com/embed/photographia2k23"
+
     },
     "rectifier": {
         "id": 7,
@@ -87,19 +94,24 @@
         "Eligibility" : "Open to all branches of all years.",
         "location":" ECL 301+ EC Lab",
         "entryfee":"100",
-        "brochure":"https://drive.google.com/file/d/13yMda2Esq3Xf9Cr1ugIDUortO0piHnSD/view?usp=drive_link"
+        "brochure":"https://drive.google.com/file/d/13yMda2Esq3Xf9Cr1ugIDUortO0piHnSD/view?usp=drive_link",
+        "ydlink":"https://www.yepdesk.com/embed/rectifier2k23"
     },
     "robotics": {
         "id": 8,
         "name": "Robotics",
         "image": "ideeeas2K23/client/src/assets/images/posters/webify.webp",
-        "poster": "ROBOTICS_ideeeas2k23.png",
-        "description": "Robotics has been a star attraction of IdEEEas for a long time, with people from all over India coming in with their creations for an event where nothing is impossible. The event is itself divided into three events viz. Autonomous Bot Competition (i.e. Line follower) and Manual Bot Competition (Roborace and Crossroads). The exhilarating atmosphere is enough to send a shiver down one's spine!",
+        "poster": "Robotics_ideeeas2023.png",
+        "description": "Robotics has been a star attraction of IdEEEas for a long time, with people from all over India coming in with their creations for an event where nothing is impossible. The event itself divided into four events viz. Chakravyuh (i.e Line following robot), Roborace, Vega and Ranrang. The exhilarating atmosphere is enough to send a shiver down one's spine!",
         "teamsize":" 2 to 4",
         "Eligibility" : "Open to all branches of all years.",
         "location":"  Indoor and outdoor stadium",
         "entryfee":"200 per team ( for group events ) 50 for individual events",
-        "brochure":"https://drive.google.com/file/d/1J0uHOlJtH6Pdy6lE6bIQtPLe6CsgdO5y/view?usp=share_link"
+        "brochure":"https://drive.google.com/file/d/1ks9NOzo1NhWLeYTvnCixkxbAy-tXUwnj/view?usp=drive_link",
+        "ydlink1":"https://www.yepdesk.com/embed/roboticsranarang2k23",
+        "ydlink2":"https://www.yepdesk.com/embed/roboticschakravyuh2k23",
+        "ydlink3":"https://www.yepdesk.com/embed/roboticsroborace2k23",
+        "ydlink4":"https://www.yepdesk.com/embed/robotics-fast-n-furious2k23"
     },
     "technocon": {
         "id": 9,
@@ -114,7 +126,8 @@
         "entryfee":"100",
         "brochure":"https://drive.google.com/file/d/1bEfVrmYi5fE38K1L1zRAQLkeBNRHeAcq/view?usp=share_link",
         "template":"https://docs.google.com/document/d/1ErVWusPrD08DLyMKB0X2vRoZ3kDTiFRT/edit?usp=drive_link&ouid=113786761310784899727&rtpof=true&sd=true",
-        "problemDescLink":"https://drive.google.com/file/d/1PMABbfxPzHNiGEwljJesQLwcS7EVECDd/view?usp=drive_link"
+        "problemDescLink":"https://drive.google.com/file/d/1PMABbfxPzHNiGEwljJesQLwcS7EVECDd/view?usp=drive_link",
+        "ydlink":"https://www.yepdesk.com/embed/technocon2k23"
 
     },
     "trademark": {
@@ -127,7 +140,8 @@
         "Eligibility" : "Open to all branches of all years.",
         "location":"Online event",
         "entryfee":"50",
-        "brochure":"https://drive.google.com/file/d/16aRWHycTyjtjlvc8vEKhIatxj_3e-H8f/view?usp=share_link"
+        "brochure":"https://drive.google.com/file/d/16aRWHycTyjtjlvc8vEKhIatxj_3e-H8f/view?usp=share_link",
+        "ydlink":"https://www.yepdesk.com/embed/trademark2k23"
     },
     "thetriveeevia": {
         "id": 11,
@@ -139,7 +153,8 @@
         "Eligibility" : " Students of all semesters and all branches can participate.",
         "location":"EEE Seminar Hall/ECL/TEL 101",
         "entryfee":" 100",
-        "brochure":"https://drive.google.com/file/d/13ownQpgqkVrqEGwyqSA2ENwuFjJi-Fg2/view?usp=share_link"
+        "brochure":"https://drive.google.com/file/d/13ownQpgqkVrqEGwyqSA2ENwuFjJi-Fg2/view?usp=share_link",
+        "ydlink":"https://www.yepdesk.com/embed/the-trieeevia2k23"
     },
     "webify": {
         "id": 12,
@@ -151,6 +166,7 @@
         "Eligibility" : "Open to all branches of all years",
         "location":" ECL 401",
         "entryfee":"100",
-        "brochure":"https://drive.google.com/file/d/10eX3CyXVhHoHLlzrv2mvGWrHWZK3Psxw/view?usp=share_link"
+        "brochure":"https://drive.google.com/file/d/10eX3CyXVhHoHLlzrv2mvGWrHWZK3Psxw/view?usp=share_link",
+        "ydlink":"https://www.yepdesk.com/embed/webify2k23"
     }
 }

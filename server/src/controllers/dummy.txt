@@ -1,0 +1,19 @@
+routes.put('/insert-no-of-questions/:id',triveeeaControllers.updateNoOfQues)
+
+const updateNoOfQues = async(req,res) => {
+    try{
+        const {NoOfQues} = req.body
+        noOfQuestions = {questions:NoOfQues}
+
+        console.log(noOfQuestions)
+
+        const result = await triveeeaAdminSchema.updateOne(noOfQuestions) 
+        res.status(200).json({"noOfQuestions":result})
+    }   
+    catch(err){
+        console.log(err)
+        res.status(500).json({"message":"Something went wrong with updating no of questions"})
+    } 
+}
+
+module.exports.updateNoOfQues = updateNoOfQues;

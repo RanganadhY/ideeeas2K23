@@ -1,5 +1,5 @@
-const { Double } = require('mongodb');
 const mongoose = require('mongoose')
+const Double = mongoose.Schema.Types.Double;
 
 const TStudentData = new mongoose.Schema({
     uniqueId:{
@@ -8,25 +8,27 @@ const TStudentData = new mongoose.Schema({
     },
     usn:{
         type:String,
-        default:null        
+        default:null       
     },
     name:{
         type:String,
-        default:null        
+        default:null       
     },
     answerSelected:{
-
         answer:{ 
             type:Array,
             default:null        
         },
         timeTaken:{
-            type:Double,
+            type:Number,
             default:null        
-        }
-        
+        }        
+    },
+    hasSubmitted:{
+        type:Boolean,
+        default:false
     }
 },{timestamps:true})
 
-const Tstudent = mongoose.model('Tstudent', TStudentData);
-module.export = Tstudent;
+
+module.exports = mongoose.model('Tstudent', TStudentData);

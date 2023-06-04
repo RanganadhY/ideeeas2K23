@@ -32,6 +32,10 @@ function EventsPage(props) {
 
     window.open(link, "_blank")
   }
+
+  const handleRegister = async(ydlink) => {
+    window.open(ydlink , "_blank")
+  }
   return (
 
     <>
@@ -116,7 +120,15 @@ function EventsPage(props) {
         
         <div className='eve-btn-container' >
           <div className='eve-register-btn'>
-            <button className='event-button' >REGISTER</button>
+            {eventDetails.id === 8 ?  
+            <div className="eve-register-robotics">
+            (<button className='event-button' onClick={() => handleRegister(eventDetails.ydlink1)}>REGISTER FOR RANARANG</button>
+            <button className='event-button' onClick={() => handleRegister(eventDetails.ydlink2)}>REGISTER FOR CHAKRAVYUH</button>
+            <button className='event-button' onClick={() => handleRegister(eventDetails.ydlink3)}>REGISTER FOR ROBORACE</button>
+            <button className='event-button' onClick={() => handleRegister(eventDetails.ydlink4)}>REGISTER FOR VEGA</button>
+            ) 
+            </div>:
+            <button className='event-button' onClick={() => handleRegister(eventDetails.ydlink)}>REGISTER</button>}
             <button className='event-button' onClick={() => handleDownloadBrochure(eventDetails.brochure)}>DOWNLOAD BROCHURE</button>
             {eventDetails.link && <button className='event-button'>UPLOAD FILE</button>}
           </div>
