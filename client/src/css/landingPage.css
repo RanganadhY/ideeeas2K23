@@ -146,7 +146,7 @@
 }
 .home-events-title p::after{
   content:"";
-  width: 150px;
+  width: 160px;
   height: 3px;
   background-color: #C194E7;
   position: absolute;
@@ -158,25 +158,45 @@
 }
 @keyframes sliding {
   0%{transform: translateX(0%);}
+  2.5%{transform: translateX(2.5%);}
   5%{transform: translateX(5%);}
+  7.5%{transform: translateX(7.5%);}
   10%{transform: translateX(10%);}
+  12.5%{transform: translateX(12.5%);}
   15%{transform: translateX(15%);}
+  17.5%{transform: translateX(17.5%);}
   20%{transform: translateX(20%);}
+  22.5%{transform: translateX(22.5%);}
   25%{transform: translateX(25%);}
+  27.5%{transform: translateX(27.5%);}
   30%{transform: translateX(30%);}
+  32.5%{transform: translateX(32.5%);}
   35%{transform: translateX(35%);}
+  37.5%{transform: translateX(37.5%);}
   40%{transform: translateX(40%);}
+  42.5%{transform: translateX(42.5%);}
   45%{transform: translateX(45%);}
+  47.5%{transform: translateX(47.5%);}
   50%{transform: translateX(50%);}
+  52.5%{transform: translateX(52.5%);}
   55%{transform: translateX(55%);}
+  57.5%{transform: translateX(57.5%);}
   60%{transform: translateX(60%);}
+  62.5%{transform: translateX(62.5%);}
   65%{transform: translateX(65%);}
+  67.5%{transform: translateX(67.5%);}
   70%{transform: translateX(70%);}
+  72.5%{transform: translateX(72.5%);}
   75%{transform: translateX(75%);}
+  77.5%{transform: translateX(77.5%);}
   80%{transform: translateX(80%);}
+  82.5%{transform: translateX(82.5%);}
   85%{transform: translateX(85%);}
+  87.5%{transform: translateX(87.5%);}
   90%{transform: translateX(90%);}
+  92.5%{transform: translateX(92.5%);}
   95%{transform: translateX(95%);}
+  97.5%{transform: translateX(97.5%);}
   100%{transform: translateX(100%);}
 }
 .home-event-cards{

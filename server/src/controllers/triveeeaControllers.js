@@ -42,13 +42,6 @@ const generateUniqueIds = async (req, res) => {
 const getAdminData = async (req, res) => {
     try {
         const NoOfQues = req.body.NoOfQues
-        // noOfQuestions = {questions:NoOfQues}
-        // console.log(noOfQuestions)
-
-        // const NoOfUIds = req.body.NoOfUIds
-        // noOfUniqueIds = {NoOfUniqueIds:NoOfUIds}
-        // console.log(noOfUniqueIds)
-
         const answers = []
         for (i = 0; i < NoOfQues; i++)
             answers[i] = req.body.answers[i]
@@ -60,7 +53,7 @@ const getAdminData = async (req, res) => {
         console.log(user)
 
         const result = await triveeeaAdminSchema.updateOne(user)
-        res.status(500).json({ "adminDataUpdated": result })
+        res.status(200).json({ "adminDataUpdated": result })
     }
 
     catch (err) {
@@ -70,6 +63,22 @@ const getAdminData = async (req, res) => {
 }
 
 
+const validateUniqueIds = async(req,res) => {
+    try{
+        const userUniqueId = req.body
+        const result = await triveeeaStudentSchema.findOne(userUniqueId)? true: false
+        console.log(result)
+        res.status(200).json({"userWithUniqueIdExists":result})
+    }
+    catch(err){
+        console.log(err)
+        res.status(500).json({"message":"something went wrong with finding the unique id"})
+    }
+   
+}
+
+
 
 module.exports.getAdminData = getAdminData;
 module.exports.generateUniqueIds = generateUniqueIds;
+module.exports.validateUniqueIds = validateUniqueIds;

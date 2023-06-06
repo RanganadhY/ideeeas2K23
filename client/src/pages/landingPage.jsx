@@ -3,10 +3,10 @@ import "../css/landingPage.css"
 import Header from '../components/header/Header';
 import Hero from "../assets/images/ezgif.com-video-to-gif.gif"
 import Tilt from 'react-parallax-tilt';
+import Slider from '../components/slider/slider';
 import Cards from '../components/cards/cards';
 import cardData from '../components/cards/cardData';
 import Footer from '../components/footer/footer'
-// import { GlitchAnimation } from "react-glitch-animation";
 import Fade from 'react-reveal/Fade';
 import Aos from 'aos'
 import 'aos/dist/aos.css'
@@ -71,6 +71,9 @@ function LandingPage() {
                     </div>
                 </div>
                 <br></br>
+                <div className='home-sponserers'>
+                        <Slider/>
+                </div>
                 <div className='home-events-title'>
                     <p>OUR EVENTS</p>
                 </div>
