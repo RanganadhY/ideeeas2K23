@@ -7,8 +7,8 @@ import computersociety from "../../assets/images/sponserers/computer society of 
 import nandini from "../../assets/images/sponserers/nandini.png";
 import vishwasJewelers from "../../assets/images/sponserers/vishwas jewellers.png";
 
-const colors = [essence,computersociety,cocosland, nandini,icafe,vishwasJewelers];
-const links = ["https://csiindia.org/","http://tumul.coop/","https://essencethebakelab.in/","https://icafe22.business.site/","https://tinyurl.com/mprm2s6a"]
+const colors = [essence,computersociety, nandini,icafe,vishwasJewelers,,cocosland];
+const links = ["https://essencethebakelab.in/","https://csiindia.org/","http://tumul.coop/","https://icafe22.business.site/","https://tinyurl.com/mprm2s6a"]
 // const titles = ["Our Title Sponsor","Our King Sponsor","Our Lord Sponsor", "Our Knight Sponsor","Our Knight Sponsor","Our Sponsor","Our Knight Sponsor"]
 const ids=["computersociety","nandini","essence","icafe","vishwasjewelers"]
 const delay = 3000;
