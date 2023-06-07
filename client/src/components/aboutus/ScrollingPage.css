@@ -1,43 +1,561 @@
-body {
+*{
   background-color: #0D051B;
-  overflow-x: hidden;
 }
-
-.scrolling-page {
+.firstpage{
+  height:100vh;
+}
+.mainpage{
   height: 100vh;
+  width: 100%;
+}
+.aboutus{
+  width: 100%;
+  text-align: center;
+  color: rgb(138, 11, 132);
+}
+.aboutus h1{
+  font-size: 6rem;
+}
+.twosections{
+  
+height: 75vh;
+width: 100%;
+display: flex;
+flex-direction: row;
+margin-top: 10rem;
+}
+.textcontents h1{
+  color:rgb(138, 11, 132) ;
+  margin-left: 5rem;
+  margin-bottom: 2rem;
+
+}
+/* underline animation*/
+.textcontents h1 {
+  position: relative;
 }
 
-.full-screen-section {
-  height: 100vh;
-  width: 100vw;
+.textcontents h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30%;
+  height: 2px;
+  background-color: blue;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
 }
 
-.reveal-section {
-  height: 80vh;
-  width: 100vw;
-  background-color: #00162b;
+.textcontents h1:hover::after {
+  transform: scaleX(1);
 }
-@media (max-width: 768px) {
-  .full-screen-section,
-  .reveal-section {
-    height: auto;
+
+.textcontents p{
+  color: aliceblue;
+  text-align: justify;
+  margin-left: 5rem;
+  font-size: 250%;
+}
+.textcontents{
+  width: 60%;
+  margin-right: 2rem;
+}
+.cards{
+  width: 40%;
+}
+#img1,#img2,#img3{
+  width: 45%;
+  height: 45%;
+}
+.cards {
+  width: 60%;
+  position: relative;
+}
+
+.cards img {
+  transition: transform 0.4s ease;
+  position: absolute;
+}
+
+.cards img:hover {
+  transform: scale(1.2);
+  z-index: 2;
+  border: 5px groove green;
+}
+
+#img3 {
+  
+  top: 30%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.4s ease;
+}
+
+#img2 {
+  
+  top: 45%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.4s ease;
+}
+
+#img1 {
+
+  top: 65%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.4s ease;
+}
+
+/* css for our college*/
+
+.secondpage{
+  height: 70vh;
+  width: 100%;
+}
+.twosections2{
+ 
+  display: flex;
+  flex-direction: row;
+  height: 70vh;
+}
+.textcontents2{
+  height: 70vh;
+  width: 50%;
+}
+.cards2{
+  width: 50%;
+  height: 70vh;
+  position: relative;
+}
+.textcontents2 h1{
+  color: rgb(138, 11, 132);
+  margin-left: 4rem;
+  margin-bottom: 2rem;
+}
+.textcontents2 p{
+  color: aliceblue;
+  margin-left: 4rem;
+  font-size: 250%;
+  text-align: justify;
+  margin-top: 10rem;
+}
+.cards2 img {
+  transition: transform 0.4s ease;
+  position: absolute;
+}
+
+.cards2 img:hover {
+  transform: scale(1.2);
+  z-index: 2;
+  border: 5px groove green;
+}
+
+#img4 {
+  
+  top: 30%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.4s ease;
+}
+
+#img5 {
+  
+  top: 45%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.4s ease;
+}
+
+#img6 {
+
+  top: 65%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.4s ease;
+}
+#img4,#img5,#img6{
+  width: 35rem;
+  height: 35rem;
+}
+/* underline animation*/
+.textcontents2 h1 {
+  position: relative;
+}
+
+.textcontents2 h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30%;
+  height: 2px;
+  background-color: blue;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.textcontents2 h1:hover::after {
+  transform: scaleX(1);
+}
+
+
+/*Responsive stuff*/
+
+@media only screen and (max-width: 480px) {
+  
+  .headd{
+    width: 130%;
+  }
+  .mainpage{
+    height: 200vh;
   }
   
-  .reveal-section {
+  
+  .twosections {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    margin-left: 2rem;
+  }
+  .twosections h1{
+    align-items: center;
+    margin-left: 30%;
+    margin-right: 10%;
+  }
+
+  .textcontents,
+  .cards {
+    width: 100%;
+    margin: 2rem;
+  }
+
+  .textcontents p {
+    font-size: 250%;
+    margin-left: 6rem;
+    width: 100%;
+  }
+
+  .textcontents h1 {
+  
+    margin-left: 14rem;
+  }
+  
+  .aboutus h1{
+    text-align: center;
+    margin-left: 10rem;
+  }
+
+  #img1,
+  #img2,
+  #img3 {
+    display: none;
+  }
+
+  #img3 {
+    display: block;
+    width: 100%;
     height: auto;
-    min-height: 80vh;
+    margin-top: 30%;
+    margin-left: 20%;
+    margin-right: 30%;
+  }
+  /*for second page*/
+  
+  .secondpage{
+    margin-bottom: 35rem;
+    margin-top: 180%;
+  }
+  
+  .twosections2 {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    margin-left: 2rem;
+  }
+  .twosections2 h1{
+    align-items: center;
+    margin-left: 20%;
+    margin-right: 10%;
+  }
+
+  .textcontents2,
+  .cards2 {
+    width: 100%;
+    margin: 2rem;
+  }
+
+  .textcontents2 p {
+    font-size: 250%;
+    margin-left: 6rem;
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  .textcontents2 h1 {
+  
+    margin-left: 12rem;
+  }
+  #img4,
+  #img5,
+  #img6 {
+    display: none;
+  }
+
+  #img4 {
+    display: block;
+    width: 100%;
+    height: 40vh;
+    margin-top: 20rem;
+    margin-left: 25%;
+    margin-right: 30%;
+    margin-bottom: 10%;
+  }
+  .footy{
+    width: 130%;
+    margin-top: 10%;
   }
 }
 
-/* Media query for screens with maximum width 480px */
-@media (max-width: 480px) {
-  .full-screen-section,
-  .reveal-section {
-    height: auto;
+@media only screen and (max-width: 840px) and (min-width: 481px){
+  .headd{
+    width: 130%;
+  }
+  .mainpage{
+    height: 200vh;
+  }
+  .firstpage{
+    margin-bottom: 90rem;
   }
   
-  .reveal-section {
-    height: auto;
-    min-height: 60vh;
+  .twosections {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    margin-left: 2rem;
   }
+  .twosections h1{
+    align-items: center;
+    margin-left: 30%;
+    margin-right: 10%;
+    font-size: 450%;
+  }
+
+  .textcontents,
+  .cards {
+    width: 100%;
+    margin: 2rem;
+  }
+
+  .textcontents p {
+    font-size: 300%;
+    margin-left: 10%;
+    width: 100%;
+  }
+
+  .textcontents h1 {
+  
+    margin-left: 50%;
+  }
+  
+  .aboutus h1{
+    text-align: center;
+    margin-left: 35%;
+  }
+
+  #img1,
+  #img2,
+  #img3 {
+    display: none;
+  }
+
+  #img3 {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 35%;
+    margin-left: 20%;
+    margin-right: 30%;
+  }
+  /*for second page*/
+  
+  .secondpage{
+    margin-bottom: 60rem;
+    margin-top: 90%;
+  }
+  
+  .twosections2 {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    margin-left: 2rem;
+  }
+  .twosections2 h1{
+    align-items: center;
+    
+    margin-left: 50%;
+    margin-right: 10%;
+  }
+
+  .textcontents2,
+  .cards2 {
+    width: 100%;
+    margin: 2rem;
+  }
+
+  .textcontents2 p {
+    font-size: 300%;
+    margin-left: 10%;
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  .textcontents2 h1 {
+  
+    margin-left: 50%;
+  }
+  #img4,
+  #img5,
+  #img6 {
+    display: none;
+  }
+
+  #img4 {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 25%;
+    margin-left: 20%;
+    margin-right: 30%;
+    
+  }
+  .footy{
+    width: 130%;
+    margin-top: 10%;
+  }
+
+}
+
+
+
+@media only screen and (max-width: 1105px) and (min-width: 841px){
+  .headd{
+    width: 130%;
+  }
+  .mainpage{
+    height: 250vh;
+  }
+  .firstpage{
+    margin-bottom: 30%;
+  }
+  
+  .twosections {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    margin-left: 2rem;
+  }
+  .twosections h1{
+    align-items: center;
+    margin-left: 30%;
+    margin-right: 10%;
+    font-size: 450%;
+  }
+
+  .textcontents,
+  .cards {
+    width: 100%;
+    margin: 2rem;
+  }
+
+  .textcontents p {
+    font-size: 300%;
+    margin-left: 10%;
+    width: 100%;
+  }
+
+  .textcontents h1 {
+  
+    margin-left: 50%;
+  }
+  
+  .aboutus h1{
+    text-align: center;
+    margin-left: 35%;
+  }
+
+  #img1,
+  #img2,
+  #img3 {
+    display: none;
+  }
+
+  #img3 {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 35%;
+    margin-left: 20%;
+    margin-right: 30%;
+  }
+  /*for second page*/
+  
+  .secondpage{
+    margin-bottom: 35rem;
+    margin-top: 70%;
+  }
+  
+  .twosections2 {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    margin-left: 2rem;
+  }
+  .twosections2 h1{
+    align-items: center;
+    
+    margin-left: 50%;
+    margin-right: 10%;
+  }
+
+  .textcontents2,
+  .cards2 {
+    width: 100%;
+    margin: 2rem;
+  }
+
+  .textcontents2 p {
+    font-size: 350%;
+    margin-left: 10%;
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  .textcontents2 h1 {
+  
+    margin-left: 50%;
+  }
+  #img4,
+  #img5,
+  #img6 {
+    display: none;
+  }
+
+  #img4 {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 30%;
+    margin-left: 20%;
+    margin-right: 30%;
+    margin-bottom: 20rem;
+  }
+  .footy{
+    width: 130%;
+    margin-top: 50%;
+  }
+
 }
