@@ -141,6 +141,7 @@ nav{
   }
   .header-list li{
     display: block;
+    background: none;
     /* height: 30%; */
     /* margin: auto; */
     margin-top: 0%;
@@ -158,13 +159,19 @@ nav{
     /* margin-left: auto;
     padding-right:80px; */
   }
-.header-list li:hover{
-    background-color: #fff;
-    /* color: rgb(14,7,25); */
-}
-.header-list li:hover a{
-    color: rgb(14,7,25);
 
+  .header-list a {
+    background: none;
+  }
+.header-list li:hover {
+    background-color: #fff;
+    /* color: rgb(242, 241, 244); */
+}
+
+
+.header-list li:hover a{
+    background:none;
+    color: rgb(6, 6, 6);
 }
   .header-list-close {
     display: none;
