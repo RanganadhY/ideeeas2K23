@@ -7,18 +7,24 @@ let timeLineElements = [
     },
     {
         id:2,
+        date:"19-06-2023",
+        title:"Trademark Theme Release",
+        desc:"The theme for this year's 'Trademark' event will be announced."
+    },
+    {
+        id:3,
         date:"21-06-2023",
         title:"Last Day for Abstract Submissions",
         desc:"The abstract submission for the events  Aavishkar, Pitchothon and Technocon will be closed after the above date. ON-SPOT REGISTRATION for other events is available."
     },
     {
-        id:3,
+        id:4,
         date:"22-06-2023",
         title:"Announcement of Selected Teams",
         desc:"Announcement of the shortlisted teams after scrutinizing their abstracts."
     },
     {
-        id:4,
+        id:5,
         date:"23-06-2023",
         title:"IdEEEas 2k23 is here!",
         desc:"The most awaited IDEEEAS 2k23 is here. Hope you have a wonderful learning, Best wishes from Team IEEE SIT SB."
