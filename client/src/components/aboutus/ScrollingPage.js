@@ -14,7 +14,7 @@ import Footer from '../footer/footer.jsx'
 class ScrollingPage extends React.Component {
   render() {
     return (
-      <div className='about-us-main-container'>
+    
         <div className="mainpage">
           <div className='headd'>
             <Header />
@@ -62,7 +62,7 @@ class ScrollingPage extends React.Component {
             <Footer />
           </div>
         </div>
-      </div>
+      
     );
   }
 }
