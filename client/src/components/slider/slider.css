@@ -1,5 +1,5 @@
 .slideshow {
-    margin: 5vh auto;
+    /* margin: 5vh auto; */
     overflow: hidden;
     max-width:100%;
   }
@@ -35,7 +35,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 25vh;
+    height: 10vh;
    
 }
   .heading-secondary p{
@@ -45,6 +45,8 @@
     letter-spacing: 0.4rem;
     line-height: 5rem;
     position: relative;
+    /* line-height: 5rem; */
+
 }
 
 

@@ -65,8 +65,15 @@ const getAdminData = async (req, res) => {
 
 const validateUniqueIds = async(req,res) => {
     try{
-        const userUniqueId = req.body
-        const result = await triveeeaStudentSchema.findOne(userUniqueId)? true: false
+        const {userUniqueId} = req.body;
+        const EventName = req.body.EventName; 
+        console.log({userUniqueId})
+        console.log(EventName)
+        if(EventName === "triveeea")
+        result = await triveeeaStudentSchema.findOne({userUniqueId})? true: false
+        if(EventName === "photographia")
+        result = await photographiaStudentSchema.findOne({userUniqueId})? true: false
+
         console.log(result)
         res.status(200).json({"userWithUniqueIdExists":result})
     }
@@ -77,8 +84,27 @@ const validateUniqueIds = async(req,res) => {
    
 }
 
+const updateStudentData = async(req,res) => {
+    try{
+        const {uniqueId} = req.body
+        const user = {
+            name:req.body.name,
+            usn :req.body.usn
+        }
+        console.log(user)
+     
 
+        const result = await triveeeaStudentSchema.findByIdAndUpdate(uniqueId,user)
+        res.status(200).json({"studentSuccessfullyUpdated":result})
+    }
+    catch(err){
+        console.log(err)
+        res.status(500).json({"message":"error in updating student details"})
+    }
+}
 
 module.exports.getAdminData = getAdminData;
+
+module.exports.updateStudentData = updateStudentData;
 module.exports.generateUniqueIds = generateUniqueIds;
 module.exports.validateUniqueIds = validateUniqueIds;
