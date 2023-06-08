@@ -1,12 +1,5 @@
-/* *{
-  background-color: #0D051B;
-} */
 
-/* .about-us-main-container{
-  background-color: #0D051B;
-  height: 225vh;
-  width: 100%;
-} */
+
 .firstpage{
   height:120vh;
   background-color: #0D051B;
@@ -225,11 +218,7 @@ margin-top: 10rem;
 
 @media only screen and (max-width: 480px) {
   
-  /* .about-us-main-container{
-    background-color: #0D051B;
-    height: 400vh;
-    width: 100%;
-  } */
+
   .headd{
     width: 130%;
   }

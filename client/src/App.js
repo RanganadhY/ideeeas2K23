@@ -13,10 +13,10 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path='/:eventNum' element={<EventsPage />} />
-        {/* <Route path='/ScrollingPage' element={<ScrollingPage/>}/>
-        <Route path='/Contact' element={<Contactus/>}/>      */}
-        <Route path="/ScrollingPage" element={<LandingPage />} />
-        <Route path="/Contact" element={<LandingPage />} />
+       <Route path='/ScrollingPage' element={<ScrollingPage/>}/>
+        <Route path='/Contact' element={<Contactus/>}/>      
+        
+       
 
       </Routes>
     </>
