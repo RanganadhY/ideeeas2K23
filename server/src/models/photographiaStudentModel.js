@@ -2,12 +2,15 @@ const mongoose = require('mongoose')
 
 const PStudentData = new mongoose.Schema({
     uniqueId:{
-        type:String,
-        required:true
+        type:String
     },
     usn:{
         type:String,
-        default:null       
+        default:null
+    },
+    email:{
+        type:String,
+        default:null
     },
     name:{
         type:String,

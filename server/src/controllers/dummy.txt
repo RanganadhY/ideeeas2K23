@@ -17,3 +17,9 @@ const updateNoOfQues = async(req,res) => {
 }
 
 module.exports.updateNoOfQues = updateNoOfQues;
+
+{userUniqueId}
+        |
+{"userUniqueId":userUniqueId}
+
+const userUniqueId = req.body.uniqueId;

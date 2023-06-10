@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
 
 const PAdminData = new mongoose.Schema({
-    photoId:{
-        type:Number
+    name:{
+        type:String
     },
     photo:{
         type:Buffer

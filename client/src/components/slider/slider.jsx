@@ -40,7 +40,7 @@ export default function Slider() {
 
   return (
 	  <>
-	  <center className='heading-secondary'><p  style={{"marginTop":"15vh"}}>IDEEEAS 2K23 SPONSORERS</p></center>
+	  <center className='heading-secondary'><p >IDEEEAS 2K23 SPONSORERS</p></center>
     <div className="slideshow">
     <div
       className="slideshowSlider"

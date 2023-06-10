@@ -56,6 +56,9 @@
     display: block;
     justify-content: center;
     align-items: center;
+    /* background-color:rgb(17, 26, 26,0.01) ; */
+
+    /* background-color: none !important; */
 }
 
 .cards-card-btn{
@@ -63,6 +66,8 @@
     justify-content: center;
     align-items: center;
     padding-top: 1.25rem;
+    /* background-color:rgb(17, 26, 26,0.01) ; */
+
     /* background: rgba(255, 255, 255, 0.05); */
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -78,10 +83,14 @@
     text-decoration: none;
   
 }
+.cards-card-btn-body{
+  background-color:rgb(17, 26, 26,0.01) ;
 
+}
 /* Button resets and style */
 .cards-card-btn-body button {
     margin: 15px auto;
+    
     /* font-family: "Montserrat"; */
     font-size: 20px;
     color: #010000;

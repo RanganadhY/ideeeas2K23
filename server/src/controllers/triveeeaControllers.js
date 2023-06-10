@@ -34,7 +34,7 @@ const generateUniqueIds = async (req, res) => {
 
     catch (err) {
         console.log(err);
-        res.status(500).json({ "message": "Something went wrong with generating unique nos for triveeea" });
+       return res.status(500).json({ "message": "Something went wrong with generating unique nos for triveeea" });
     }
 }
 
@@ -53,32 +53,98 @@ const getAdminData = async (req, res) => {
         console.log(user)
 
         const result = await triveeeaAdminSchema.updateOne(user)
-        res.status(200).json({ "adminDataUpdated": result })
+       return res.status(200).json({ "adminDataUpdated": result })
     }
 
     catch (err) {
         console.log(err)
-        res.status(500).json({ "message": "Something went wrong with entering admin data" })
+       return res.status(500).json({ "message": "Something went wrong with entering admin data" })
     }
 }
 
 
 const validateUniqueIds = async(req,res) => {
     try{
-        const userUniqueId = req.body
-        const result = await triveeeaStudentSchema.findOne(userUniqueId)? true: false
+        const {userUniqueId} = req.body;
+        const EventName = req.body.EventName; 
+        console.log({userUniqueId})
+        console.log(EventName)
+        if(EventName === "triveeea")
+        result = await triveeeaStudentSchema.findOne({"uniqueId":userUniqueId})? true: false
+        if(EventName === "photographia"){
+            result = await photographiaStudentSchema.findOne({"uniqueId":userUniqueId})? true: false
+            console.log(result)
+            console.log(EventName)
+        }
         console.log(result)
-        res.status(200).json({"userWithUniqueIdExists":result})
+        return res.status(200).json({"userWithUniqueIdExists":result})
     }
     catch(err){
         console.log(err)
-        res.status(500).json({"message":"something went wrong with finding the unique id"})
+       return res.status(500).json({"message":"something went wrong with finding the unique id"})
     }
    
 }
+ 
+const updateStudentData = async(req,res) => {
+    try{
+        const {EventName} = req.body
+        console.log(EventName)
+        if(EventName === "triveeea")
+        {
+            const {uniqueId} = req.body
+            console.log(uniqueId)
+            const user = {
+                "name":req.body.name,
+                "usn" :req.body.usn
+            }
+            console.log(user)
+            const result = await triveeeaStudentSchema.findOneAndUpdate({uniqueId},user)
+            console.log(result)
+            return res.status(200).json({"studentSuccessfullyUpdated":result})
+        }
 
+        if(EventName === "photographia")
+        {
+            const {email} = req.body 
+            const {uniqueId} = req.body
+            console.log(email)
+            console.log(uniqueId)
 
+            if(email)
+            {
+                console.log("EMail is present")
+                const user = {
+                    "email":req.body.email,
+                    "name":req.body.name
+                }
+                const result = await photographiaStudentSchema.create({email},user)
+                console.log(result)
+                return res.status(200).json({"studentSuccessfullyUpdated":result})
+            }
+
+            if(uniqueId)
+            {
+                console.log("EMail is not present")
+
+                const user = {
+                    "name":req.body.name,
+                    "usn":req.body.usn
+                }
+                const result = await photographiaStudentSchema.findOneAndUpdate({uniqueId},user)
+                console.log(result)
+                return res.status(200).json({"studentSuccessfullyUpdated":result})
+            }
+        }
+    }
+    catch(err){
+        console.log(err)
+        return res.status(500).json({"message":"error in updating student details"})
+    }
+}
 
 module.exports.getAdminData = getAdminData;
+
+module.exports.updateStudentData = updateStudentData;
 module.exports.generateUniqueIds = generateUniqueIds;
 module.exports.validateUniqueIds = validateUniqueIds;

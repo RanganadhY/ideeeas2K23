@@ -1,10 +1,13 @@
-*{
-  background-color: #0D051B;
-}
+
+
 .firstpage{
-  height:100vh;
+  height:120vh;
+  background-color: #0D051B;
+
 }
 .mainpage{
+  background-color: #0D051B;
+
   height: 100vh;
   width: 100%;
 }
@@ -112,6 +115,8 @@ margin-top: 10rem;
 /* css for our college*/
 
 .secondpage{
+  background-color: #0D051B;
+
   height: 70vh;
   width: 100%;
 }
@@ -126,6 +131,7 @@ margin-top: 10rem;
   width: 50%;
 }
 .cards2{
+  
   width: 50%;
   height: 70vh;
   position: relative;
@@ -203,11 +209,16 @@ margin-top: 10rem;
   transform: scaleX(1);
 }
 
+.footy{
+    background-color: #0D051B;
+
+}
 
 /*Responsive stuff*/
 
 @media only screen and (max-width: 480px) {
   
+
   .headd{
     width: 130%;
   }
