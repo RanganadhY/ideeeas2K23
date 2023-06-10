@@ -146,7 +146,7 @@ function EventsPage(props) {
                 <div className='eve-temp-icon'>
                   <IoArrowRedoCircle />
                 </div>
-                <a href={eventDetails.template} target={"_blank"}>Synopsis Template</a></div></div>}
+                <a href={eventDetails.template} target={"_blank"}>Article Template</a></div></div>}
           </div>
         <div classNme='eve-template-container'>
         {eventDetails.id === 9 && <div className='eve-temp-name'>

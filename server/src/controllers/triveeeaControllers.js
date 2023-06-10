@@ -88,10 +88,11 @@ const validateUniqueIds = async(req,res) => {
  
 const updateStudentData = async(req,res) => {
     try{
-        const {EventName} = req.body.EventName
+        const {EventName} = req.body
+        console.log(EventName)
         if(EventName === "triveeea")
         {
-            const {uniqueId} = req.body.uniqueId
+            const {uniqueId} = req.body
             console.log(uniqueId)
             const user = {
                 "name":req.body.name,
@@ -105,35 +106,36 @@ const updateStudentData = async(req,res) => {
 
         if(EventName === "photographia")
         {
-            const {email} = req.body.email
-            const {uniqueId} = req.body.uniqueId
+            const {email} = req.body 
+            const {uniqueId} = req.body
             console.log(email)
             console.log(uniqueId)
 
             if(email)
             {
+                console.log("EMail is present")
                 const user = {
                     "email":req.body.email,
                     "name":req.body.name
                 }
-                const result = await photographiaStudentSchema.findOneAndUpdate({email},user)
-
+                const result = await photographiaStudentSchema.create({email},user)
+                console.log(result)
+                return res.status(200).json({"studentSuccessfullyUpdated":result})
             }
 
             if(uniqueId)
             {
+                console.log("EMail is not present")
+
                 const user = {
                     "name":req.body.name,
                     "usn":req.body.usn
                 }
                 const result = await photographiaStudentSchema.findOneAndUpdate({uniqueId},user)
-
+                console.log(result)
+                return res.status(200).json({"studentSuccessfullyUpdated":result})
             }
-            console.log(result)
-            return res.status(200).json({"studentSuccessfullyUpdated":result})
-          
         }
-      
     }
     catch(err){
         console.log(err)

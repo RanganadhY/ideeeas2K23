@@ -149,14 +149,14 @@
 .home-events-title p{
     background-color: #0D051B;
     color: azure;
-    font-size: 6rem;
+    font-size: 4rem;
     letter-spacing: 0.8rem;
     line-height: 5rem;
     position: relative;
 }
 .home-events-title p::after{
   content:"";
-  width: 160px;
+  width: 115px;
   height: 3px;
   background-color: #C194E7;
   position: absolute;
@@ -604,14 +604,14 @@ color: aliceblue;
   .home-events-title p{
       background-color: #0D051B;
       color: azure;
-      font-size: 6rem;
+      font-size: 3rem;
       letter-spacing: 0.8rem;
       line-height: 5rem;
       position: relative;
   }
     .home-events-title p::after{
       content:"";
-      width: 150px;
+      width: 100px;
       height: 3px;
       background-color: #C194E7;
       position: absolute;

@@ -5,10 +5,12 @@ const PStudentData = new mongoose.Schema({
         type:String
     },
     usn:{
-        type:String
+        type:String,
+        default:null
     },
     email:{
-        type:String
+        type:String,
+        default:null
     },
     name:{
         type:String,
