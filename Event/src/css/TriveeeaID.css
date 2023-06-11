@@ -1,0 +1,102 @@
+
+.tfullpage {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+  }
+  .tradio-optionu {
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+    
+    
+  }
+  
+  .triveeea-id-container{
+    background-color: #f9bc60;
+    width: 25%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  }
+  .tlogin-container{
+    margin-left: -1.7rem;
+  }
+ 
+  .tradio-option input[type="radio"] {
+    transform: scale(1.5);
+  }
+
+
+
+  .tradio-option label {
+    font-size: 25px;
+    margin-right: 10px;
+    color: #000000;
+    font-weight: bold;
+  }
+  .tinput-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: #fff;
+
+    
+  }
+  .tinput-container label{
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+  }
+  .tinput-container input[type="ttext"]{
+  width: 90%;
+  margin-left: 15%;
+  
+    padding: 0.5rem 0.5rem;
+    outline: none;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+  }
+  
+  
+  .label {
+    font-weight: bold;
+  }
+  .tbutton-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    background-color: #0066ff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-left: 15%;
+  }
+  
+
+  @media (min-width:530px) and (max-width: 1040px) {
+    .triveeea-id-container {
+      width: 60%;
+    }
+  }
+  @media (min-width:320px) and (max-width: 530px) {
+    .triveeea-id-container {
+      width: 60%;
+    }
+  }
