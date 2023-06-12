@@ -1,0 +1,67 @@
+.fulll {
+  background-color: rgb(0, 0, 0);
+}
+
+.centered-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.center-div {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
+  width: 100%;
+}
+
+.red-div {
+  background-color: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 30%;
+  padding: 0 20px;
+  
+  
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: rgb(0, 55, 255);
+
+  cursor: pointer;
+  margin: 0;
+  font-size: 2rem;
+}
+.rightb{
+  margin-right: 15%;
+  font-size: 2rem;
+}
+.leftb{
+  font-size: 2rem;
+}
+h2 {
+  margin-top: 0;
+  color: aliceblue;
+  font-size: 2rem;
+}
+
+img {
+  width: 50%;
+  height: 200%;
+  margin-bottom: 1rem;
+  object-fit: contain;
+}
+
+.voteb{
+  margin-top: 10px;
+  margin-right: 10%;
+  font-size: 2rem;
+}
