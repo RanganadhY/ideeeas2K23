@@ -19,6 +19,10 @@ const PStudentData = new mongoose.Schema({
     hasVoted:{
         type:Boolean,
         default:false
+    },
+    teamName:{
+        type:String,
+        default:null
     }
 },{timestamps:true})
 

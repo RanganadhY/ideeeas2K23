@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../css/photography.css";
+import axios from "../axios/axios";
+import validator from 'validator'
+import {  Formik, Form, Field ,ErrorMessage} from 'formik'
+import * as Yup from 'yup'
 
 function Photographia() {
   const [selectedType, setSelectedType] = useState();
@@ -51,8 +55,24 @@ function UniqueIdLogin() {
   const [uniqueId, setUniqueId] = useState("");
 
   const handleClick = async (e) => {
+    e.preventDefault();
     console.log("Unique ID:", uniqueId);
-    navigate("/DetailsPage", { state: {} });
+    const user = {
+      "userUniqueId":uniqueId,
+      "EventName":"photographia"
+    }
+    console.log(user)
+    try{
+      const response = await axios.post('/triveeea-routes/validate-user',user,{headers:{'Content-Type': 'application/json'}})
+      console.log(response)
+      console.log(response.status)
+      navigate("/DetailsPage", { state: {} });
+    }
+    catch(err){
+      if(err.response.status === 404)
+      alert('404: Unique Id not found')
+    }
+
   };
 
   const handleUniqueIdChange = (e) => {
@@ -77,33 +97,102 @@ function EmailLogin() {
   const [name, setName] = useState("");
   const navigate = useNavigate();
 
-  const handleClick = async (e) => {
-    console.log("Name:", name);
-    console.log("Email ID:", email);
-    navigate("/EventPage", { state: {} });
-  };
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
+  // const handleClick = async (e) => {
+  //   console.log("Name:", name);
+  //   console.log("Email ID:", email);
+    
+  //   {
+  //     const user = {
+  //       "EventName":"photographia",
+  //       "uniqueId":"",
+  //       "email":email,
+  //       "name":name
+  //     }
+  //     console.log(user)
+  //     const response = axios.post('/triveeea-routes/add-student-details',user,{headers:{'Content-Type':'application/json'}})
+  //     console.log(response)
+  //     navigate("/EventPage", { state: {} });
 
-  const handleNameChange = (e) => {
-    setName(e.target.value);
-  };
+  //   }
+  // };
 
+  // const handleEmailChange = (e) => {
+  //   setEmail(e.target.value);
+  // };
+
+  // const handleNameChange = (e) => {
+  //   setName(e.target.value);
+  // };
+
+  const initialValues = {
+    name: '',
+    email: '',
+    EventName:'photographia',
+    uniqueId:''
+}
+
+const validationSchema = Yup.object({
+  name: Yup.string().required('Required'),
+  email: Yup.string()
+      .email('Invalid email format')
+      .required('Required'),
+
+})
+const onSubmit = async (values) => {
+  console.log('form values', values)
+  try
+    {
+      const user = values
+      console.log(user)
+      const response = await axios.post('/triveeea-routes/add-student-details',user,{headers:{'Content-Type':'application/json'}})
+      console.log(response.status)
+      
+        navigate("/EventPage", { state: {} });
+      
+
+    }
+    catch(err){
+      if(err.response.status === 403)
+      alert('403: User already exists')
+    }
+}
   return (
     <>
+    <Formik
+            initialValues={initialValues}
+            validationSchema={validationSchema}
+            onSubmit={onSubmit}>
+    <Form>
       <div className="input-container">
-        <label htmlFor="">Email id</label>
-        <input type="text" value={email} onChange={handleEmailChange} />
+        
+        <label htmlFor="email">Email id</label>
+        <Field type="text"
+        // value={email}
+        id='email'
+        name='email' 
+        // onChange={handleEmailChange} 
+        />
+         <ErrorMessage name='email'/>
       </div>
       <div className="input-container">
-        <label htmlFor="">Name</label>
-        <input type="text" value={name} onChange={handleNameChange} />
+        <label htmlFor="name">Name</label>
+        <Field type="text" 
+        // value={name}
+        id='name'
+        name='name'
+        //  onChange={handleNameChange} 
+         />
+        <ErrorMessage name='name'/>
       </div>
       <div className="button-container">
-        <button onClick={handleClick}>Login</button>
+        <button type='submit'
+        // onClick={handleClick}
+        >
+          Login</button>
       </div>
+      </Form>
+      </Formik>
     </>
   );
 }

@@ -77,7 +77,10 @@ const validateUniqueIds = async(req,res) => {
             console.log(EventName)
         }
         console.log(result)
+        if(result)
         return res.status(200).json({"userWithUniqueIdExists":result})
+        else
+        return res.status(404).json({"message":"unique Id not found"})
     }
     catch(err){
         console.log(err)
@@ -113,19 +116,26 @@ const updateStudentData = async(req,res) => {
 
             if(email)
             {
-                console.log("EMail is present")
+                console.log("EMail is being used to login")
                 const user = {
                     "email":req.body.email,
                     "name":req.body.name
                 }
-                const result = await photographiaStudentSchema.create({email},user)
-                console.log(result)
-                return res.status(200).json({"studentSuccessfullyUpdated":result})
+                const validateEmail = await photographiaStudentSchema.findOne({email})?true:false
+                console.log(validateEmail)
+                if(!validateEmail){
+                    const result = await photographiaStudentSchema.create(user)
+                    console.log(result)
+                    return res.status(200).json({"studentSuccessfullyUpdated":result})
+                }
+               else{
+                return res.status(403).json({"error":"user already exists"})
+               }
             }
 
             if(uniqueId)
             {
-                console.log("EMail is not present")
+                console.log("EMail is not being used to login")
 
                 const user = {
                     "name":req.body.name,
@@ -143,8 +153,64 @@ const updateStudentData = async(req,res) => {
     }
 }
 
-module.exports.uploadAdminData = uploadAdminData;
+const uploadStudentResponse = async(req,res) => {
+    try{
+        const {uniqueId,studentResponse} = req.body
+        console.log(uniqueId)
+        console.log(studentResponse)
+        const updateObj = {
+            $push:{answersSelected:{$each:studentResponse,slice:-studentResponse.length}},
+            "hasSubmitted":true
+        }
+        const response = await triveeeaStudentSchema.findOneAndUpdate({uniqueId},updateObj)
+    //    const response = await triveeeaStudentSchema.findOneAndUpdate({uniqueId},{
+    //     "answersSelected":studentResponse,"hasSubmitted":true})
+    //     // console.log(studentResponse)
+        // console.log(response)
+       return res.status(200).json({"message":response})
+        }
+    catch(err){
+        console.log(err)
+        return res.status(500).json({"message":"error in uploading student response"})
+    }
+}
+const validateStudentResult = async(req,res) => {
+    try{
+        const {uniqueId} = req.body
+        console.log(uniqueId)
+        const hasSubmitted = await triveeeaStudentSchema.findOne({uniqueId})
+        if(hasSubmitted){
+            const response = await triveeeaStudentSchema.findOne({uniqueId},{answersSelected:1,score:1})
+            const adminData = await triveeeaAdminSchema.find({},{answers:1});
+            // console.log(response)
+            // console.log(adminData)
+            // console.log(adminData[0].answers[0])
+            // console.log(response.answersSelected[1].answer)
+            // console.log(adminData[0].answers.length) 
+            for(i = 0 ;i<adminData[0].answers.length;i++)
+            {
+                // console.log(adminData[0].answers[i])
+                // console.log(response.answersSelected[i].answer)
+                if(adminData[0].answers[i] == response.answersSelected[i].answer)
+                {
+                    response.score++
+                    console.log(response.score)
+                }
+            }
+            console.log(response.score) 
 
+            const result = await triveeeaStudentSchema.findOneAndUpdate({uniqueId},{score:response.score})
+            return res.status(200).json({"studentScore":result})
+        }
+    }
+    catch(err){
+        console.log(err)
+        return res.status(500).json({"message":"Something went wrong with validating student response"})
+    }
+}
+module.exports.uploadAdminData = uploadAdminData;
 module.exports.updateStudentData = updateStudentData;
 module.exports.generateUniqueIds = generateUniqueIds;
 module.exports.validateUniqueIds = validateUniqueIds;
+module.exports.uploadStudentResponse = uploadStudentResponse;
+module.exports.validateStudentResult = validateStudentResult;
