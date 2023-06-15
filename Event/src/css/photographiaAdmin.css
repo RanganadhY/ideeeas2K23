@@ -1,0 +1,12 @@
+.photo-admin-main-wrapper{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-sub-container-wrapper{
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+}

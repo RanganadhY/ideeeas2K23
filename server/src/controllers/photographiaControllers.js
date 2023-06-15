@@ -6,8 +6,9 @@ const uploadImageDetails = async(req,res) => {
     try{
         const {name} = req.body;
         const photographiaImg = req.files.photographiaImg[0];
-
-        const imageS3 = await uploadFile(photographiaImg);
+        console.log(photographiaImg)
+        const BUCKET_NAME="ideeeas-2k23-events-server"
+        const imageS3 = await uploadFile(BUCKET_NAME,photographiaImg);
         console.log(imageS3)
         const imageDetails = {
             "name":{name},
