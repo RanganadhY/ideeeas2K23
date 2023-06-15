@@ -24,8 +24,8 @@ const generateUniqueIds = async (req, res) => {
         //uniqueId is the field name in schema
         console.log(uniqueIds)
         {EventName === "triveeea" ? 
-             response = await triveeeaStudentSchema.insertMany(uniqueIds) :
-             response = await photographiaStudentSchema.insertMany(uniqueIds)
+            response = await triveeeaStudentSchema.insertMany(uniqueIds) :
+            response = await photographiaStudentSchema.insertMany(uniqueIds)
         }
         console.log(response)
         return res.status(200).json({ "uniqueIdsGenerated": response })
@@ -53,12 +53,12 @@ const getAdminData = async (req, res) => {
         console.log(user)
 
         const result = await triveeeaAdminSchema.updateOne(user)
-       return res.status(200).json({ "adminDataUpdated": result })
+        return res.status(200).json({ "adminDataUpdated": result })
     }
 
     catch (err) {
         console.log(err)
-       return res.status(500).json({ "message": "Something went wrong with entering admin data" })
+        return res.status(500).json({ "message": "Something went wrong with entering admin data" })
     }
 }
 
@@ -70,7 +70,7 @@ const validateUniqueIds = async(req,res) => {
         console.log({userUniqueId})
         console.log(EventName)
         if(EventName === "triveeea")
-        result = await triveeeaStudentSchema.findOne({"uniqueId":userUniqueId})? true: false
+            result = await triveeeaStudentSchema.findOne({"uniqueId":userUniqueId})? true: false
         if(EventName === "photographia"){
             result = await photographiaStudentSchema.findOne({"uniqueId":userUniqueId})? true: false
             console.log(result)
@@ -81,11 +81,11 @@ const validateUniqueIds = async(req,res) => {
     }
     catch(err){
         console.log(err)
-       return res.status(500).json({"message":"something went wrong with finding the unique id"})
+        return res.status(500).json({"message":"something went wrong with finding the unique id"})
     }
-   
+
 }
- 
+
 const updateStudentData = async(req,res) => {
     try{
         const {EventName} = req.body
