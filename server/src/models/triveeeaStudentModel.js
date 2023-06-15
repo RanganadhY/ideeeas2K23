@@ -14,19 +14,25 @@ const TStudentData = new mongoose.Schema({
         type:String,
         default:null       
     },
-    answerSelected:{
+    answersSelected:[
+        {
         answer:{ 
-            type:Array,
+            type:Number,
             default:null        
         },
         timeTaken:{
             type:Number,
             default:null        
-        }        
-    },
+        }  
+        }
+    ],
     hasSubmitted:{
         type:Boolean,
         default:false
+    },
+    score:{
+        type:Number,
+        default:null
     }
 },{timestamps:true})
 
