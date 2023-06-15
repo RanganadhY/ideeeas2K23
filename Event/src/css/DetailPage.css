@@ -1,0 +1,88 @@
+.details {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+  }
+  .enter{
+    font-size: 75%;
+    color:black;
+    
+    
+  }
+  
+  .centered-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#7f5af0;
+    padding: 20px;
+  }
+  
+  .name-container label {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .name-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    color: #fff;
+  }
+  
+  .usn-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  .name-container input[type="text"] {
+    margin-left: 8px;
+    width: 80%;
+    padding: 0.5rem 0.5rem;
+    outline: none;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+  }
+  
+  .usn-container input[type="text"] {
+    margin-left: 14px;
+    width: 80%;
+    padding: 0.5rem 0.5rem;
+    outline: none;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+  }
+  
+  .usn-container label {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    margin-right: 10px;
+    align-items: center;
+    font-weight: bold;
+  }
+  
+  .uniquebutton button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin-left: 25px;
+    border-radius: 4px;
+    background-color: #ff8906;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  

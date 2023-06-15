@@ -39,7 +39,7 @@ const generateUniqueIds = async (req, res) => {
 }
 
 
-const getAdminData = async (req, res) => {
+const uploadAdminData = async (req, res) => {
     try {
         const NoOfQues = req.body.NoOfQues
         const answers = []
@@ -81,7 +81,7 @@ const validateUniqueIds = async(req,res) => {
     }
     catch(err){
         console.log(err)
-        return res.status(500).json({"message":"something went wrong with finding the unique id"})
+       return res.status(404).json({"message":"unique Id not found"})
     }
 
 }
@@ -139,11 +139,11 @@ const updateStudentData = async(req,res) => {
     }
     catch(err){
         console.log(err)
-        return res.status(500).json({"message":"error in updating student details"})
+        return res.status(404).json({"message":"Student not found"})
     }
 }
 
-module.exports.getAdminData = getAdminData;
+module.exports.uploadAdminData = uploadAdminData;
 
 module.exports.updateStudentData = updateStudentData;
 module.exports.generateUniqueIds = generateUniqueIds;
