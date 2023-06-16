@@ -62,6 +62,17 @@ const uploadAdminData = async (req, res) => {
     }
 }
 
+const displayUniqueIds = async(req,res) => {
+    try{
+        const response = await photographiaStudentSchema.findById({"uniqueId":1})
+        console.log('in display route')
+        console.log(response)
+    }
+    catch(err){
+        console.log(err)
+        return res.status(500).json({"error":"unable to get the unique Ids"})
+    }
+}
 
 const validateUniqueIds = async(req,res) => {
     try{
@@ -141,9 +152,13 @@ const updateStudentData = async(req,res) => {
                     "name":req.body.name,
                     "usn":req.body.usn
                 }
-                const result = await photographiaStudentSchema.findOneAndUpdate({uniqueId},user)
-                console.log(result)
-                return res.status(200).json({"studentSuccessfullyUpdated":result})
+                if(user.name && user.usn){
+                    const result = await photographiaStudentSchema.findOneAndUpdate({uniqueId},user)
+                    console.log(result)
+                    return res.status(200).json({"studentSuccessfullyUpdated":result})
+                }
+                else
+                return res.status(401).json({'message':'invalid credentials'})
             }
         }
     }
@@ -221,6 +236,7 @@ const getQuestionsCount = async(req,res)=>{
 module.exports.uploadAdminData = uploadAdminData;
 module.exports.updateStudentData = updateStudentData;
 module.exports.generateUniqueIds = generateUniqueIds;
+module.exports.displayUniqueIds = displayUniqueIds;
 module.exports.validateUniqueIds = validateUniqueIds;
 module.exports.uploadStudentResponse = uploadStudentResponse;
 module.exports.validateStudentResult = validateStudentResult;

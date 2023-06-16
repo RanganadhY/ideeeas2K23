@@ -31,19 +31,28 @@
   margin-bottom: 1rem;
 }
 
+.image-main{
+  height: 60%;
+  width: 50%;
+}
+
+.image-main img{
+  width: 100%;
+  height: 100%;
+}
 .leftb,
 .rightb {
   position: absolute;
   font-size: 1.5rem;
   width: 3%; 
-  height: 8.5%; 
+  height: 60%; 
   padding: 0;
   
 }
 
 .leftb {
   left: 1rem;
-  top: 50%;
+  /* top: 50%; */
   transform: translateY(-50%);
   margin-left: 1rem;
   background-color: aliceblue;
@@ -51,7 +60,7 @@
 
 .rightb {
   right: 2rem;
-  top: 50%;
+  /* top: 50%; */
   transform: translateY(-50%);
   background-color: aliceblue;
 }
@@ -87,6 +96,8 @@ img {
     position: static;
     transform: none;
     font-size: 1.5rem;
+     margin: 0 1.5rem ;
+    padding: 1rem;
   }
 
   .button-container {
@@ -96,10 +107,6 @@ img {
     
   }
 
-  .leftb,
-  .rightb {
-    margin: 1rem 0;
-  }
 
   img {
     height: 50%;

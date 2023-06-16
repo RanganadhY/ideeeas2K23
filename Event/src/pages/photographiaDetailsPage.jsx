@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "../css/DetailPage.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import axios from '../axios/axios'
 
 function DetailsPage(props) {
+  const {id,isEmail} = useParams();
   const [name, setName] = useState("");
   const [usn, setUsn] = useState("");
   const navigate = useNavigate();
@@ -16,16 +18,21 @@ function DetailsPage(props) {
       const user = {
         "EventName":"photographia",
         "name":name,
-        "uniqueId":props.uniqueId,
-        "usn":usn
+        "uniqueId":id,
+        "usn":usn,
+        "email":""
       }
       console.log(user)
+      const response = await axios.post('triveeea-routes/add-student-details',user,{'content-type':'application/json'})
+      console.log(response)
+      alert('Student saved successfully')
+      navigate(`/photographia-event/${id}/${isEmail}`);
     }
     catch(err){
       console.log(err)
       alert('error in updating the details')
     }
-    navigate("/EventPage", { state: {} });
+   
   };
 
   const handleNameChange = (e) => {

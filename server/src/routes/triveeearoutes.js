@@ -4,6 +4,7 @@ const routes = express.Router()
 const triveeeaControllers = require('../controllers/triveeeaControllers')
 
 routes.post('/generate-unique-ids',triveeeaControllers.generateUniqueIds)
+routes.get('/display-unique-ids',triveeeaControllers.displayUniqueIds)
 routes.post('/insert-no-of-questions',triveeeaControllers.uploadAdminData)
 routes.post('/validate-user',triveeeaControllers.validateUniqueIds) 
 routes.post('/add-student-details',triveeeaControllers.updateStudentData) 
