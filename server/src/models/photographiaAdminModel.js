@@ -6,6 +6,10 @@ const PAdminData = new mongoose.Schema({
     },
     photo:{
         type:Buffer
+    },
+    votes:{
+        type:Number,
+        default:null
     }
 },{timestamps:true})
 

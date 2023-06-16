@@ -23,3 +23,22 @@ module.exports.updateNoOfQues = updateNoOfQues;
 {"userUniqueId":userUniqueId}
 
 const userUniqueId = req.body.uniqueId;
+
+// upload-student-response
+{
+  "uniqueId":376128,
+  "studentResponse":
+  [
+    {
+       "answer":3,
+    "timeTaken":20
+    },
+    {
+      "answer":4,
+      "timeTaken":30
+    }
+  ]
+}
+
+//upload student response
+$push:{answersSelected:{$each:studentResponse,slice:-studentResponse.length}},
