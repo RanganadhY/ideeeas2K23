@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../css/EventPage.css'; 
-
+import '../css/EventPage.css';
+import bg from '../asset/bg.jpg';
+import leftArrowImage from '../asset/caret-left.png';
+import rightArrowImage from '../asset/caret-right.png';
 
 const EventPage = () => {
   const [currentPhoto, setCurrentPhoto] = useState(0);
@@ -18,31 +20,34 @@ const EventPage = () => {
 
   const handleVoteClick = (teamName) => {
     console.log(`Voted for ${teamName}`);
-    navigate('/Photographia-login'); 
+    navigate('/Photographia-login');
   };
 
-  const photos = [
-    '../asset/squid.jpg',
-    '../asset/money.jpg',
-    '../asset/breaking-bad.jpg'
-  ];
+  const photos = [bg, bg, bg];
 
   return (
-    <div className='fulll'>
-      <div className='centered-div'>
-        <div className='center-div'>
+    <div className="fulll">
+      <div className="centered-div">
+        <div className="team">
           <h2>{teamNames[currentPhoto]}</h2>
-          <img src={photos[currentPhoto]} alt='Team' />
-          <div className='red-div'>
-        <button className="leftb" onClick={handlePreviousClick}>&lt;</button>
-        <button className='rightb' onClick={handleNextClick}>&gt;</button>
-      </div>
-          <button className='voteb' onClick={() => handleVoteClick(teamNames[currentPhoto])}>Vote</button>
         </div>
+        
+        <div className="image-container">
+          <button className="leftb" onClick={handlePreviousClick}>
+            <img src={leftArrowImage} alt="Previous" />
+          </button>
+          <img src={photos[currentPhoto]} alt="Team" />
+          <button className="rightb" onClick={handleNextClick}>
+            <img src={rightArrowImage} alt="Next" />
+          </button>
+        </div>
+        
+        <button className="voteb" onClick={() => handleVoteClick(teamNames[currentPhoto])}>
+          Vote
+        </button>
       </div>
-      
     </div>
   );
-};
+}
 
 export default EventPage;

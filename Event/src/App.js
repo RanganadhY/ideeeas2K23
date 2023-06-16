@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <Routes>
-      <Route path="/" element={<Photographia />} />
+      <Route path="/" element={<TriveeeaID />} />
         <Route path="/photographia-login" element={<Photographia/>}/>
         <Route path='/DetailsPage/:uniqueId' element={<DetailsPage/>}/>
         <Route path='/EventPage' element={<EventPage/>}/>

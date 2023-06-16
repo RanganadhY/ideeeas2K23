@@ -26,7 +26,7 @@ function TriveeeaLogin() {
       <div className="tdetails">
         <div className="wraptriv">
           <div className="nameusn">
-            <h1>Please Enter NAME and USN</h1>
+            <h1>Enter NAME and USN</h1>
           </div>
           <div className="tname-container">
             <label htmlFor="">Name</label>
