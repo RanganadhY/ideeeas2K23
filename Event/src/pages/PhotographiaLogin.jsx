@@ -66,7 +66,7 @@ function UniqueIdLogin() {
       const response = await axios.post('/triveeea-routes/validate-user',user,{headers:{'Content-Type': 'application/json'}})
       console.log(response)
       console.log(response.status)
-      navigate(`/DetailsPage/${uniqueId}`, { state: {} });
+      navigate(`/DetailsPage/${uniqueId}/${false}`);
     }
     catch(err){
       if(err.response.status === 404)
@@ -97,34 +97,6 @@ function EmailLogin() {
   const [name, setName] = useState("");
   const navigate = useNavigate();
 
-
-  // const handleClick = async (e) => {
-  //   console.log("Name:", name);
-  //   console.log("Email ID:", email);
-    
-  //   {
-  //     const user = {
-  //       "EventName":"photographia",
-  //       "uniqueId":"",
-  //       "email":email,
-  //       "name":name
-  //     }
-  //     console.log(user)
-  //     const response = axios.post('/triveeea-routes/add-student-details',user,{headers:{'Content-Type':'application/json'}})
-  //     console.log(response)
-  //     navigate("/EventPage", { state: {} });
-
-  //   }
-  // };
-
-  // const handleEmailChange = (e) => {
-  //   setEmail(e.target.value);
-  // };
-
-  // const handleNameChange = (e) => {
-  //   setName(e.target.value);
-  // };
-
   const initialValues = {
     name: '',
     email: '',
@@ -135,7 +107,7 @@ function EmailLogin() {
 const validationSchema = Yup.object({
   name: Yup.string().required('Required'),
   email: Yup.string()
-      .email('Invalid email format')
+      .matches(/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/, 'Invalid email')
       .required('Required'),
 
 })
@@ -147,8 +119,7 @@ const onSubmit = async (values) => {
       console.log(user)
       const response = await axios.post('/triveeea-routes/add-student-details',user,{headers:{'Content-Type':'application/json'}})
       console.log(response.status)
-      
-        navigate("/EventPage", { state: {} });
+      navigate(`/photographia-event/${values.email}/${true}`);
       
 
     }

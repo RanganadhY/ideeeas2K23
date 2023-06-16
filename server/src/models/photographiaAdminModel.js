@@ -1,3 +1,4 @@
+const { Int32 } = require('mongodb')
 const mongoose = require('mongoose')
 
 const PAdminData = new mongoose.Schema({
@@ -5,11 +6,11 @@ const PAdminData = new mongoose.Schema({
         type:String
     },
     photo:{
-        type:Buffer
+        type:String         
     },
     votes:{
         type:Number,
-        default:null
+        default:0
     }
 },{timestamps:true})
 

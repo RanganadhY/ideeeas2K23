@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "../css/TriveeeaLogin.css";
-import { useNavigate } from "react-router-dom";
-
+import { useNavigate , useParams} from "react-router-dom";
+import axios from'../axios/axios'
 function TriveeeaLogin() {
   const navigate = useNavigate();
   const [name, setName] = useState("");
   const [usn, setUsn] = useState("");
+  const {uniqueId} = useParams();
 
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -18,8 +19,24 @@ function TriveeeaLogin() {
   const handleClick = async (e) => {
     console.log("Name:", name);
     console.log("USN:", usn);
-    navigate("/Triveeea", { state: {} });
-  };
+
+try{
+      const user = {
+        "EventName":"triveeea",
+        "name":name,
+        "uniqueId":uniqueId,
+        "usn":usn,
+      }
+      console.log(user)
+      const response = await axios.post('triveeea-routes/add-student-details',user,{'content-type':'application/json'})
+      console.log(response)
+      alert('Student saved successfully')
+      navigate(`/EventPage`,{uniqueId:uniqueId,email:''}, { state: {} });
+    }
+    catch(err){
+      console.log(err)
+      alert('error in updating the details')
+    }  };
 
   return (
     <>
