@@ -141,9 +141,13 @@ const updateStudentData = async(req,res) => {
                     "name":req.body.name,
                     "usn":req.body.usn
                 }
-                const result = await photographiaStudentSchema.findOneAndUpdate({uniqueId},user)
-                console.log(result)
-                return res.status(200).json({"studentSuccessfullyUpdated":result})
+                if(user.name && user.usn){
+                    const result = await photographiaStudentSchema.findOneAndUpdate({uniqueId},user)
+                    console.log(result)
+                    return res.status(200).json({"studentSuccessfullyUpdated":result})
+                }
+                else
+                return res.status(401).json({'message':'invalid credentials'})
             }
         }
     }

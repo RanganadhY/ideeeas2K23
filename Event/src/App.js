@@ -16,7 +16,7 @@ function App() {
       <Routes>
       <Route path="/" element={<Photographia />} />
         <Route path="/photographia-login" element={<Photographia/>}/>
-        <Route path='/DetailsPage:uniqueId' element={<DetailsPage/>}/>
+        <Route path='/DetailsPage/:uniqueId' element={<DetailsPage/>}/>
         <Route path='/EventPage' element={<EventPage/>}/>
         <Route path='/TriveeeaID' element={<TriveeeaID/>}/>
         <Route path='/TriveeeaLogin' element={<TriveeeaLogin/>}/>
