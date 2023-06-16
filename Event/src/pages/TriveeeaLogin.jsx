@@ -1,48 +1,67 @@
 import React, { useState } from "react";
-import "../css/TriveeeaLogin.css";
+import "../css/TriveeeaID.css";
 import { useNavigate } from "react-router-dom";
-
-function TriveeeaLogin() {
+import axios from '../axios/axios'
+function TriveeeaID() {
+  const [selectedType, setSelectedType] = useState();
+  const [uniqueId, setUniqueId] = useState("");
   const navigate = useNavigate();
-  const [name, setName] = useState("");
-  const [usn, setUsn] = useState("");
 
-  const handleNameChange = (e) => {
-    setName(e.target.value);
+  const handleRadioChange = (e) => {
+    setSelectedType(e.target.value);
+    console.log("Radio selected:", e.target.value);
   };
 
-  const handleUsnChange = (e) => {
-    setUsn(e.target.value);
+  const handleUniqueIdChange = (e) => {
+    setUniqueId(e.target.value);
   };
 
   const handleClick = async (e) => {
-    console.log("Name:", name);
-    console.log("USN:", usn);
-    navigate("/Triveeea", { state: {} });
+    console.log("Unique ID:", uniqueId);
+    try{
+      const user = {
+        "userUniqueId":uniqueId,
+        "EventName":"triveeea"
+      }
+      console.log(user)
+      const response = await axios.post('/triveeea-routes/validate-user',user,{'content-type':'application/json'})
+      console.log(response)
+      navigate(`/triveeea-details/${uniqueId}`);
+
+    }
+    catch(err){
+      console.log(err)
+      alert('404:Unique ID not found')
+    }
   };
 
   return (
-    <>
-      <div className="tdetails">
-        <div className="wraptriv">
-          <div className="nameusn">
-            <h1>Enter NAME and USN</h1>
-          </div>
-          <div className="tname-container">
-            <label htmlFor="">Name</label>
-            <input type="text" value={name} onChange={handleNameChange} />
-          </div>
-          <div className="tusn-container">
-            <label htmlFor="">USN</label>
-            <input type="text" value={usn} onChange={handleUsnChange} />
-          </div>
-          <div className="tuniquebutton">
-            <button onClick={handleClick}>Login</button>
-          </div>
+    <div className="tfullpage">
+      <div className="triveeea-id-container">
+        <div className="tradio-option">
+          <label htmlFor="tloginType">Unique Id</label>
+          <input
+            type="radio"
+            name="tloginType"
+            value="TuniqueId"
+            onChange={handleRadioChange}
+          />
+        </div>
+        <div className="tlogin-container">
+          {selectedType === "TuniqueId" && (
+            <>
+              <div className="tinput-container">
+                <input type="ttext" value={uniqueId} onChange={handleUniqueIdChange} />
+              </div>
+              <div className="tbutton-container">
+                <button onClick={handleClick}>Login</button>
+              </div>
+            </>
+          )}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
-export default TriveeeaLogin;
+export default TriveeeaID;

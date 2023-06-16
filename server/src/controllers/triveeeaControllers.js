@@ -208,9 +208,20 @@ const validateStudentResult = async(req,res) => {
         return res.status(500).json({"message":"Something went wrong with validating student response"})
     }
 }
+
+const getQuestionsCount = async(req,res)=>{
+    try{
+        const questionCount = await triveeeaAdminSchema.find()
+        return res.status(200).json({"questionCount":questionCount})
+    }catch(e){
+        console.log(e)
+        return res.status(500).json({"message":"Something went wrong"})
+    }
+}
 module.exports.uploadAdminData = uploadAdminData;
 module.exports.updateStudentData = updateStudentData;
 module.exports.generateUniqueIds = generateUniqueIds;
 module.exports.validateUniqueIds = validateUniqueIds;
 module.exports.uploadStudentResponse = uploadStudentResponse;
 module.exports.validateStudentResult = validateStudentResult;
+module.exports.getQuestionsCount = getQuestionsCount;
