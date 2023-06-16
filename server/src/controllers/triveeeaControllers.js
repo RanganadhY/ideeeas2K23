@@ -132,7 +132,7 @@ const updateStudentData = async(req,res) => {
                 return res.status(403).json({"error":"user already exists"})
                }
             }
-
+ 
             if(uniqueId)
             {
                 console.log("EMail is not being used to login")

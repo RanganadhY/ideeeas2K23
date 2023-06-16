@@ -66,7 +66,7 @@ function UniqueIdLogin() {
       const response = await axios.post('/triveeea-routes/validate-user',user,{headers:{'Content-Type': 'application/json'}})
       console.log(response)
       console.log(response.status)
-      navigate("/DetailsPage", { state: {} });
+      navigate("/DetailsPage:uniqueId", { state: {} });
     }
     catch(err){
       if(err.response.status === 404)

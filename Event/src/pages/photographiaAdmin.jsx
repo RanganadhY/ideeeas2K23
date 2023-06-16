@@ -25,6 +25,7 @@ function photographiaAdmin() {
             console.log('try block')
             const response = await axios.post('/photographia-routes/upload-image',formData,{headers:{'Content-Type':'multipart/form-data'}})
             console.log(response.status)
+            alert('Details uploaded successfully')
         }
         catch(err){
             console.log(err)

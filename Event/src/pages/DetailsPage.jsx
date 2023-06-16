@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../css/DetailPage.css";
 import { useNavigate } from "react-router-dom";
 
-function DetailsPage() {
+function DetailsPage(props) {
   const [name, setName] = useState("");
   const [usn, setUsn] = useState("");
   const navigate = useNavigate();
@@ -12,6 +12,19 @@ function DetailsPage() {
     console.log("USN:", usn);
     // Perform login logic here
     // Redirect to another page
+    try{
+      const user = {
+        "EventName":"photographia",
+        "name":name,
+        "uniqueId":props.uniqueId,
+        "usn":usn
+      }
+      console.log(user)
+    }
+    catch(err){
+      console.log(err)
+      alert('error in updating the details')
+    }
     navigate("/EventPage", { state: {} });
   };
 

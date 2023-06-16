@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../css/TriveeeaID.css";
 import { useNavigate } from "react-router-dom";
-
+import axios from '../axios/axios'
 function TriveeeaID() {
   const [selectedType, setSelectedType] = useState();
   const [uniqueId, setUniqueId] = useState("");
@@ -18,7 +18,21 @@ function TriveeeaID() {
 
   const handleClick = async (e) => {
     console.log("Unique ID:", uniqueId);
-    navigate("/TriveeeaLogin", { state: {} });
+    try{
+      const user = {
+        "userUniqueId":uniqueId,
+        "EventName":"triveeea"
+      }
+      console.log(user)
+      const response = await axios.post('/triveeea-routes/validate-user',user,{'content-type':'application/json'})
+      console.log(response)
+      navigate("/TriveeeaLogin", { state: {} });
+
+    }
+    catch(err){
+      console.log(err)
+      alert('404:Unique ID not found')
+    }
   };
 
   return (
