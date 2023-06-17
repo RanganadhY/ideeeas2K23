@@ -1,6 +1,7 @@
 import React, { useState,useEffect } from 'react';
 import { useNavigate,useParams } from 'react-router-dom';
 import '../css/EventPage.css';
+import { IoIosArrowBack,IoIosArrowForward  } from 'react-icons/io'
 import bg from '../asset/bg.jpg';
 import leftArrowImage from '../asset/caret-left.png';
 import rightArrowImage from '../asset/caret-right.png';
@@ -9,9 +10,10 @@ import { useLocation } from 'react-router-dom';
 
 const EventPage = (props) => {
   const [currentPhoto, setCurrentPhoto] = useState(0);
+  const [isVoted, setisVoted] = useState()
   const navigate = useNavigate();
   const {id,isEmail} = useParams();
-  // console.log(isEmail,id)
+  console.log(isEmail,id)
   
   const handlePreviousClick = () => {
     setCurrentPhoto((prevPhoto) => (prevPhoto === 0 ?  imageDetails.length-1 : prevPhoto - 1));
@@ -23,40 +25,39 @@ const EventPage = (props) => {
 
   const handleVoteClick = async(imageDetails) => {
     try{
-      console.log(imageDetails)
+      let votingDetails = {}
       console.log(isEmail)
-      if(!isEmail)
+      if(isEmail)
       {
-          const user = {
-            "_id":imageDetails,
-            "uniqueId":id,
-            "email":''
+        console.log("1")
+          votingDetails = {
+            "imageId":imageDetails,
+            "userId":id,
+            "isEmail":isEmail
           }
-        console.log(user)
-        const response = await axios.post('/photographia-routes/casted-vote',user,{'content-type':'application/json'})
-        console.log(response)
       }
-
-      else
-      {
-        const user = {
-          "_id":imageDetails,
-          "uniqueId":'',
-          "email":id
+      else{
+        console.log("2")
+        votingDetails = {
+          "imageId":imageDetails,
+          "userId":id,
+          "isEmail":isEmail
         }
-        console.log(user)
-        const response = await axios.post('/photographia-routes/casted-vote',user,{'content-type':'application/json'})
-        console.log(response)
       }
+      console.log(votingDetails)
+      const response = await axios.post('/photographia-routes/casted-vote',votingDetails,
+        {
+          'content-type':'application/json'
+        }
+        )
+      console.log(response)
+      alert('Vote casted successfully')
+      navigate('/Photographia-login');
     }
     catch(err){
       console.log(err)
       alert('something went wrong with voting')
     }
-    
-
-    
-    // navigate('/Photographia-login');
   };
 
 
@@ -68,7 +69,6 @@ const EventPage = (props) => {
         const response = await axios.get('/photographia-routes/display-iamge-details')
         console.log(response.data)
         await setImageDetails(response.data.details)
-        console.log(imageDetails)
       }
       catch(err){
         console.log(err)
@@ -78,35 +78,59 @@ const EventPage = (props) => {
     getImages()
   },[])
 
-  return (
-    <div className="fulll">
-      {
-        (imageDetails.length>0)?
-        <div className="centered-div">
-          <div className="team">
-            <h2>{imageDetails[currentPhoto].name}</h2>
-            {/* <h2>{imageDetails}</h2> */}
-          </div>
-          
-          <div className="image-container">
-            <button className="leftb" onClick={handlePreviousClick}>
-              <img src={leftArrowImage} alt="Previous" />
-            </button>
-            <img className='image-main'src={imageDetails[currentPhoto].photo} alt="Team" />
-            <button className="rightb" onClick={handleNextClick}>
-              <img src={rightArrowImage} alt="Next" />
-            </button>
-          </div>
-          
-          <button className="voteb" onClick={() => handleVoteClick(imageDetails[currentPhoto]._id)}>
-            Vote
-          </button>
-        </div>
-        :
-        <></>
-      }
-    </div>
-  );
-}
 
+  useEffect(()=>{
+    async function checkTheVotingStatus(){
+      const response = await axios.get(`/photographia-routes/isVoted/${id}/${isEmail}`)
+      setisVoted(response.data.hasVoted)
+    }
+    checkTheVotingStatus()
+  },[])
+
+  return (
+    <>
+        {
+          (isVoted === false)?
+          <div className="fulll">
+          {
+            (imageDetails.length>0)?
+            <div className="centered-div">
+              <div className="team">
+                <h2>Participant Name : {imageDetails[currentPhoto].name}</h2>
+                {/* <h2>{imageDetails}</h2> */}
+              </div>
+
+              <div className="image-container">
+                <div className="leftb" >
+                <IoIosArrowBack onClick={handlePreviousClick}/> 
+                </div>
+              
+                <img className='image-main'src={imageDetails[currentPhoto].photo} alt="Team" />
+                <div className="rightb" >
+                <IoIosArrowForward onClick={handleNextClick}/> 
+                </div>
+                {/* <button className="rightb" onClick={handleNextClick}>
+                  <img src={rightArrowImage} alt="Next" />
+                </button> */}
+              </div>
+              
+              <button className="voteb" onClick={() => handleVoteClick(imageDetails[currentPhoto]._id)}>
+                Vote
+              </button>
+            </div>
+            :
+            <>
+            </>
+          }
+          </div>
+          :
+          <>
+            <h2 className="voted-warning">You have already Voted</h2>
+          </>
+        }
+
+    </>
+    
+  );
+      }
 export default EventPage;

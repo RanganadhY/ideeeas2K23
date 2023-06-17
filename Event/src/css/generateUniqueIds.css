@@ -1,0 +1,28 @@
+.unique-ids-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    color: rgb(15, 137, 244);
+}
+
+.sub-container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    color: aliceblue;
+    height: 30%;
+}
+
+.sub-container-2{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: aliceblue;
+    height: 20%;
+}

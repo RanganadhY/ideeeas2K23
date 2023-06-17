@@ -58,18 +58,28 @@ function UniqueIdLogin() {
     e.preventDefault();
     console.log("Unique ID:", uniqueId);
     const user = {
-      "userUniqueId":uniqueId,
+      "uniqueId":uniqueId,
       "EventName":"photographia"
     }
     console.log(user)
     try{
       const response = await axios.post('/triveeea-routes/validate-user',user,{headers:{'Content-Type': 'application/json'}})
       console.log(response)
-      console.log(response.status)
-      navigate(`/DetailsPage/${uniqueId}/${false}`);
+      console.log(response.data.uniqueIdDetails.isUniqueIdFound)
+      console.log(response.data.uniqueIdDetails.isUserDetailsUpdated)
+
+      if(response.data.uniqueIdDetails.isUniqueIdFound && response.data.uniqueIdDetails.isUserDetailsUpdated)
+        navigate(`/photographia-event/${uniqueId}/${false}`);
+
+      else if(response.data.uniqueIdDetails.isUniqueIdFound && !(response.data.uniqueIdDetails.isUserDetailsUpdated))
+        navigate(`/DetailsPage/${uniqueId}/${false}`);
+
+      else 
+      alert('404: Unique Id not found')
+
     }
     catch(err){
-      if(err.response.status === 404)
+      if(err)
       alert('404: Unique Id not found')
     }
 
