@@ -2,6 +2,9 @@ const triveeeaStudentSchema = require('../models/triveeeaStudentModel')
 const triveeeaAdminSchema = require('../models/triveeeaAdminModel')
 const photographiaStudentSchema = require('../models/photographiaStudentModel')
 const photographiaAdminSchema = require('../models/photographiaAdminModel')
+const AdmZip = require("adm-zip");
+const fs = require("fs-extra");
+const XLSX = require("xlsx");
 const generateUniqueIds = async (req, res) => {
 
     try {
@@ -28,6 +31,29 @@ const generateUniqueIds = async (req, res) => {
             response = await photographiaStudentSchema.insertMany(uniqueIds)
         }
         console.log(response)
+        const workbook = XLSX.utils.book_new();
+        const worksheet = XLSX.utils.json_to_sheet(response);
+
+        XLSX.utils.book_append_sheet(workbook, worksheet, 'uniqueIds');
+
+        const folderName = Date.now().toString();
+        const folderPath = require('path').resolve(__dirname) + "/temp/";
+
+        fs.mkdirSync(`${folderPath}/${folderName}`);
+        const workbookName = `${new Date().getTime()}.xlsx`
+        const workbookFilePath = `${folderPath}/${folderName}/${workbookName}`; // Set the temporary file path
+        XLSX.writeFile(workbook, workbookFilePath);
+
+        // snippet for creating zip file for the coupon codes excel sheet
+        const zip = new AdmZip();
+        const files = fs.readdirSync(`${folderPath}/${folderName}`);
+        files.forEach((file)=>{
+            const filePath = `${folderPath}/${folderName}/${file}`;
+            zip.addLocalFile(filePath);
+        })
+        const zipFilePath = `${folderPath}/${folderName}.zip`;
+        zip.writeZip(zipFilePath);
+        const zipFileData = fs.readFileSync(zipFilePath);
         return res.status(200).json({ "uniqueIdsGenerated": response })
 
     }
@@ -76,22 +102,53 @@ const displayUniqueIds = async(req,res) => {
 
 const validateUniqueIds = async(req,res) => {
     try{
-        const {userUniqueId} = req.body;
+        const {uniqueId} = req.body;
         const EventName = req.body.EventName; 
-        console.log({userUniqueId})
-        console.log(EventName)
-        if(EventName === "triveeea")
-            result = await triveeeaStudentSchema.findOne({"uniqueId":userUniqueId})? true: false
+        
+        let result = {};
+        if(EventName === "triveeea"){
+            const response =  await triveeeaStudentSchema.findOne({"uniqueId":uniqueId})
+            if(!response){
+                return res.status(404).json({"message":"unique Id not found"})
+            }
+            else if(response&&(response.name&&response.usn)){
+                result= {
+                    "isUniqueIdFound":true,
+                    "isUserDetailsUpdated":true
+                }
+            }
+            else if(response&& !response.name){
+                result= {
+                    "isUniqueIdFound":true,
+                    "isUserDetailsUpdated":false
+                }
+            }
+        }
         if(EventName === "photographia"){
-            result = await photographiaStudentSchema.findOne({"uniqueId":userUniqueId})? true: false
-            console.log(result)
-            console.log(EventName)
+            console.log(uniqueId)
+            const response = await photographiaStudentSchema.findOne({"uniqueId":uniqueId})
+            console.log(response)
+            if(!response){
+                return res.status(404).json({"message":"unique Id not found"})
+            }
+            else if(response&&(response.name != null)){
+                console.log("hello")
+                result= {
+                    "isUniqueIdFound":true,
+                    "isUserDetailsUpdated":true
+                }
+            }
+            
+            else if(response&& (response.name == null)){
+
+                result= {
+                    "isUniqueIdFound":true,
+                    "isUserDetailsUpdated":false
+                }
+            }
         }
         console.log(result)
-        if(result)
-        return res.status(200).json({"userWithUniqueIdExists":result})
-        else
-        return res.status(404).json({"message":"unique Id not found"})
+        return res.status(200).json({"uniqueIdDetails":result})
     }
     catch(err){
         console.log(err)
@@ -132,9 +189,9 @@ const updateStudentData = async(req,res) => {
                     "email":req.body.email,
                     "name":req.body.name
                 }
-                const validateEmail = await photographiaStudentSchema.findOne({email})?true:false
-                console.log(validateEmail)
-                if(!validateEmail){
+                const validateEmail = await photographiaStudentSchema.findOne({email})
+                console.log(validateEmail.hasVoted)
+                if(!validateEmail.hasVoted){
                     const result = await photographiaStudentSchema.create(user)
                     console.log(result)
                     return res.status(200).json({"studentSuccessfullyUpdated":result})
@@ -233,6 +290,8 @@ const getQuestionsCount = async(req,res)=>{
         return res.status(500).json({"message":"Something went wrong"})
     }
 }
+
+
 module.exports.uploadAdminData = uploadAdminData;
 module.exports.updateStudentData = updateStudentData;
 module.exports.generateUniqueIds = generateUniqueIds;
@@ -241,3 +300,4 @@ module.exports.validateUniqueIds = validateUniqueIds;
 module.exports.uploadStudentResponse = uploadStudentResponse;
 module.exports.validateStudentResult = validateStudentResult;
 module.exports.getQuestionsCount = getQuestionsCount;
+

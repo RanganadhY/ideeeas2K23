@@ -32,6 +32,18 @@ function photographiaAdmin() {
             alert('500:error in uploading ')
         }
       }
+
+      const handleClickForResults = async() => {
+        try{
+            const validatedResults = await axios.get('/photographia-routes/validate-result')
+            console.log(validatedResults.data)
+        }
+        catch(err){
+            console.log(err)
+            alert('error: Cannot get results')
+        }
+     
+      }
   return (
    <div className='photo-admin-main-wrapper'>
         <Formik
@@ -65,8 +77,14 @@ function photographiaAdmin() {
                 }
             }
             
-           
         </Formik>
+        <div>
+            <h2>Click here to view the results</h2>
+            <button onClick={handleClickForResults}>Click</button>?
+                
+            `
+
+        </div>
         </div>
   )
 }

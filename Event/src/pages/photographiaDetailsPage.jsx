@@ -25,7 +25,6 @@ function DetailsPage(props) {
       console.log(user)
       const response = await axios.post('triveeea-routes/add-student-details',user,{'content-type':'application/json'})
       console.log(response)
-      alert('Student saved successfully')
       navigate(`/photographia-event/${id}/${isEmail}`);
     }
     catch(err){

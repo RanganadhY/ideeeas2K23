@@ -2,7 +2,7 @@
 import './App.css'
 import {Routes , Route} from "react-router-dom"
 
-
+import GenerateUniqueIds from './pages/generateUniqueIds'
 
 import Photographia from './pages/PhotographiaLogin';
 import DetailsPage from './pages/photographiaDetailsPage';
@@ -19,6 +19,7 @@ function App() {
   return (
     <>
       <Routes>
+        <Route path='/generate-unique-ids' element={<GenerateUniqueIds/>}/>
         <Route path='/photographia-admin' element={<PhotographiaAdmin/>}/>
         <Route path="/photographia-login" element={<Photographia/>}/>
         <Route path='/DetailsPage/:id/:isEmail' element={<DetailsPage/>}/>
