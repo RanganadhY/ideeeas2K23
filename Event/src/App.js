@@ -25,8 +25,8 @@ function App() {
         <Route path='/photographia-event/:id/:isEmail' element={<EventPage/>}/>
 
         <Route path='/triveeea-details/:id' element={<TriveeeaDetails/>}/>
-        <Route path='/triveeea-event' element={<TriveeeaEventPage/>}/>
-        <Route path='/TriveeeaLogin/:uniqueId' element={<TriveeeaLogin/>}/>
+        <Route path='/triveeea-event/:id' element={<TriveeeaEventPage/>}/>
+        <Route path='/triveeea-login' element={<TriveeeaLogin/>}/>
         <Route path="/triveeea-admin" element={<TriveeeaAdmin/>}/>
       </Routes>
     </>

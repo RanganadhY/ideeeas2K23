@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-import "../css/TriveeeaLogin.css";
-import { useNavigate } from "react-router-dom";
+import "../css/TriveeeaDetails.css";
+import axios from "../axios/axios"
+import { useNavigate,useParams } from "react-router-dom";
 
 function TriveeeaLogin() {
   const navigate = useNavigate();
+  const {id} = useParams();
+
   const [name, setName] = useState("");
   const [usn, setUsn] = useState("");
 
@@ -18,8 +21,18 @@ function TriveeeaLogin() {
   const handleClick = async (e) => {
     console.log("Name:", name);
     console.log("USN:", usn);
-    
-    navigate("/Triveeea", { state: {} });
+    try{
+      const response = await axios.post("/triveeea-routes/add-student-details",{
+        name,
+        usn,
+        "EventName":"triveeea",
+        "uniqueId":id
+      })
+      navigate(`/triveeea-event/${id}`); 
+    }catch(e){
+      console.log(e)
+      alert("Something went wrong")
+    }
   };
 
   return (

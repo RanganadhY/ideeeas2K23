@@ -1,95 +1,139 @@
-
-.tdetails {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    width: 100%;
-    background-color: black;
-    background-image: url(../asset/behance-643f3ceba42f9.jpg);
+.tfullpage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  background-image: url(../asset/behance-643f3ceba42f9.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  }
-  
-  .wraptriv {
-    background-color: #ffffff;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    opacity: 0.5;
-  }
-  
-  .tname-container label {
-    color: rgb(0, 0, 0);
-    font-size: 20px;
-    font-weight: bold;
-    margin-left: -4px;
-    
-  }
-  
-  .tname-container {
-    display: flex;
-    flex-direction: row;
-    margin-top: 20px;
-    align-items: center;
-    margin-bottom: 0.5rem;
-    color: #fff;
-  }
-  
-  .tusn-container {
-    display: flex;
-    flex-direction: row;
-    margin-top: 10px;
-    align-items: center;
-    margin-bottom: 1rem;
-    color: #fff;
-    font-weight:bold;
-  }
-  
-  .tname-container input[type="text"] {
-    margin-left: 3px;
+}
+
+.triveeea-id-container {
+  background-color: rgb(255, 255, 255);
+  opacity: 0.5;
+  width: 25%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.tlogin-container {
+  margin-left: -1.7rem;
+}
+
+.tradio-option input[type="radio"] {
+  transform: scale(1.75);
+}
+
+.tradio-option label {
+  font-size: 30px;
+  margin-right: 10px;
+  color: #000000;
+  font-weight: bold;
+}
+
+.tinput-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 20px;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: #ea0b0b;
+}
+
+.tinput-container label {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.tinput-container input[type="ttext"] {
+  width: 90%;
+  margin-left: 15%;
+  border-color: #000000;
+  padding: 0.5rem 0.5rem;
+  outline: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+}
+
+/* .label {
+  font-weight: bold;
+} */
+
+.tbutton-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  background-color: #0066ff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-left: 15%;
+}
+
+@media (min-width: 320px) and (max-width: 530px) {
+  .triveeea-id-container {
     width: 80%;
-    padding: 0.5rem 0.25rem;
-    outline: none;
-    
-    border-radius: 0.25rem;
-    font-size: 0.75rem;
+    height: 60%;
   }
-  .nameusn{
-    font-size: 65%;
-    
-  }
-  .tusn-container input[type="text"] {
-    margin-left: 8px;
-    width: 80%;
-    padding: 0.5rem 0.5rem;
-    outline: none;
- 
-    border-radius: 0.25rem;
-    font-size: 0.75rem;
-  }
-  
-  .tusn-container label {
-    color: rgb(0, 0, 0);
+
+  .tradio-option label {
     font-size: 20px;
-    margin-right: 10px;
-    align-items: center;
   }
-  
-  .tuniquebutton {
-    display: flex;
-    justify-content: center;
+
+  .tinput-container label {
+    font-size: 16px;
   }
-  
-  .tuniquebutton button {
-    padding: 0.5rem 1rem;
+
+  .tinput-container input[type="ttext"] {
+    width: 90%;
+    margin-left: 5%;
+    font-size: 0.8rem;
+  }
+
+  button {
+    font-size: 0.8rem;
+    margin-left: 5%;
+  }
+}
+
+@media (min-width: 530px) and (max-width: 1040px) {
+  .triveeea-id-container {
+    width: 60%;
+  }
+
+  .tradio-option label {
+    font-size: 24px;
+  }
+
+  .tinput-container label {
+    font-size: 18px;
+  }
+
+  .tinput-container input[type="ttext"] {
+    width: 80%;
+    margin-left: 10%;
     font-size: 1rem;
-    margin-left: 25px;
-    border-radius: 4px;
-    background-color: #0066ff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
   }
-  
+
+  button {
+    font-size: 1rem;
+    margin-left: 10%;
+  }
+}
