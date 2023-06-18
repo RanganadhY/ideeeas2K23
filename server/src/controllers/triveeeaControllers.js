@@ -189,7 +189,8 @@ const updateStudentData = async(req,res) => {
                     "email":req.body.email,
                     "name":req.body.name
                 }
-                const validateEmail = await photographiaStudentSchema.findOne({email})
+                const validateEmail = await photographiaStudentSchema.findOne({email})?true:false
+                console.log(validateEmail)
                 console.log(validateEmail.hasVoted)
                 if(!validateEmail.hasVoted){
                     const result = await photographiaStudentSchema.create(user)
