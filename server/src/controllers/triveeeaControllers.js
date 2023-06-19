@@ -32,7 +32,7 @@ const generateUniqueIds = async (req, res) => {
         }
         console.log(response)
         const workbook = XLSX.utils.book_new();
-        const worksheet = XLSX.utils.json_to_sheet(response);
+        const worksheet = XLSX.utils.json_to_sheet(uniqueIds);
 
         XLSX.utils.book_append_sheet(workbook, worksheet, 'uniqueIds');
 

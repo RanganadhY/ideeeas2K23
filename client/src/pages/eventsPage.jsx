@@ -40,6 +40,18 @@ function EventsPage(props) {
   const handleUploadFile = async(link) => {
     window.open(link, "_blank")
   }
+
+  const settings={
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    infinite: true,
+    autoplay: true,
+    speed: 9000,
+    autoplaySpeed: 0,
+    cssEase: 'linear',
+    arrows: false,
+    pauseOnHover:false
+  }
   return (
 
     <>
@@ -135,6 +147,8 @@ function EventsPage(props) {
             <button className='event-button' onClick={() => handleRegister(eventDetails.ydlink)}>REGISTER</button>}
             <button className='event-button' onClick={() => handleDownloadBrochure(eventDetails.brochure)}>DOWNLOAD BROCHURE</button>
             {eventDetails.link && <button className='event-button' onClick={() => handleUploadFile(eventDetails.link)}>UPLOAD FILE</button>}
+            {eventDetails.logoLink && <button className='event-button' onClick={() => handleUploadFile(eventDetails.logoLink)}>SUBMIT LOGO</button>}
+
           </div>
         </div>
         <section className='eve-template-content'>
