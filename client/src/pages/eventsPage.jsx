@@ -41,17 +41,6 @@ function EventsPage(props) {
     window.open(link, "_blank")
   }
 
-  const settings={
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    infinite: true,
-    autoplay: true,
-    speed: 9000,
-    autoplaySpeed: 0,
-    cssEase: 'linear',
-    arrows: false,
-    pauseOnHover:false
-  }
   return (
 
     <>
@@ -126,14 +115,17 @@ function EventsPage(props) {
           <div data-aos="fade-left" className='eve-content-poster'>
             <div className='eve-content-poster-image'>
               <img src={"/eventPosters/" + eventDetails.poster} />
-
+               
               {/* <img src={web}  /> */}
               {/* <img src={'../assets/images/posters/' + eventDetails.poster} /> */}
 
             </div>
           </div>
         </div>
-        
+        {eventDetails.themeReleasePoster && 
+          <div  className='events-trademark-theme-poster'>
+            <img src={"/eventPosters/"+ eventDetails.themeReleasePoster}></img>
+          </div>}
         <div className='eve-btn-container' >
           <div className='eve-register-btn'>
             {eventDetails.id === 8 ?  
@@ -152,7 +144,6 @@ function EventsPage(props) {
           </div>
         </div>
         <section className='eve-template-content'>
-
           <div className='eve-template-container'>
           {eventDetails.template &&
             <div className='eve-temp-name'><h2>For Materials refer the link below</h2>

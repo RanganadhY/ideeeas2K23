@@ -161,6 +161,8 @@ const updateStudentData = async(req,res) => {
     try{
         const {EventName} = req.body
         console.log(EventName)
+        const addr = require("address")
+        console.log(addr.ip())
         if(EventName === "triveeea")
         {
             const {uniqueId} = req.body

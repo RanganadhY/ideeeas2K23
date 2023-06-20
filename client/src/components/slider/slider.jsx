@@ -10,7 +10,7 @@ import kwikpic from "../../assets/images/sponserers/Kwikpic.jpg"
 import aicteIdeaLab from "../../assets/images/sponserers/aicteIdeaLab.jpeg"
 import taskade from "../../assets/images/sponserers/logo_taskade_white.png"
 const colors = [essence,computersociety, nandini,icafe,vishwasJewelers,cocosland,kwikpic,taskade,aicteIdeaLab];
-const links = ["https://essencethebakelab.in/","https://csiindia.org/","http://tumul.coop/","https://icafe22.business.site/","https://tinyurl.com/mprm2s6a","https://www.kwikpic.in/landing/home","https://www.taskade.com/","https://idealnet.aicte-india.org/"]
+const links = ["https://essencethebakelab.in/","https://csiindia.org/","http://tumul.coop/","https://icafe22.business.site/","https://tinyurl.com/mprm2s6a","","https://www.kwikpic.in/landing/home","https://www.taskade.com/","https://idealnet.aicte-india.org/"]
 // const titles = ["Our Title Sponsor","Our King Sponsor","Our Lord Sponsor", "Our Knight Sponsor","Our Knight Sponsor","Our Sponsor","Our Knight Sponsor"]
 const ids=["computersociety","nandini","essence","icafe","vishwasjewelers","Kwikpic","Taskade","AICTE idea lab"]
 const delay = 3000;
