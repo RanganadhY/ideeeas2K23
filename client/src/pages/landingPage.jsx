@@ -77,7 +77,7 @@ function LandingPage() {
                         <p> Trademark Theme : "ART AND CULTURE"  </p>
                     </Marquee>
                     <Marquee>
-                        <p> Trademarks registrations will be open till  June 22nd(6 P.M ) and the last date to submit the logo is June 22 at(11P.M).</p>
+                        <p> Trademarks registrations will be open till  June 22nd(6 P.M ) and the last date to submit the logo is June 22 (11P.M).</p>
                     </Marquee>
               </div>
                 <br></br>
