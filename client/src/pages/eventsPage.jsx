@@ -122,10 +122,10 @@ function EventsPage(props) {
             </div>
           </div>
         </div>
-        {eventDetails.themeReleasePoster && 
+        {/* {eventDetails.themeReleasePoster && 
           <div  className='events-trademark-theme-poster'>
             <img src={"/eventPosters/"+ eventDetails.themeReleasePoster}></img>
-          </div>}
+          </div>} */}
         <div className='eve-btn-container' >
           <div className='eve-register-btn'>
             {eventDetails.id === 8 ?  
