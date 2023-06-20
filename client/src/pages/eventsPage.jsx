@@ -40,6 +40,7 @@ function EventsPage(props) {
   const handleUploadFile = async(link) => {
     window.open(link, "_blank")
   }
+
   return (
 
     <>
@@ -114,14 +115,17 @@ function EventsPage(props) {
           <div data-aos="fade-left" className='eve-content-poster'>
             <div className='eve-content-poster-image'>
               <img src={"/eventPosters/" + eventDetails.poster} />
-
+               
               {/* <img src={web}  /> */}
               {/* <img src={'../assets/images/posters/' + eventDetails.poster} /> */}
 
             </div>
           </div>
         </div>
-        
+        {eventDetails.themeReleasePoster && 
+          <div  className='events-trademark-theme-poster'>
+            <img src={"/eventPosters/"+ eventDetails.themeReleasePoster}></img>
+          </div>}
         <div className='eve-btn-container' >
           <div className='eve-register-btn'>
             {eventDetails.id === 8 ?  
@@ -135,10 +139,11 @@ function EventsPage(props) {
             <button className='event-button' onClick={() => handleRegister(eventDetails.ydlink)}>REGISTER</button>}
             <button className='event-button' onClick={() => handleDownloadBrochure(eventDetails.brochure)}>DOWNLOAD BROCHURE</button>
             {eventDetails.link && <button className='event-button' onClick={() => handleUploadFile(eventDetails.link)}>UPLOAD FILE</button>}
+            {eventDetails.logoLink && <button className='event-button' onClick={() => handleUploadFile(eventDetails.logoLink)}>SUBMIT LOGO</button>}
+
           </div>
         </div>
         <section className='eve-template-content'>
-
           <div className='eve-template-container'>
           {eventDetails.template &&
             <div className='eve-temp-name'><h2>For Materials refer the link below</h2>

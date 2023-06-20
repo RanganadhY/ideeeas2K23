@@ -11,6 +11,8 @@ import Fade from 'react-reveal/Fade';
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import Timeline from '../components/timeline/timeline';
+import Marquee from "react-fast-marquee";
+
 function LandingPage() {
 
     useEffect(() => {
@@ -70,6 +72,14 @@ function LandingPage() {
                         <img src={Hero} alt="" />
                     </div>
                 </div>
+                <div className='eve-text-slider'>
+                    <Marquee>
+                        <p> Trademark Theme : "ART AND CULTURE"  </p>
+                    </Marquee>
+                    <Marquee>
+                        <p> Trademarks registrations will be open till  June 22nd(6 P.M ) and the last date to submit the logo is June 22 (11P.M).</p>
+                    </Marquee>
+              </div>
                 <br></br>
                 <div className='home-sponserers'>
                         <Slider/>

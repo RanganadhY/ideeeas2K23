@@ -18,7 +18,7 @@
 #us{
     height: 500px;
     width: 500px;
-    margin-right: 200px;
+    margin-right: 150px;
     margin-bottom: 150px;
 }
 
@@ -34,6 +34,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-right: 50px;
 }
 .flex4{
     margin-left: 30px;
@@ -115,7 +116,7 @@
       margin: 7vh;
     }
 .flex3{
-    margin-right: 90px;
+    margin-right: 85px;
 }    
 @media  screen and (max-width:56.25em) {
     #us{
@@ -148,4 +149,20 @@
         align-items: center;
 
     }
+    @media (min-width: 900px) and (max-width: 1400px) {
+        .c-head{
+            width: 100%;
+            margin-left: 15%;
+        }
+        .flex5{
+            width: 100%;
+            margin-left: 15%;
+        }
+        #us{
+          height: 300px;
+          width: 300px;
+          margin-left: 150px;
+
+        }
+      }
 }

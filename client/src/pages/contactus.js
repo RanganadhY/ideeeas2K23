@@ -21,13 +21,13 @@ export default function Contactus() {
                 <div className='flex3'>
                     <div className='contact-card'>
                         <h3 className='name'>Chethan Baradwaj M</h3>
-                        <h3 className='deets'>Chair, IEEE SIT SB</h3>
+                        <h3 className='deets'>Chairman, IEEE SIT SB</h3>
                         <h3 className='deets'><img alt="phone" src={phone} className="deets-img"></img><span> +91 96064 16541</span></h3>
                         <h3 className='deets'><img alt="email" src={email} className="deets-img"></img><span> chethanbaradwaj24@ieee.org</span></h3>
                     </div>
                     <div className='contact-card'>
                         <h3 className='name'>Prakruthi C</h3>
-                        <h3 className='deets'>Chair, WIE IEEE SIT SB</h3>
+                        <h3 className='deets'>Chairman,WIE IEEE SIT SB</h3>
                         <h3 className='deets'><img alt="phone" src={phone} className="deets-img"></img><span> +91 81473 82401</span></h3>
                         <h3 className='deets'><img alt="email" src={email} className="deets-img"></img><span> prakruthichalapathy@gmail.com</span></h3>
                     </div>
@@ -53,6 +53,12 @@ export default function Contactus() {
         <div className='bottom'>
         <center  className="c-head">WebDev Team</center>
         <div className='flex5'>
+        <div className='dev-card'>
+                        <h3 className='dev-name'>Anvs Anudeep</h3>
+                        <h3 className='dev-deets'>Lead, WebDev IEEE SIT SB</h3>
+                        <h3 className='dev-deets'><img alt="phone" src={phone} className="deets-img"></img><span> +91 63637 64172</span></h3>
+                        <h3 className='dev-deets'><img alt="email" src={email} className="deets-img"></img><span> anvsanudeep@gmail.com</span></h3>
+        </div>
         <div className='dev-card'>
                         <h3 className='dev-name'>Anagha N</h3>
                         <h3 className='dev-deets'>Member, IEEE SIT SB</h3>

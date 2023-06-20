@@ -10,7 +10,7 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    height: 90vh;
+    height: 75vh;
     /* padding-left: 20px; */
     /* margin: 0 20px; */
     /* flex-direction: column; */
@@ -270,7 +270,22 @@
   .home-hero-title-letters span::after{
     opacity: 1;
 }
-
+.eve-text-slider {
+  /* color: #f1f8ff; */
+  color: #C194E7;
+  /* animation: neon 0.8s ease-in-out infinite alternate; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  font-weight: bold;
+}
+.eve-text-slider p{
+  font-size: 2.3rem;
+  letter-spacing: 0.8re;
+  width: 140rem;
+}
 @keyframes flickerI {
     0% {
       opacity: 0.4;
@@ -510,7 +525,7 @@
         width: 100%;
         justify-content: space-between;
         align-items: center;
-        height: 93vh;
+        height: 83vh;
         /* height: 100%; */
     }
     .home-hero-image{
@@ -656,11 +671,11 @@
         width: 100%;
         justify-content: space-between;
         align-items: center;
-        height: 90vh;
+        height: 70vh;
     }
 
     .home-hero-image{
-        width: 80%;
+        width: 60%;
         /* height: 50vh; */
         height: 70%;
     }

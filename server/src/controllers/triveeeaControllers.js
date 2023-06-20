@@ -32,7 +32,7 @@ const generateUniqueIds = async (req, res) => {
         }
         console.log(response)
         const workbook = XLSX.utils.book_new();
-        const worksheet = XLSX.utils.json_to_sheet(response);
+        const worksheet = XLSX.utils.json_to_sheet(uniqueIds);
 
         XLSX.utils.book_append_sheet(workbook, worksheet, 'uniqueIds');
 
@@ -161,6 +161,8 @@ const updateStudentData = async(req,res) => {
     try{
         const {EventName} = req.body
         console.log(EventName)
+        const addr = require("address")
+        console.log(addr.ip())
         if(EventName === "triveeea")
         {
             const {uniqueId} = req.body
@@ -189,7 +191,8 @@ const updateStudentData = async(req,res) => {
                     "email":req.body.email,
                     "name":req.body.name
                 }
-                const validateEmail = await photographiaStudentSchema.findOne({email})
+                const validateEmail = await photographiaStudentSchema.findOne({email})?true:false
+                console.log(validateEmail)
                 console.log(validateEmail.hasVoted)
                 if(!validateEmail.hasVoted){
                     const result = await photographiaStudentSchema.create(user)
