@@ -27,6 +27,9 @@ const photographiaRoutes = require('./routes/photographiaroutes')
 
 app.use("/api/triveeea-routes/",triveeeaRoutes)
 app.use("/api/photographia-routes/",photographiaRoutes)
+app.all("/*",(req,res)=>{
+    res.send("page not found");
+});
 
 const port = process.env.PORT
 
