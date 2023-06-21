@@ -178,7 +178,7 @@ const updateStudentData = async(req,res) => {
             console.log(result)
             return res.status(200).json({"studentSuccessfullyUpdated":result})
         }
-
+        
         if(EventName === "photographia")
         {
             const {email} = req.body 
