@@ -297,7 +297,7 @@ const validateStudentResult = async(req,res) => {
 const getQuestionsCount = async(req,res)=>{
     try{
         const questionCount = await triveeeaAdminSchema.find()
-        return res.status(200).json({"questionCount":questionCount})
+        return res.status(200).json({"questionCount":questionCount[0].questions})
     }catch(e){
         console.log(e)
         return res.status(500).json({"message":"Something went wrong"})
