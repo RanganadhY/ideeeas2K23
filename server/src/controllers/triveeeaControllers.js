@@ -196,7 +196,6 @@ const updateStudentData = async(req,res) => {
                     "ipaddress":addr.ip()
                 }
                 const validateEmail = await photographiaStudentSchema.findOne({ipaddress})
-                console.log('hey')
                 console.log(validateEmail)
                 // console.log(validateEmail.hasVoted)
                 if(!validateEmail)

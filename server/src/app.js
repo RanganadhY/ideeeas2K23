@@ -8,7 +8,7 @@ console.log(__dirname)
 
 const cors = require('cors')
 app.use(express.json());
-const allowedDomains=["http://photographia-ideeas2k23.s3-website.ap-south-1.amazonaws.com"]
+const allowedDomains=["http://photographia-ideeas2k23.s3-website.ap-south-1.amazonaws.com","http://localhost:3000"]
 app.use(cors({  
     credentials:true,
     origin:function (origin, callback) {
