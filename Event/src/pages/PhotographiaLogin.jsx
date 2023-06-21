@@ -21,7 +21,7 @@ function Photographia() {
           <h1>LOGIN VIA</h1>
         </div>
         <div className="radiobuttons">
-          <div className="radio-optionu">
+          {/* <div className="radio-optionu">
             <input
               type="radio"
               name="loginType"
@@ -29,7 +29,7 @@ function Photographia() {
               onChange={handleRadioChange}
             />
             <label htmlFor="loginType">Unique Id</label>
-          </div>
+          </div> */}
           <div className="radio-option">
             <input
               type="radio"
@@ -107,11 +107,12 @@ function EmailLogin() {
   const [name, setName] = useState("");
   const navigate = useNavigate();
 
+  
   const initialValues = {
     name: '',
     email: '',
     EventName:'photographia',
-    uniqueId:''
+    uniqueId:'',
 }
 
 const validationSchema = Yup.object({

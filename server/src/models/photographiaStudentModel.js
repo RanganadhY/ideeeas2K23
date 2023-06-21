@@ -1,3 +1,4 @@
+const { Int32 } = require('mongodb');
 const mongoose = require('mongoose')
 
 const PStudentData = new mongoose.Schema({
@@ -20,7 +21,7 @@ const PStudentData = new mongoose.Schema({
         type:Boolean,
         default:false
     },
-    teamName:{
+    ipaddress:{
         type:String,
         default:null
     }

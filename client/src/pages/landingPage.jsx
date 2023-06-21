@@ -96,9 +96,7 @@ function LandingPage() {
                 <div data-aos="fade-up" className='home-timeline'>
                     <span className='ideeas-timeline-header'> IDEEEAS 2K23 SCHEDULE</span>
                     <Timeline />
-
                 </div>
-
                 {/* <div data-aos="fade-up" className='home-event-cards'>
                     <Cards details={cardData} />
                 </div> */}

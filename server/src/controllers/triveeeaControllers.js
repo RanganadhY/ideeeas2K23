@@ -104,7 +104,9 @@ const validateUniqueIds = async(req,res) => {
     try{
         const {uniqueId} = req.body;
         const EventName = req.body.EventName; 
-        
+        const addr = require("address")
+        console.log(addr.ip())
+
         let result = {};
         if(EventName === "triveeea"){
             const response =  await triveeeaStudentSchema.findOne({"uniqueId":uniqueId})
@@ -181,21 +183,29 @@ const updateStudentData = async(req,res) => {
         {
             const {email} = req.body 
             const {uniqueId} = req.body
+            const ipaddress = addr.ip()
             console.log(email)
-            console.log(uniqueId)
+            // console.log(uniqueId)
 
-            if(email)
+            if(email && ipaddress)
             {
                 console.log("EMail is being used to login")
                 const user = {
                     "email":req.body.email,
-                    "name":req.body.name
+                    "name":req.body.name,
+                    "ipaddress":addr.ip()
                 }
-                const validateEmail = await photographiaStudentSchema.findOne({email})?true:false
+                const validateEmail = await photographiaStudentSchema.findOne({ipaddress})
+                console.log('hey')
                 console.log(validateEmail)
-                console.log(validateEmail.hasVoted)
-                if(!validateEmail.hasVoted){
+                // console.log(validateEmail.hasVoted)
+                if(!validateEmail)
+                {
                     const result = await photographiaStudentSchema.create(user)
+                    return res.status(200).json({"studentCreatedSuccessfully":result})
+                }
+                else if(validateEmail && validateEmail.hasVoted === false){
+                    const result = await photographiaStudentSchema.findOneAndUpdate({ipaddress},user)
                     console.log(result)
                     return res.status(200).json({"studentSuccessfullyUpdated":result})
                 }
@@ -203,7 +213,7 @@ const updateStudentData = async(req,res) => {
                 return res.status(403).json({"error":"user already exists"})
                }
             }
- 
+            
             if(uniqueId)
             {
                 console.log("EMail is not being used to login")
