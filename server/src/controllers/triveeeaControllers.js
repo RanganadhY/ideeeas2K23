@@ -201,6 +201,7 @@ const updateStudentData = async(req,res) => {
                 if(!validateEmail)
                 {
                     const result = await photographiaStudentSchema.create(user)
+                    console.log(result)
                     return res.status(200).json({"studentCreatedSuccessfully":result})
                 }
                 else if(validateEmail && validateEmail.hasVoted === false){
