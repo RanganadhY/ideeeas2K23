@@ -277,17 +277,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   height: 10vh;
   font-weight: 500;
   background-color: #0F0D57;
-
+  /* width: 100%; */
 }
+/* .Marquee{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+} */
 .eve-text-slider p{
   font-size: 2.3rem;
-  letter-spacing: 0.8re;
-  width: 140rem;
-
+  letter-spacing: 0.15rem;
+  width: 210rem;
+  line-height: 4rem;
+  /* padding: 1rem ; */
+  text-align: left;
 }
 @keyframes flickerI {
     0% {

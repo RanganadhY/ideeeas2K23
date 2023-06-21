@@ -188,7 +188,7 @@ const updateStudentData = async(req,res) => {
             // console.log(uniqueId)
 
             if(email && ipaddress)
-            {
+            { 
                 console.log("EMail is being used to login")
                 const user = {
                     "email":req.body.email,

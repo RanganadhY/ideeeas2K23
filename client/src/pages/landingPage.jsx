@@ -74,15 +74,16 @@ function LandingPage() {
                 </div>
                 <div className='eve-text-slider'>
                     <Marquee>
-                        <p> Trademark Theme : "ART AND CULTURE"  </p>
+                        <p>Date of submission of abstract extended till June 22nd(5 P.M) for Aavishkar, pitchothon and TechnoCon</p>
                     </Marquee>
                     <Marquee>
-                        <p> Trademarks registrations will be open till  June 22nd(6 P.M ) and the last date to submit the logo is June 22 (11P.M).</p>
+                        <p> Trademark Theme : "ART AND CULTURE"   Trademarks registrations will be open till  June 22nd(6 P.M ) and the last date to submit the logo is June 22 (11P.M). </p>
+                        {/* <p> Trademarks registrations will be open till  June 22nd(6 P.M ) and the last date to submit the logo is June 22 (11P.M).</p> */}
                     </Marquee>
-              </div>
+                </div>
                 <br></br>
                 <div className='home-sponserers'>
-                        <Slider/>
+                    <Slider />
                 </div>
                 <div className='home-events-title'>
                     <p>OUR EVENTS</p>
