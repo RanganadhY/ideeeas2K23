@@ -5,8 +5,12 @@ import axios from "../axios/axios";
 import validator from 'validator'
 import {  Formik, Form, Field ,ErrorMessage} from 'formik'
 import * as Yup from 'yup'
+// import address from 'address';
+
 
 function Photographia() {
+
+  
   const [selectedType, setSelectedType] = useState();
 
   const handleRadioChange = (e) => {
@@ -106,6 +110,15 @@ function EmailLogin() {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const navigate = useNavigate();
+  const [ip,setIP] = useState('');
+    
+    //creating function to load ip address from the API
+    const getIpData = async()=>{
+        const res = await axios.get('https://api.ipdata.co')
+        console.log(res.data);
+        // setIP(res.data.IPv4)
+        return res.ip
+    }
 
   
   const initialValues = {
@@ -126,11 +139,13 @@ const onSubmit = async (values) => {
   console.log('form values', values)
   try
     {
-      const user = values
+      const ipAddress = await getIpData()
+      let user = values
+      user['ipAddress'] = ipAddress;
       console.log(user)
-      const response = await axios.post('/triveeea-routes/add-student-details',user,{headers:{'Content-Type':'application/json'}})
-      console.log(response.status)
-      navigate(`/photographia-event/${values.email}/${true}`);
+      // const response = await axios.post('/triveeea-routes/add-student-details',user,{headers:{'Content-Type':'application/json'}})
+      // console.log(response.status)
+      // navigate(`/photographia-event/${values.email}/${true}`);
       
 
     }
