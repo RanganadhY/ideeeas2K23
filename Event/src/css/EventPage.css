@@ -15,7 +15,7 @@
 
 .team {
   width: 100%;
-  height: 10%;
+  /* padding-left: 4rem; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,16 +70,28 @@
   align-items: center;
 }
 .team h2 {
-  margin-top: 0;
+  /* margin-top: 0; */
   /* width: 80%; */
-  color:rgb(18, 172, 243);
-  font-size: 2rem;
+  /* margin-left: 1rem; */
+  width: 80%;
+  text-align: center;
+  color:burlywood;
+  font-size: 1.2rem;
   align-items: center;
-  line-height: 1.6rem;
-  letter-spacing: 0.5rem;
+  /* line-height: 1.6rem; */
+  letter-spacing: 0.07rem;
   text-transform: capitalize;
+  width: 100%;
 }
 
+.team h3{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 1.75rem;
+  color: white;
+  text-align: center;
+}
 img {
   display: block;
   margin: 0 auto;
@@ -109,6 +121,24 @@ img {
     padding: 1rem;
   } */
 
+  .team{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  /* .team h2 {
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+  }
+
+  .team h3{
+    text-align: left;
+    padding: 0;
+    margin: 0 ;
+    color:rgb(18, 172, 243);
+
+  } */
   .button-container {
     display: flex;
     flex-direction: column;
