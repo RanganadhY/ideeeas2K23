@@ -183,30 +183,30 @@ const updateStudentData = async(req,res) => {
         {
             const {email} = req.body 
             const {uniqueId} = req.body
-            const ipaddress = addr.ip()
+            const {ipAddress} = req.body.ipAddress
             console.log(email)
             // console.log(uniqueId)
 
-            if(email && ipaddress)
+            if(email && ipAddress)
             { 
                 console.log("EMail is being used to login")
                 const user = {
                     "email":req.body.email,
                     "name":req.body.name,
-                    "ipaddress":addr.ip()
+                    "ipaddress":req.body.ipAddress
                 }
-                const validateEmail = await photographiaStudentSchema.findOne({ipaddress})
+                const validateEmail = await photographiaStudentSchema.findOne({ipAddress})
                 console.log(validateEmail)
                 // console.log(validateEmail.hasVoted)
                 if(!validateEmail)
                 {
-                    console.log("hey")
+                    console.log()
                     const result = await photographiaStudentSchema.create(user)
                     console.log(result)
                     return res.status(200).json({"studentCreatedSuccessfully":result})
                 }
                 else if(validateEmail && validateEmail.hasVoted === false){
-                    const result = await photographiaStudentSchema.findOneAndUpdate({ipaddress},user)
+                    const result = await photographiaStudentSchema.findOneAndUpdate({ipAddress},user)
                     console.log(result)
                     return res.status(200).json({"studentSuccessfullyUpdated":result})
                 }
