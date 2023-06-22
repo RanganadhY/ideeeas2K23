@@ -23,7 +23,8 @@ function App() {
       <Routes>
         <Route path='/generate-unique-ids' element={<GenerateUniqueIds/>}/>
         <Route path='/photographia-admin' element={<PhotographiaAdmin/>}/>
-        <Route path="/photographia-login" element={<Photographia/>}/>
+        {/* <Route path="/photographia-login" element={<Photographia/>}/> */}
+        <Route path="/" element={<Photographia/>}/>
         <Route path='/DetailsPage/:id/:isEmail' element={<DetailsPage/>}/>
         <Route path='/photographia-event/:id/:isEmail' element={<EventPage/>}/>
 
