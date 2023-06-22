@@ -145,8 +145,14 @@ const onSubmit = async (values) => {
       console.log(user)
       const response = await axios.post('/triveeea-routes/add-student-details',user,{headers:{'Content-Type':'application/json'}})
       console.log(response.status)
-      navigate(`/photographia-event/${values.email}/${true}`);
-      
+      if(response.data.isEligibleToMove)
+      {
+        navigate(`/photographia-event/${values.email}/${true}`);
+      }
+      else
+      {
+        alert('403: User already exists')
+      }
 
     }
     catch(err){

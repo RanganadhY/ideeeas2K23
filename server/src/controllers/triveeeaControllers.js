@@ -178,58 +178,111 @@ const updateStudentData = async(req,res) => {
             console.log(result)
             return res.status(200).json({"studentSuccessfullyUpdated":result})
         }
+        
+        // if(EventName === "photographia")
+        // {
+        //     const {email} = req.body 
+        //     const {uniqueId} = req.body
+        //     const {ipAddress} = req.body.ipAddress
+        //     console.log(email)
 
-        if(EventName === "photographia")
-        {
-            const {email} = req.body 
-            const {uniqueId} = req.body
-            const {ipAddress} = req.body.ipAddress
-            console.log(email)
-            // console.log(uniqueId)
-
-            if(email && ipAddress)
-            { 
-                console.log("EMail is being used to login")
-                const user = {
-                    "email":req.body.email,
-                    "name":req.body.name,
-                    "ipaddress":req.body.ipAddress
-                }
-                const validateEmail = await photographiaStudentSchema.findOne({ipAddress})
-                console.log(validateEmail)
-                // console.log(validateEmail.hasVoted)
-                if(!validateEmail)
-                {
-                    console.log()
-                    const result = await photographiaStudentSchema.create(user)
-                    console.log(result)
-                    return res.status(200).json({"studentCreatedSuccessfully":result})
-                }
-                else if(validateEmail && validateEmail.hasVoted === false){
-                    const result = await photographiaStudentSchema.findOneAndUpdate({ipAddress},user)
-                    console.log(result)
-                    return res.status(200).json({"studentSuccessfullyUpdated":result})
-                }
-               else{
-                return res.status(403).json({"error":"user already exists"})
-               }
-            }
+        //     if(email && ipAddress)
+        //     { 
+        //         console.log("EMail is being used to login")
+        //         const user = {
+        //             "email":req.body.email,
+        //             "name":req.body.name,
+        //             "ipaddress":req.body.ipAddress
+        //         }
+        //         const validateEmail = await photographiaStudentSchema.findOne({ipAddress})
+        //         console.log(validateEmail)
+        //         if(!validateEmail)
+        //         {
+        //             console.log()
+        //             const result = await photographiaStudentSchema.create(user)
+        //             console.log(result)
+        //             return res.status(200).json({"studentCreatedSuccessfully":result})
+        //         }
+        //         else if(validateEmail && validateEmail.hasVoted === false){
+        //             const result = await photographiaStudentSchema.findOneAndUpdate({ipAddress},user)
+        //             console.log(result)
+        //             return res.status(200).json({"studentSuccessfullyUpdated":result})
+        //         }
+        //        else{
+        //         return res.status(403).json({"error":"user already exists"})
+        //        }
+        //     }
             
-            if(uniqueId)
-            {
-                console.log("EMail is not being used to login")
+        //     if(uniqueId)
+        //     {
+        //         console.log("EMail is not being used to login")
 
-                const user = {
-                    "name":req.body.name,
-                    "usn":req.body.usn
-                }
-                if(user.name && user.usn){
-                    const result = await photographiaStudentSchema.findOneAndUpdate({uniqueId},user)
-                    console.log(result)
-                    return res.status(200).json({"studentSuccessfullyUpdated":result})
-                }
+        //         const user = {
+        //             "name":req.body.name,
+        //             "usn":req.body.usn
+        //         }
+        //         if(user.name && user.usn){
+        //             const result = await photographiaStudentSchema.findOneAndUpdate({uniqueId},user)
+        //             console.log(result)
+        //             return res.status(200).json({"studentSuccessfullyUpdated":result})
+        //         }
+        //         else
+        //         return res.status(401).json({'message':'invalid credentials'})
+        //     }
+        // }
+
+        if(EventName === 'photographia')
+        {
+            const {email,ipAddress,name} = req.body
+            const user ={
+                'email':email,
+                'ipaddress':ipAddress,
+                'name':name
+            }
+            const isIpPresent = await photographiaStudentSchema.findOne({"ipaddress":ipAddress})
+            const isEmailPresent = await photographiaStudentSchema.findOne({email})
+            console.log(isIpPresent,isEmailPresent)
+            if(!isIpPresent && !isEmailPresent)
+            {
+                console.log(1)
+                const result = await photographiaStudentSchema.create(user)
+                console.log(result)
+                return res.status(200).json({'isEligibleToMove':true})
+            }
+            else if(!isIpPresent && isEmailPresent)
+            {
+                if(!isEmailPresent.hasVoted)
+                {
+                    console.log(2.1)
+                    return res.status(200).json({'isEligibleToMove':true})
+                }   
                 else
-                return res.status(401).json({'message':'invalid credentials'})
+                {
+                    console.log(2.2)
+                    return res.status(200).json({'isEligibleToMove':false})
+                }
+            }
+
+            else if(isIpPresent && isEmailPresent)
+            {
+
+                if(!isEmailPresent.hasVoted)
+                {
+                    console.log(3.1)
+                    return res.status(200).json({'isEligibleToMove':true})
+                }   
+                else
+                {
+                    console.log(3.2)
+                    return res.status(200).json({'isEligibleToMove':false})
+                }
+            }
+
+            else if(isIpPresent && !isEmailPresent)
+
+            {
+                console.log(4)
+                return res.status(200).json({'isEligibleToMove':false})
             }
         }
     }
