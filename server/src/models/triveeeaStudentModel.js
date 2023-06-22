@@ -10,7 +10,7 @@ const TStudentData = new mongoose.Schema({
         required:true
     },
     clickedAt:{
-        type:Date,
+        type:Number,
         // required:true
     }
 })

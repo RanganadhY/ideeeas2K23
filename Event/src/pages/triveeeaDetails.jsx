@@ -8,9 +8,11 @@ function TriveeeaLogin() {
 
   const handleClick = async (e) => {
     try{
+      var date = new Date()
+      var timeStamp = date.getTime()
       const response = await axios.post("/triveeea-routes/buzzer-save",{
         "uniqueId":id,
-        "timeStamp":Date()
+        "timeStamp": timeStamp
       });
       if(response.status === 200){
         if(response.data.message === "successfull"){
