@@ -78,13 +78,13 @@ function photographiaAdmin() {
             }
             
         </Formik>
-        <div>
+        {/* <div>
             <h2>Click here to view the results</h2>
             <button onClick={handleClickForResults}>Click</button>?
                 
             `
 
-        </div>
+        </div> */}
         </div>
   )
 }
