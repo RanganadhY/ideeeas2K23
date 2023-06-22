@@ -52,7 +52,7 @@ const EventPage = (props) => {
         )
       console.log(response)
       alert('Vote casted successfully')
-      navigate('/Photographia-login');
+      navigate('/');
     }
     catch(err){
       console.log(err)
