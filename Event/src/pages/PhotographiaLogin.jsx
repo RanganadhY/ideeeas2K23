@@ -114,10 +114,10 @@ function EmailLogin() {
     
     //creating function to load ip address from the API
     const getIpData = async()=>{
-        const res = await axios.get('https://api.ipify.org?format=json')
+        const res = await axios.get('https://geolocation-db.com/json/')
         console.log(res.data);
         // setIP(res.data.IPv4)
-        return res.data.ip
+        return res.data.IPv4
     }
 
   
@@ -145,8 +145,14 @@ const onSubmit = async (values) => {
       console.log(user)
       const response = await axios.post('/triveeea-routes/add-student-details',user,{headers:{'Content-Type':'application/json'}})
       console.log(response.status)
-      navigate(`/photographia-event/${values.email}/${true}`);
-      
+      if(response.data.isEligibleToMove)
+      {
+        navigate(`/photographia-event/${values.email}/${true}`);
+      }
+      else
+      {
+        alert('403: User already exists')
+      }
 
     }
     catch(err){

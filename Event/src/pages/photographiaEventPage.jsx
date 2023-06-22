@@ -52,7 +52,7 @@ const EventPage = (props) => {
         )
       console.log(response)
       alert('Vote casted successfully')
-      navigate('/Photographia-login');
+      navigate('/');
     }
     catch(err){
       console.log(err)
@@ -96,8 +96,8 @@ const EventPage = (props) => {
             (imageDetails.length>0)?
             <div className="centered-div">
               <div className="team">
-                <h2>Participant Name : {imageDetails[currentPhoto].name}</h2>
-                {/* <h2>{imageDetails}</h2> */}
+                <h2>Participant Name</h2>
+                <h3>{imageDetails[currentPhoto].name}</h3>
               </div>
 
               <div className="image-container">
