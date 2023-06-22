@@ -22,7 +22,6 @@ function TriveeeaID() {
       const response = await axios.post('/triveeea-routes/validate-user',user,{'content-type':'application/json'})
       console.log(response)
       navigate(`/triveeea-details/${uniqueId}`);
-
     }
     catch(err){
       console.log(err)

@@ -5,6 +5,7 @@ const photographiaAdminSchema = require('../models/photographiaAdminModel')
 const AdmZip = require("adm-zip");
 const fs = require("fs-extra");
 const XLSX = require("xlsx");
+
 const generateUniqueIds = async (req, res) => {
 
     try {
@@ -64,7 +65,6 @@ const generateUniqueIds = async (req, res) => {
     }
 }
 
-
 const uploadAdminData = async (req, res) => {
     try {
         const NoOfQues = req.body.NoOfQues
@@ -102,28 +102,20 @@ const displayUniqueIds = async(req,res) => {
 
 const validateUniqueIds = async(req,res) => {
     try{
-        const {uniqueId} = req.body;
+        const uniqueId = req.body.userUniqueId;
         const EventName = req.body.EventName; 
         const addr = require("address")
         console.log(addr.ip())
 
         let result = {};
         if(EventName === "triveeea"){
-            const response =  await triveeeaStudentSchema.findOne({"uniqueId":uniqueId})
+            const response =  await triveeeaStudentSchema.find({"uniqueId":uniqueId});
+            console.log(response);
             if(!response){
                 return res.status(404).json({"message":"unique Id not found"})
             }
-            else if(response&&(response.name&&response.usn)){
-                result= {
-                    "isUniqueIdFound":true,
-                    "isUserDetailsUpdated":true
-                }
-            }
-            else if(response&& !response.name){
-                result= {
-                    "isUniqueIdFound":true,
-                    "isUserDetailsUpdated":false
-                }
+            else{
+                return res.status(200).json({"message":"succesfull"});
             }
         }
         if(EventName === "photographia"){
@@ -154,7 +146,7 @@ const validateUniqueIds = async(req,res) => {
     }
     catch(err){
         console.log(err)
-       return res.status(404).json({"message":"unique Id not found"})
+        return res.status(404).json({"message":"unique Id not found"})
     }
 
 }
@@ -260,6 +252,7 @@ const uploadStudentResponse = async(req,res) => {
         return res.status(500).json({"message":"error in uploading student response"})
     }
 }
+
 const validateStudentResult = async(req,res) => {
     try{
         const {uniqueId} = req.body
@@ -305,6 +298,46 @@ const getQuestionsCount = async(req,res)=>{
     }
 }
 
+const saveTimeStamp = async(req, res)=>{
+    try{
+        const uniqueId = req.body.uniqueId;
+        const time = req.body.timeStamp;
+
+        if(!uniqueId || !time){
+            return res.status(400).json({"message":"Something went wrong"});
+        }
+
+        const details = await triveeeaStudentSchema.find({uniqueId:uniqueId});
+
+        if(details.length === 0 ){
+            const triveeeaStudentSchema = new triveeeaAdminSchema({
+                uniqueId:uniqueId,
+                clickedAt:time
+            }).save();
+        }else{
+            details[0].clickedAt = time;
+            details[0].save();
+        }
+        res.status(200).json({"message":"successfull"})
+    }catch(err){
+        console.log(err);
+        return res.status(500).json({"message":"Something went wrong"});
+    }
+}
+
+const changeStatus = async(req, res)=>{
+    try{
+        console.log("hi")
+        const buzzer = triveeeaAdminSchema.find({});
+        console.log(buzzer)
+        buzzer[0].status = !buzzer[0].status;
+        await buzzer[0].save();
+        res.status(200).send({"message":"successfull","status":!buzzer[0].status})
+    }catch(err){
+        console.log(err);
+        return res.status(500).json({"message":"Something went wrong"});
+    }
+}
 
 module.exports.uploadAdminData = uploadAdminData;
 module.exports.updateStudentData = updateStudentData;
@@ -314,4 +347,5 @@ module.exports.validateUniqueIds = validateUniqueIds;
 module.exports.uploadStudentResponse = uploadStudentResponse;
 module.exports.validateStudentResult = validateStudentResult;
 module.exports.getQuestionsCount = getQuestionsCount;
-
+module.exports.saveTimeStamp = saveTimeStamp;
+module.exports.changeStatus = changeStatus;

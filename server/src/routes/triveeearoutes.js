@@ -11,8 +11,8 @@ routes.post('/add-student-details',triveeeaControllers.updateStudentData)
 routes.post('/upload-student-response',triveeeaControllers.uploadStudentResponse)
 routes.post('/validate-student-result',triveeeaControllers.validateStudentResult)
 routes.get("/get-question-count",triveeeaControllers.getQuestionsCount)
-
-
+routes.post("/buzzer-save",triveeeaControllers.saveTimeStamp)
+routes.get("/change-status",triveeeaControllers.changeStatus);
 
 
 
